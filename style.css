@@ -1,5 +1,5 @@
 html {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Space Mono';font-size:small
 }
 
 img {
@@ -16,7 +16,7 @@ div.item {
 
 a {
     text-decoration: none;
-    color: rgb(155, 71, 7);
+    color: rgb(0, 0, 0);
     text-align: left;
 }
 
@@ -25,3 +25,7 @@ div {
     vertical-align: top;
 
 }
+a:hover, a:focus, a:active {
+    color: black;
+    cursor: url(point.svg) 16 16, pointer;
+  }
