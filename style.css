@@ -1,5 +1,6 @@
 html {
-    font-family: 'Space Mono';font-size:small
+    font-family: 'Space Mono';
+    font-size: small
 }
 
 img {
@@ -25,7 +26,19 @@ div {
     vertical-align: top;
 
 }
-a:hover, a:focus, a:active {
+
+a:hover,
+a:focus,
+a:active {
     color: black;
     cursor: url(point.svg) 16 16, pointer;
-  }
+}
+
+div#items div:target{
+    width: 500px;
+
+}
+div#items div:target img{
+    width: 500px;
+
+}
