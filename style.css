@@ -133,5 +133,6 @@ a{
     }
     .nav-menu.active{
         left: 0;
+        top: 0;
     }
 }
