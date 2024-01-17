@@ -160,11 +160,17 @@ div.zoom img {
 }
 
 div.zoom p {
-    font-size: 30px;
-    margin-top: 10px;
+    font-size: 60px;
+    margin-bottom: 1px;
+    position: absolute;
+    bottom: 5px;
 }
 
 div.zoom {
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
     position: absolute;
     height: 100%;
     width: 100%;
