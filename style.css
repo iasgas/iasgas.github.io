@@ -116,7 +116,7 @@ a{
     display: block;
     width: 45px;
     height: 2px;
-    margin:10px auto;
+    margin:20px auto;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
     background-color: black;
@@ -128,15 +128,16 @@ a{
     }
 
     .hamburger.active .bar:nth-child(1){
-        transform:translateY(6px) rotate(-45deg);
+        transform:translateY(11px) rotate(-45deg);
     }
     .hamburger.active .bar:nth-child(2){
-        transform:translateY(-6px) rotate(45deg);
+        transform:translateY(-11px) rotate(45deg);
     }
 
     .nav-menu{
         position: fixed;
         top: -100%;
+        left: 0;
         gap: 0;
         flex-direction: column;
         background-color: white;
@@ -155,4 +156,4 @@ a{
         left: 0;
         top: 0;
     }
-}
+} 
