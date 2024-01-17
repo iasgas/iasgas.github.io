@@ -1,13 +1,17 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto Mono');
+@import url('https://fonts.googleapis.com/css?family=Rubik Light');
+
 
 html {
-    font-family: 'Roboto Mono';
+    font-family: 'Rubik Light';
     font-size: small
 }
 
 img {
     width: 200px;
 
+}
+.item:hover{
+    color: pink;
 }
 
 div.item {
@@ -68,11 +72,11 @@ a{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 24px;
+    padding: 0 10px;
 }
 
 .nav-menu{
-    display: flex;
+    display: block;
     justify-content: space-between;
     align-items: center;
     gap: 60px;
@@ -83,10 +87,18 @@ a{
 }
 
 .nav-link{
-    transition: 0.7s ease;
+    font-size: 1.2rem;
 }
 
 .nav-link:hover{
+    color: pink;
+}
+
+.nav-info{
+    font-size: 1rem;
+}
+
+.nav-info:hover{
     color: pink;
 }
 
@@ -119,19 +131,22 @@ a{
 
     .nav-menu{
         position: fixed;
-        left: -100%;
+        top: -100%;
         gap: 0;
         flex-direction: column;
         background-color: white;
         width: 100%;
         text-align: center;
-        transition: 0.3s;
+        transition: 0.5s;
     }   
 
     .nav-item{
-        margin: 16px 0;
+        margin-top: 16px;
+        margin-bottom: 0px;
     }
+
     .nav-menu.active{
+        height: 100%;
         left: 0;
         top: 0;
     }
