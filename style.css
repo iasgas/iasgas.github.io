@@ -157,10 +157,11 @@ div {
 div.zoom img {
     height: 90%;
     width: auto;
+    cursor: url(pointoutline.svg) 16 16, pointer;
 }
 
 div.zoom p {
-    font-size: 60px;
+    font-size: 40px;
     margin-bottom: 1px;
     position: absolute;
     bottom: 5px;
