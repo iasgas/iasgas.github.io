@@ -73,7 +73,7 @@ a {
 }
 
 .nav-link:hover {
-    color: pink;
+    color: #abbfae;
 }
 
 .nav-info {
@@ -81,7 +81,7 @@ a {
 }
 
 .nav-info:hover {
-    color: pink;
+    color: #abbfae;
 }
 
 .hamburger {
@@ -150,7 +150,7 @@ img {
 }
 
 div.item:hover {
-    color: pink;
+    color: #abbfae;
 }
 
 div.item {
