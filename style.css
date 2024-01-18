@@ -19,6 +19,10 @@ div.item:hover {
     cursor: url(point.svg) 16 16, pointer;
 }
 
+div.zoom:hover{
+    cursor: url(pointoutline.svg) 16 16, pointer;
+}
+
 /* Header */
 
 header {
@@ -157,7 +161,6 @@ div {
 div.zoom img {
     height: 90%;
     width: auto;
-    cursor: url(pointoutline.svg) 16 16, pointer;
 }
 
 div.zoom p {
@@ -172,7 +175,7 @@ div.zoom {
     top: 0;
     bottom: 0;
     right: 0;
-    position: absolute;
+    position: fixed;
     height: 100%;
     width: 100%;
     background-color: white;
