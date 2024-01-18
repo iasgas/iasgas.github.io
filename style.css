@@ -55,6 +55,7 @@ a {
     gap: 60px;
 }
 
+
 .nav-branding {
     align-items: center;
     font-size: 2rem;
@@ -67,6 +68,8 @@ a {
 
 .nav-link {
     font-size: 1.2rem;
+    margin-left: 300px;
+    margin-right: 300px;
 }
 
 .nav-link:hover {
@@ -137,6 +140,7 @@ a {
         top: 0;
 
     }
+
 }
 
 /* Items */
@@ -145,8 +149,8 @@ img {
     width: 200px
 }
 
-.item:hover {
-    color: rgb(129, 129, 129);
+div.item:hover {
+    color: pink;
 }
 
 div.item {
