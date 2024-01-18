@@ -34,7 +34,7 @@ li {
 }
 
 a {
-    color: black;
+    color: #023c00;
     text-decoration: none;
 }
 
@@ -59,6 +59,7 @@ a {
 .nav-branding {
     align-items: center;
     font-size: 2rem;
+    color: #023c00;
     zoom: 100%;
 }
 
@@ -68,6 +69,7 @@ a {
 
 .nav-link {
     font-size: 1.2rem;
+    color: #023c00;
     margin-left: 300px;
     margin-right: 300px;
 }
@@ -78,6 +80,7 @@ a {
 
 .nav-info {
     font-size: 1rem;
+    color: #023c00;
 }
 
 .nav-info:hover {
@@ -96,7 +99,7 @@ a {
     margin: 8px auto;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
-    background-color: black;
+    background-color: #023c00;
 }
 
 @media(max-width:1920px) {
@@ -122,7 +125,6 @@ a {
         left: 0;
         gap: 0;
         flex-direction: column;
-        background-image: url'icon-web.png';
         background-color: white;
         width: 100%;
         text-align: center;
@@ -133,12 +135,14 @@ a {
     .nav-item {
         margin-top: 16px;
         margin-bottom: 0px;
+        color: #023c00;
     }
 
     .nav-menu.active {
         height: 100%;
         left: 0;
         top: 0;
+        color: #023c00;
 
     }
 
@@ -159,11 +163,12 @@ div.item {
     border: 2px solid rgb(255, 255, 255);
     height: auto;
     margin-top: 0;
+    color: #023c00;
 }
 
 a {
     text-decoration: none;
-    color: rgb(0, 0, 0);
+    color: #023c00;
     text-align: left;
 }
 
