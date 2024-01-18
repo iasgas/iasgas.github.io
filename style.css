@@ -56,7 +56,13 @@ a {
 }
 
 .nav-branding {
+    align-items: center;
     font-size: 2rem;
+    zoom: 100%;
+}
+
+.nav-branding-img{
+    zoom: 50%;
 }
 
 .nav-link {
@@ -82,9 +88,9 @@ a {
 
 .bar {
     display: block;
-    width: 45px;
+    width: 30px;
     height: 2px;
-    margin: 20px auto;
+    margin: 8px auto;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
     background-color: black;
@@ -95,12 +101,16 @@ a {
         display: block;
     }
 
-    .hamburger.active .bar:nth-child(1) {
-        transform: translateY(11px) rotate(-45deg);
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
     }
 
-    .hamburger.active .bar:nth-child(2) {
-        transform: translateY(-11px) rotate(45deg);
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(10px) rotate(-45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-10px) rotate(45deg);
     }
 
     .nav-menu {
