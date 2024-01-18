@@ -122,6 +122,7 @@ a {
         left: 0;
         gap: 0;
         flex-direction: column;
+        background-image: url'icon-web.png';
         background-color: white;
         width: 100%;
         text-align: center;
