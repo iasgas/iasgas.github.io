@@ -56,6 +56,8 @@ a {
 }
 
 
+
+
 .nav-branding {
     align-items: center;
     font-size: 2rem;
@@ -63,9 +65,11 @@ a {
     zoom: 100%;
 }
 
+
 .nav-branding-img{
     zoom: 50%;
 }
+
 
 .nav-link {
     font-size: 1.2rem;
@@ -100,6 +104,11 @@ a {
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
     background-color: #023c00;
+}
+
+.bottom-right{
+    margin-bottom: 3px;
+
 }
 
 @media(max-width:1920px) {
