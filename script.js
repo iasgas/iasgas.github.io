@@ -15,3 +15,9 @@ for (let i = 0; i < items.length; i++) {
     })
 
 }
+
+
+document.querySelectorAll(".column").forEach(column=>{
+    column.style.paddingLeft = Math.floor(Math.random() * 8) + 3+ "%"
+    column.style.paddingRight = Math.floor(Math.random() * 8) + 3 + "%"
+  })
