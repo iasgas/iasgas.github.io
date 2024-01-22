@@ -12,8 +12,8 @@
   }
   
   .column img {
-    margin-top: 30px;
-    margin-bottom: 8px;
+    margin-top: 20px;
+    margin-bottom: 18px;
     vertical-align: middle;
     width: 100%;
     justify-content: center;
@@ -32,6 +32,17 @@
         width: 80%;
         margin-left: 10%;
     }
+
+    .textbox {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: #023c00;
+        font-size: 0.8rem;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
   }
   
   @media screen and (max-width: 600px) {
@@ -46,5 +57,17 @@
         width: 90%;
         margin-left: 5%;
     }
+
+    .textbox {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: #023c00;
+        font-size: 0.8rem;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    
   }
 
