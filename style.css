@@ -1,7 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
 
+
+
+
 html {
-    font-family: 'Rubik';
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-weight: 300;
     font-size: small
 }
 
@@ -62,6 +66,7 @@ a {
 .nav-branding {
     align-items: center;
     font-size: 2rem;
+    letter-spacing: 0.2rem;
     color: #023c00;
     zoom: 100%;
 }
