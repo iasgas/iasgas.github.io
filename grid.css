@@ -10,6 +10,7 @@
     max-width: 25%;
     padding: 5% 5%;
   }
+
   
   .column img {
     margin-top: 20px;
@@ -18,6 +19,7 @@
     width: 100%;
     justify-content: center;
   }
+
   
   /* Responsive layout - makes a two column-layout instead of four columns */
   @media screen and (max-width: 800px) {
