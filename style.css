@@ -166,7 +166,6 @@ a {
         margin-top: 16px;
         margin-bottom: 1em;
         color: #023c00;
-        font-size: 1rem;
     }
 
     .nav-menu.active {
@@ -182,8 +181,12 @@ a {
 
 /* Items */
 
-img {
-    width: 200px
+img{
+    width: 200px;
+}
+
+p{
+    font-size: 0.7rem;
 }
 
 div.item:hover {
