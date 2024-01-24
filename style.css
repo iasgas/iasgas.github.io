@@ -1,12 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
 
-
+@font-face {
+    font-family: Boogie;
+    src: url(Fonts/BoogieSchoolSans-Middle1st.woff)
+}
 
 
 html {
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-    font-weight: 300;
-    font-size: small
+    font-family: "Boogie"; 
+    font-size: 100%
 }
 
 * {
@@ -65,10 +67,8 @@ a {
 
 .nav-branding {
     align-items: center;
-    font-size: 1.6rem;
-    letter-spacing: 0.2rem;
+    font-size: 1.6em;
     color: #023c00;
-    zoom: 100%;
 }
 
 
@@ -81,8 +81,9 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.2rem;
+    font-size: 1.6em;
     color: #023c00;
+    margin-bottom: 1em;
 }
 
 .nav-link:hover {
@@ -163,9 +164,9 @@ a {
 
     .nav-item {
         margin-top: 16px;
-        margin-bottom: 0px;
+        margin-bottom: 1em;
         color: #023c00;
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
     .nav-menu.active {
