@@ -26,6 +26,7 @@ const Block= document.querySelector(".headerblock");
 const Dot= document.querySelector(".dot");
 const Link= document.querySelector(".menu-link");
 
+
 Name.addEventListener("click", () => {
     contact.classList.toggle("active")
     contactdrop.classList.toggle("active") 

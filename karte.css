@@ -200,7 +200,6 @@ footer{
 }
 
 
-
 .line{
     display: block;
     height: 1px;
@@ -279,12 +278,12 @@ img {
         text-align: center;
         font-family: Print;
         font-size: 40px;
-        color: #091928;
+        color: #184168;
       }
 
     a{
         text-decoration: none;
-        color: #091928;
+        color: #184168;
         text-align: center;
         font-family: Print;
         font-weight: 200;
