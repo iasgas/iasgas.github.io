@@ -1,0 +1,331 @@
+@font-face {
+    font-family: Boogie;
+    src: url(Fonts/BoogieSchoolSans-Middle3rd.woff)
+}
+
+@font-face {
+    font-family: Tag;
+    src: url(Fonts/DeFontePlus-Normale.woff)
+}
+
+@font-face {
+    font-family: Print;
+    src: url(Fonts/DeFontePlus-Leger.woff)
+}
+
+@import url('https://fonts.cdnfonts.com/css/helvetica-neue-55');
+
+
+
+
+body{
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    margin: 0 0;
+    background-color: white;
+    position: fixed;
+}
+
+
+/* Text */
+.name{ 
+    text-align: center;
+}
+
+.name.active{ 
+    z-index: -5;
+}
+
+.projects{ 
+    text-align: center;
+ }
+
+h2{
+    text-align: center;
+    font-family: Print;
+    font-size: 25px;
+    color: #184168;
+  }
+
+h2:hover {
+    opacity: .5;
+    cursor: url(point.svg) 16 16, pointer;
+}
+
+a{
+    text-decoration: none;
+    color: #184168;
+    text-align: center;
+    text-align: center;
+    font-family: Print;
+    font-weight: 200;
+    font-size: 15px;
+  }
+
+/* - - - - - - */
+
+
+/* Header&Footer */
+header{
+    display: flex;
+    z-index: 1;
+    background-color: white;
+    transition: 0.8s;
+    height: 10vh;
+    align-items: center;
+    justify-content: center;
+}
+
+header.active{
+    z-index: -10;
+}
+
+.headerblock{
+    position: fixed;
+    top: 0;
+    background-color: transparent;
+    z-index: -100;
+    height: 0vh;
+    width: 0vw;
+}
+
+.headerblock.active{
+    width: 100vw;
+    height: 10vh; 
+    z-index: 100;  
+}
+
+footer{
+    display: flex;
+    margin-top: auto;
+    z-index: 800;
+    background-color: white;
+    height: 10vh;
+    align-items: center;
+    justify-content: center;
+}
+
+/* - - - - - - */
+
+/* Contact */
+.contact{
+    background-color: white;
+    height: 0vh;
+    z-index: 999;
+    transition: 0.8s;
+}
+
+.contact.active{
+    background-color: white;
+    height: 90vh;
+    transition: 0.8s;
+}
+
+.contact-drop{
+    width: 100%;
+    height: 90vh;
+    padding: 10% 0;
+    position: fixed;
+    top: -100%;
+    transition: 0.8s;
+}
+
+.contact-drop.active{
+    display: flex;
+    flex-direction: column;
+    transition: 0.8s;
+    position: fixed;
+    top: 0;
+    justify-content: space-between;
+    padding-top: 0%;
+}
+
+.contact-link{
+    text-decoration: none;
+    justify-content: center;
+    text-align: center;
+}
+/* - - - - - - */
+
+/* Projects */
+.menu{
+    background-color: white;
+    height: 0vh;
+    z-index: 999;
+    transition: 0.8s;
+}
+
+.menu.active{
+    background-color: white;
+    height: 80vh;
+    transition: 0.8s;
+}
+
+.menu-drop{
+    width: 100%;
+    height: 80vh;
+    padding-bottom: 10%;
+    padding-top: 5%;
+    position: fixed;
+    bottom: -100%;
+    transition: 0.8s;
+}
+
+.menu-drop.active{
+    display: flex;
+    flex-direction: column;
+    transition: 0.8s;
+    position: fixed;
+    bottom: 0;
+    margin-top: 0;
+}
+
+.menu-link{
+    display: flex;
+    text-decoration: none;
+    justify-content: space-between;
+    text-indent: 0px;
+    align-items: center;
+    padding: 0 10%;
+    margin: 1vh 0;
+    background-color: white;
+    z-index: 1000;
+}
+
+.menu-link:hover{
+    text-indent: 15px;
+    background-color: transparent;
+}
+
+
+
+.line{
+    display: block;
+    height: 1px;
+    width: 80vw;
+    margin: 0 10vw;
+    align-items: center;
+    z-index: 1000;
+    background-color: #184168;
+}
+
+
+
+
+.menu-info:hover{
+    cursor: url(point.svg) 16 16, pointer;
+}
+
+.contact-info:hover{
+    cursor: url(point.svg) 16 16, pointer;
+}
+
+
+/* - - - - - - */
+
+
+* {
+    box-sizing: border-box
+}
+
+
+
+ 
+
+.center-container{
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: -2;
+  }
+
+
+
+
+.image-slideshow {
+  max-width: 80%;
+  display: flex;
+  position: relative;
+  margin: auto;
+  padding: 20% 0%;
+
+}
+
+img {
+  width: 100%
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 2s;
+}
+
+@keyframes fade {
+  from {opacity: .5}
+  to {opacity: 1}
+}
+
+
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+
+    h2{
+        text-align: center;
+        font-family: Print;
+        font-size: 40px;
+        color: #091928;
+      }
+
+    a{
+        text-decoration: none;
+        color: #091928;
+        text-align: center;
+        font-family: Print;
+        font-weight: 200;
+        font-size: 20px;
+    
+    }
+    
+
+    * {
+        box-sizing: border-box
+    }
+    
+    .center-container{
+        margin: 0% 10%;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+      }
+    
+    .image-slideshow {
+      max-width: 35%;
+      display: block;
+      position: relative;
+      margin: auto;
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+    
+    img {
+      width: 100%
+    }
+    
+    .fade {
+      animation-name: fade;
+      animation-duration: 2s;
+    }
+    
+    @keyframes fade {
+      from {opacity: .4}
+      to {opacity: 1}
+    }
+  }
+

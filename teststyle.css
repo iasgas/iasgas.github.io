@@ -1,0 +1,23 @@
+body {
+    width: 100%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.mapdiv {
+    width: 80%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    padding-left: 10%;
+    padding-right: 10%;
+
+}
+
+.cls-16 {
+    fill: blue;
+
+}
