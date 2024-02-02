@@ -19,7 +19,7 @@
 
 
 body{
-    min-height: -webkit-fill-available;
+    min-height: 100%;
     min-width: 100vw;
     display: flex;
     flex-direction: column;
