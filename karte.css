@@ -19,7 +19,7 @@
 
 
 body{
-    min-height: 100vh;
+    min-height: 100%;
     min-width: 100vw;
     display: flex;
     flex-direction: column;
@@ -31,6 +31,7 @@ body{
 
 /* Text */
 .name{ 
+    margin-top: 8px;
     text-align: center;
 }
 
@@ -48,6 +49,8 @@ h2{
     font-size: 25px;
     color: #184168;
     filter: blur(2px);
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
   }
 
 h2:hover {
@@ -77,7 +80,7 @@ header{
     z-index: 1;
     background-color: white;
     transition: 0.8s;
-    height: 10vh;
+    height: 10%;
     align-items: center;
     justify-content: center;
 }
@@ -91,13 +94,13 @@ header.active{
     top: 0;
     background-color: transparent;
     z-index: -100;
-    height: 0vh;
+    height: 0%;
     width: 0vw;
 }
 
 .headerblock.active{
     width: 100vw;
-    height: 10vh; 
+    height: 7.5%; 
     z-index: 100;  
 }
 
@@ -106,10 +109,11 @@ footer{
     margin-top: auto;
     z-index: 800;
     background-color: white;
-    height: 10vh;
+    height: 10%;
     align-items: center;
     justify-content: center;
 }
+
 
 /* - - - - - - */
 
@@ -129,7 +133,7 @@ footer{
 
 .contact-drop{
     width: 100%;
-    height: 90vh;
+    height: 90%;
     padding: 10% 0;
     position: fixed;
     top: -100%;
@@ -163,15 +167,13 @@ footer{
 
 .menu.active{
     background-color: white;
-    height: 80vh;
+    height: 85vh;
     transition: 0.8s;
 }
 
 .menu-drop{
     width: 100%;
-    height: 80vh;
-    padding-bottom: 10%;
-    padding-top: 5%;
+    height: 85vh;
     position: fixed;
     bottom: -100%;
     transition: 0.8s;
