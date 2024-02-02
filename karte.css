@@ -135,6 +135,7 @@ footer{
     width: 100%;
     height: 80%;
     padding: 10% 0;
+    position: fixed;
     top: -100%;
     transition: 0.8s;
 }
@@ -142,6 +143,7 @@ footer{
 .contact-drop.active{
     display: flex;
     flex-direction: column;
+    position: relative;
     transition: 0.8s;
     top: 0;
     justify-content: space-between;
@@ -180,6 +182,7 @@ footer{
 .menu-drop.active{
     display: flex;
     flex-direction: column;
+    position: relative;
     transition: 0.8s;
     bottom: 0;
 }
