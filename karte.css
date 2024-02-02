@@ -169,7 +169,7 @@ footer{
 .menu-drop{
     width: 100%;
     height: 80%;
-    padding-bottom: 10%;
+    padding-bottom: 0%;
     padding-top: 5%;
     position: fixed;
     bottom: -100%;
