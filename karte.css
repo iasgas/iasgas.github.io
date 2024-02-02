@@ -76,7 +76,7 @@ header{
     z-index: 1;
     background-color: white;
     transition: 0.8s;
-    height: 10vh;
+    height: 10%;
     align-items: center;
     justify-content: center;
 }
@@ -90,13 +90,13 @@ header.active{
     top: 0;
     background-color: transparent;
     z-index: -100;
-    height: 0vh;
+    height: 0%;
     width: 0vw;
 }
 
 .headerblock.active{
     width: 100vw;
-    height: 10vh; 
+    height: 10%; 
     z-index: 100;  
 }
 
@@ -105,7 +105,7 @@ footer{
     margin-top: auto;
     z-index: 800;
     background-color: white;
-    height: 10vh;
+    height: 10%;
     align-items: center;
     justify-content: center;
 }
@@ -115,20 +115,20 @@ footer{
 /* Contact */
 .contact{
     background-color: white;
-    height: 0vh;
+    height: 0%;
     z-index: 999;
     transition: 0.8s;
 }
 
 .contact.active{
     background-color: white;
-    height: 90vh;
+    height: 90%;
     transition: 0.8s;
 }
 
 .contact-drop{
     width: 100%;
-    height: 90vh;
+    height: 90%;
     padding: 10% 0;
     position: fixed;
     top: -100%;
@@ -155,20 +155,20 @@ footer{
 /* Projects */
 .menu{
     background-color: white;
-    height: 0vh;
+    height: 0%;
     z-index: 999;
     transition: 0.8s;
 }
 
 .menu.active{
     background-color: white;
-    height: 80vh;
+    height: 80%;
     transition: 0.8s;
 }
 
 .menu-drop{
     width: 100%;
-    height: 80vh;
+    height: 80%;
     padding-bottom: 10%;
     padding-top: 5%;
     position: fixed;
