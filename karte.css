@@ -19,7 +19,7 @@
 
 
 body{
-    min-height: 100%;
+    min-height: 100vh;
     min-width: 100vw;
     display: flex;
     flex-direction: column;
@@ -55,6 +55,7 @@ h2:hover {
     cursor: url(point.svg) 16 16, pointer;
     filter: none;
 }
+
 
 
 a{
