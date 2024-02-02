@@ -127,7 +127,7 @@ footer{
 
 .contact.active{
     background-color: white;
-    height: 90vh;
+    height: 85vh;
     transition: 0.8s;
 }
 
@@ -185,7 +185,6 @@ footer{
     transition: 0.8s;
     position: fixed;
     bottom: 0;
-    margin-top: 0;
 }
 
 .menu-link{
