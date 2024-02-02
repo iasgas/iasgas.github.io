@@ -19,7 +19,7 @@
 
 
 body{
-    height: -webkit-fill-available;
+    min-height: -webkit-fill-available;
     min-width: 100vw;
     display: flex;
     flex-direction: column;
@@ -47,13 +47,15 @@ h2{
     font-family: Print;
     font-size: 25px;
     color: #184168;
+    filter: blur(2px);
   }
 
 h2:hover {
-    font-family: 'Helvetica Neue', sans-serif;
     font-weight: 200;
     cursor: url(point.svg) 16 16, pointer;
+    filter: none;
 }
+
 
 a{
     text-decoration: none;
