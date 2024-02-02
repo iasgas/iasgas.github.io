@@ -48,7 +48,6 @@ h2{
     font-family: Print;
     font-size: 25px;
     color: #184168;
-    filter: blur(2px);
     margin-top: 2.5%;
     margin-bottom: 2.5%;
   }
@@ -56,7 +55,7 @@ h2{
 h2:hover {
     font-weight: 200;
     cursor: url(point.svg) 16 16, pointer;
-    filter: none;
+    font-family: 'Helvetica Neue', sans-serif;
 }
 
 
@@ -127,7 +126,7 @@ footer{
 
 .contact.active{
     background-color: white;
-    height: 85vh;
+    height: 81vh;
     transition: 0.8s;
 }
 
@@ -143,7 +142,7 @@ footer{
 .contact-drop.active{
     display: flex;
     flex-direction: column;
-    position: relative;
+    position: none;
     transition: 0.8s;
     top: 0;
     justify-content: space-between;
