@@ -19,7 +19,7 @@
 
 
 body{
-    min-height: 100vh;
+    height: -webkit-fill-available;
     min-width: 100vw;
     display: flex;
     flex-direction: column;
@@ -50,7 +50,8 @@ h2{
   }
 
 h2:hover {
-    opacity: .5;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 200;
     cursor: url(point.svg) 16 16, pointer;
 }
 
@@ -189,7 +190,7 @@ footer{
     text-indent: 0px;
     align-items: center;
     padding: 0 10%;
-    margin: 1vh 0;
+    margin-top: 8px;
     background-color: white;
     z-index: 1000;
 }
@@ -197,6 +198,17 @@ footer{
 .menu-link:hover{
     text-indent: 15px;
     background-color: transparent;
+}
+
+.dot{
+    display: flex;
+    position: fixed;
+    left: 10vw;
+    align-items: center;
+    height: 12px;
+    width: 12px;
+    border-radius: 12px;
+    background-color: #184168;
 }
 
 
@@ -210,11 +222,19 @@ footer{
     background-color: #184168;
 }
 
+.line:hover{
+    cursor: none;
+}
 
 
+.menu-info{
+    z-index: 1000;
+    background-color: white;
+}
 
 .menu-info:hover{
-    cursor: url(point.svg) 16 16, pointer;
+    background-color: transparent;
+    cursor: none;
 }
 
 .contact-info:hover{
