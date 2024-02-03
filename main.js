@@ -22,13 +22,18 @@ const contactclose= document.querySelector(".contact-close");
 const Menu = document.querySelector(".menu");
 const MenuDrop= document.querySelector(".menu-drop");
 const Name= document.querySelector(".name");
-const Block= document.querySelector(".headerblock");
+const HBlock= document.querySelector(".headerblock");
+const FBlock= document.querySelector(".footerblock");
 const Dot= document.querySelector(".dot");
 const Link= document.querySelector(".menu-link");
+const CenterImg= document.querySelector(".center-container");
 
 Name.addEventListener("click", () => {
     contact.classList.toggle("active")
     contactdrop.classList.toggle("active") 
+    footer.classList.toggle("active")
+    CenterImg.classList.toggle("active") 
+    FBlock.classList.toggle("active")
 })
 
 contactclose.addEventListener("click", () => {
@@ -41,7 +46,7 @@ footer.addEventListener("click", () => {
     MenuDrop.classList.toggle("active")
     header.classList.toggle("active")
     Name.classList.toggle("active")
-    Block.classList.toggle("active")
+    HBlock.classList.toggle("active")
 })
 
 Link.addEventListener("onmouseenter", () => {
