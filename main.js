@@ -39,6 +39,9 @@ Name.addEventListener("click", () => {
 contactclose.addEventListener("click", () => {
     contact.classList.toggle("active")
     contactdrop.classList.toggle("active")
+    footer.classList.toggle("active")
+    CenterImg.classList.toggle("active") 
+    FBlock.classList.toggle("active")
 })
 
 footer.addEventListener("click", () => {
