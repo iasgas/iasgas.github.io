@@ -79,7 +79,7 @@ header{
     display: flex;
     z-index: 1;
     background-color: white;
-    transition: 0.8s;
+    transition: 1s;
     height: 10%;
     align-items: center;
     justify-content: center;
@@ -143,13 +143,13 @@ footer.active{
     background-color: white;
     height: 0vh;
     z-index: 999;
-    transition: 0.8s;
+    transition: 1s;
 }
 
 .contact.active{
     background-color: white;
     height: 75vh;
-    transition: 0.8s;
+    transition: 1s;
 }
 
 .contact-close{
@@ -162,13 +162,13 @@ footer.active{
     padding: 10% 0;
     position: fixed;
     top: -100%;
-    transition: 0.8s;
+    transition: 1s;
 }
 
 .contact-drop.active{
     display: flex;
     flex-direction: column;
-    transition: 0.8s;
+    transition: 1s;
     top: 0;
     justify-content: space-between;
     padding-top: 0%;
@@ -186,13 +186,13 @@ footer.active{
     background-color: white;
     height: 0vh;
     z-index: 999;
-    transition: 0.8s;
+    transition: 1s;
 }
 
 .menu.active{
     background-color: white;
     height: 85vh;
-    transition: 0.8s;
+    transition: 1s;
 }
 
 .menu-drop{
@@ -200,14 +200,14 @@ footer.active{
     height: 85%;
     position: fixed;
     bottom: -100%;
-    transition: 0.8s;
+    transition: 1s;
 }
 
 .menu-drop.active{
     display: flex;
     flex-direction: column;
     position: relative;
-    transition: 0.8s;
+    transition: 1s;
     bottom: 0;
 }
 
@@ -292,7 +292,7 @@ footer.active{
 
 .center-container.active{
     opacity: 0;
-    transition: 0.8s;
+    transition: 1s;
 }
 
 
