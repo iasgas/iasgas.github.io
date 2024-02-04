@@ -165,7 +165,7 @@ h2:hover {
 .title.active{
     z-index: 10;
     position: fixed;
-    margin-top: 140vh;
+    margin-top: 150vh;
     transition: 0.8s;  
 }
 
