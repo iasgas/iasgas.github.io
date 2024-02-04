@@ -5,9 +5,23 @@
     src: url(Fonts/BoogieSchoolSans-Middle3rd.woff)
 }
 
+@font-face {
+    font-family: Tag;
+    src: url(Fonts/DeFontePlus-Normale.woff)
+}
+
+@font-face {
+    font-family: Print;
+    src: url(Fonts/DeFontePlus-Leger.woff)
+}
+
+@import url('https://fonts.cdnfonts.com/css/helvetica-neue-55');
+
+
+
 
 html {
-    font-family: "Boogie"; 
+    font-family: "Print"; 
     font-size: 100%
 }
 
@@ -21,7 +35,6 @@ a:hover,
 a:focus,
 a:active,
 div.item:hover {
-    color: black;
     cursor: url(point.svg) 16 16, pointer;
 }
 
@@ -35,19 +48,32 @@ header {
     background-color: white;
 }
 
+header.active {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+}
+
 li {
     list-style: none;
 }
 
 a {
-    color: #023c00;
+    color: #184168;
+    text-decoration: none;
+}
+
+h4 {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 200;
+    color: #184168;
     text-decoration: none;
 }
 
 .navbar {
     min-height: 70px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding-left: 4%;
     padding-right: 4%;
@@ -68,7 +94,7 @@ a {
 .nav-branding {
     align-items: center;
     font-size: 1.6em;
-    color: #023c00;
+    color: #184168;
 }
 
 
@@ -82,21 +108,23 @@ a {
     justify-content: center;
     align-items: center;
     font-size: 1.6em;
-    color: #023c00;
+    color: #184168;
     margin-bottom: 1em;
 }
 
 .nav-link:hover {
-    color: #abbfae;
+    font-weight: 200;
+    font-family: 'Helvetica Neue', sans-serif;
 }
 
 .nav-info {
     font-size: 1rem;
-    color: #023c00;
+    color: #184168;
 }
 
 .nav-info:hover {
-    color: #abbfae;
+    font-weight: 200;
+    font-family: 'Helvetica Neue', sans-serif;
 }
 
 .textbox {
@@ -104,7 +132,7 @@ a {
     justify-content: center;
     align-items: center;
     text-align:justify;
-    color: #023c00;
+    color: #184168;
     font-size: 1rem;
     margin-left: 10%;
     margin-right: 10%;
@@ -112,9 +140,39 @@ a {
 }
 
 
+
+h2{
+    text-align: center;
+    font-family: Print;
+    font-size: 25px;
+    color: #184168;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+  }
+
+h2:hover {
+    font-weight: 200;
+    cursor: url(point.svg) 16 16, pointer;
+    font-family: 'Helvetica Neue', sans-serif;
+}
+.title{
+    font-family: "Print"; 
+    color: #184168;
+    cursor: url(point.svg) 16 16, pointer;
+    transition: 0.8s;
+}
+
+.title.active{
+    z-index: 10;
+    position: fixed;
+    margin-top: 180vh;
+    transition: 0.8s;  
+}
+
 .hamburger {
     display: none;
     cursor: url(point.svg) 16 16, pointer;
+    
 }
 
 .bar {
@@ -158,14 +216,14 @@ a {
         background-color: rgb(255, 255, 255);
         width: 100%;
         text-align: center;
-        transition: 0.5s;
+        transition: 0.8s;
 
     }
 
     .nav-item {
         margin-top: 16px;
         margin-bottom: 1em;
-        color: #023c00;
+        color: #184168;
         font-size: 1rem;
     }
 
@@ -173,8 +231,8 @@ a {
         height: 100%;
         left: 0;
         top: 0;
-        color: #023c00;
-        padding-top: 10%;
+        color: #184168;
+        padding-top: 0%;
         padding-bottom: 10%;
     }
 
@@ -192,19 +250,20 @@ p{
 }
 
 div.item:hover {
-    color: #abbfae;
+    font-weight: 200;
+    font-family: 'Helvetica Neue', sans-serif;
 }
 
 div.item {
     width: fit-content;
     height: auto;
     margin-top: 0;
-    color: #023c00;
+    color: #184168;
 }
 
 a {
     text-decoration: none;
-    color: #023c00;
+    color: #184168;
     text-align: left;
 }
 

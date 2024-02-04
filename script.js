@@ -1,13 +1,14 @@
-const hamburger = document.querySelector(".hamburger");
+const title = document.querySelector(".title");
 const navMenu = document.querySelector(".nav-menu");
 const navProjectMenu = document.querySelector(".nav-project-menu");
 const items = document.getElementsByClassName("item");
 const header = document.getElementsByTagName("header")[0];
 
-hamburger.addEventListener("click", () => {
-    hamburger.classList.toggle("active")
+title.addEventListener("click", () => {
+    title.classList.toggle("active")
     navMenu.classList.toggle("active")
     navProjectMenu.classList.toggle("active")
+    header.classList.toggle("active")
 })
 
 for (let i = 0; i < items.length; i++) {
@@ -18,8 +19,3 @@ for (let i = 0; i < items.length; i++) {
 
 }
 
-
-document.querySelectorAll(".column").forEach(column=>{
-    column.style.paddingLeft = Math.floor(Math.random() * 6) + 3+ "%"
-    column.style.paddingRight = Math.floor(Math.random() * 6) + 3 + "%"
-  })
