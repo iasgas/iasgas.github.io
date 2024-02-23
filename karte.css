@@ -109,6 +109,7 @@ header{
 }
 
 header.active{
+    transition: 0.8s;
     z-index: -10;
     filter: blur(2px);
 }
@@ -166,13 +167,13 @@ footer.active{
     background-color: white;
     height: 0vh;
     z-index: 999;
-    transition: 1s;
+    transition: 0.8s;
 }
 
 .contact.active{
     background-color: white;
     height: 75vh;
-    transition: 1s;
+    transition: 0.8s;
 }
 
 .contact-close{
@@ -203,27 +204,45 @@ footer.active{
     text-align: center;
 }
 
-.triangle-left {
-    position: flex;
-    left: 0;
-	width: 0;
-	height: 0;
-	border-top: 25px solid transparent;
-	border-right: 100vw solid #9d0e1c;
-	border-bottom: 25px solid transparent;
+    
+.triangle1 {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-right: 180px solid #9d0e1c;
+    border-bottom: 50px solid transparent;
     z-index: -999;
+    border-radius: 0;
 }
 
-.triangle-right {
-    position: flex;
-    right: 0;
-	width: 0;
-	height: 0;
-	border-top: 25px solid transparent;
-	border-left: 100vw solid #9d0e1c;
-	border-bottom: 25px solid transparent;
+.triangle2 {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-left: 120px solid #9d0e1c;
+    border-bottom: 120px solid transparent;
     z-index: -999;
+    border-radius: 0;
 }
+
+.triangle3 {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-right: 70px solid #9d0e1c;
+    border-bottom: 90px solid transparent;
+    z-index: -999;
+    border-radius: 0;
+} 
 
 /* - - - - - - */
 
@@ -232,16 +251,17 @@ footer.active{
     background-color: white;
     height: 0vh;
     z-index: 999;
-    transition: 1s;
-    background-image: url(triangles5.svg);
-    background-size: 100%;
-    background-position-y: 1800px;
+    transition: 0.8s;
+    background-image: url(triangles6.svg);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-position-y: 0;
 }
 
 .menu.active{
     background-color: white;
     height: 85vh;
-    transition: 1s;
+    transition: 0.8s;
 }
 
 .menu-drop{
@@ -249,14 +269,14 @@ footer.active{
     height: 85%;
     position: fixed;
     bottom: -100%;
-    transition: 1s;
+    transition: 0.8s;
 }
 
 .menu-drop.active{
     display: flex;
     flex-direction: column;
     position: relative;
-    transition: 1s;
+    transition: 0.8s;
     bottom: 0;
 }
 
@@ -426,7 +446,7 @@ img {
     }
     
     @keyframes fade {
-      from {opacity: .4}
+      from {opacity: 0.4}
       to {opacity: 1}
     }
     
@@ -443,27 +463,45 @@ img {
 
     }
     
-    .triangle-left {
-        position: flex;
-        left: 0;
-        width: 0;
-        height: 0;
-        border-top: 3vh solid transparent;
-        border-right: 60vw solid #9d0e1c;
-        border-bottom: 3vh solid transparent;
-        z-index: -999;
-    }
     
-    .triangle-right {
-        position: flex;
-        right: 0;
+    .triangle1 {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        top: 0;
         width: 0;
         height: 0;
-        border-top: 3vh solid transparent;
-        border-left: 60vw solid #9d0e1c;
-        border-bottom: 3vh solid transparent;
+        border-right: 180px solid #9d0e1c;
+        border-bottom: 50px solid transparent;
         z-index: -999;
+        border-radius: 0;
     }
+
+    .triangle2 {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        top: 0;
+        width: 0;
+        height: 0;
+        border-left: 120px solid #9d0e1c;
+        border-bottom: 120px solid transparent;
+        z-index: -999;
+        border-radius: 0;
+    }
+
+    .triangle3 {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        top: 0;
+        width: 0;
+        height: 0;
+        border-right: 70px solid #9d0e1c;
+        border-bottom: 90px solid transparent;
+        z-index: -999;
+        border-radius: 0;
+    } 
    
 }
 

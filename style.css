@@ -88,9 +88,9 @@ h4 {
     justify-content: space-between;
     align-items: center;
     gap: 60px;
-    background-image: url(triangles2.svg);
-    background-size: 120%;
-    background-position-y: 1100px;
+    background-image: url(triangles4.svg);
+    background-position: left;
+    background-repeat: no-repeat;
 }
 
 
@@ -424,9 +424,6 @@ div.zoom {
     height: 100%;
     width: 100%;
     background-color: white;
-    background-image: url(triangles4.svg);
-    background-size: 100%;
-    background-position-y: 1000px;
 }
 
 .hidden {
