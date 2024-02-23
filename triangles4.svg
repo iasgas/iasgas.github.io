@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 840">
+  <g id="Layer_1" data-name="Layer 1">
+    <path d="M0,840V280l280,560H0Z" fill="#9d0e1c" stroke-width="0"/>
+    <path d="M560,280H0L560,0v280Z" fill="#9d0e1c" stroke-width="0"/>
+  </g>
+</svg>

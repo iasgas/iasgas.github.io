@@ -18,13 +18,11 @@
     vertical-align: middle;
     width: 100%;
     justify-content: center;
-    transition: 0.5s;
   }
 
   img:hover {
     -webkit-filter: invert(1); /* Chrome, Safari, Opera */
     filter: invert(1);
-    transition: 0.5s;
 }
 
   
@@ -38,8 +36,9 @@
     
     div.zoom img {
         height: auto;
-        width: 80%;
-        margin-left: 10%;
+        width: 90%;
+        margin-left: 0%;
+        margin-top: 0%;
     }
 
     .textbox {
@@ -56,7 +55,6 @@
     img:hover {
       -webkit-filter: invert(0); /* Chrome, Safari, Opera */
       filter: invert(0);
-      transition: 0.5s;
   }
   }
   
@@ -69,8 +67,9 @@
 
     div.zoom img {
         height: auto;
-        width: 90%;
-        margin-left: 5%;
+        width: 100%;
+        margin-left: 0%;
+        margin-top: 0%;
     }
 
     .textbox {
@@ -87,7 +86,6 @@
     img:hover {
       -webkit-filter: invert(0); /* Chrome, Safari, Opera */
       filter: invert(0);
-      transition: 0.5s;
   }
     
     

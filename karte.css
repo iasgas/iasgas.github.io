@@ -47,10 +47,10 @@ body{
 h2{
     text-align: center;
     font-family: 'Helvetica Neue', sans-serif;
-    font-weight: 200;
+    font-weight: 400;
     font-size: 25px;
     color: #000000;
-    margin-top: 2.5%;
+    margin-top: 0%;
     margin-bottom: 2.5%;
   }
 
@@ -58,19 +58,30 @@ h2{
     text-align: center;
     font-family: 'Helvetica Neue', sans-serif;
     font-weight: 200;
-    font-size: 22px;
+    font-size: 18px;
     color: #000000;
-    margin-top: 2.5%;
+    margin-top: 0px;
     margin-bottom: 1px;
   }
 
 h2:hover {
-    font-weight: 200;
     cursor: url(point.svg) 16 16, pointer;
     font-family: 'Helvetica Neue', sans-serif;
+    text-decoration: underline;
 }
 
+h4 {
+    cursor: url(point.svg) 16 16, pointer;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 200;
+    margin-top: 0;
+}
 
+h4:hover {
+    cursor: url(point.svg) 16 16, pointer;
+    font-family: 'Helvetica Neue', sans-serif;
+    text-decoration: underline;
+}
 
 a{
     text-decoration: none;
@@ -82,6 +93,7 @@ a{
     font-size: 12px;
   }
 
+
 /* - - - - - - */
 
 
@@ -90,7 +102,7 @@ header{
     display: flex;
     z-index: 1;
     background-color: white;
-    transition: 1s;
+    transition: 0.8s;
     height: 10%;
     align-items: center;
     justify-content: center;
@@ -173,13 +185,13 @@ footer.active{
     padding: 10% 0;
     position: fixed;
     top: -100%;
-    transition: 1s;
+    transition: 0.8s;
 }
 
 .contact-drop.active{
     display: flex;
     flex-direction: column;
-    transition: 1s;
+    transition: 0.8s;
     top: 0;
     justify-content: space-between;
     padding-top: 0%;
@@ -190,6 +202,29 @@ footer.active{
     justify-content: center;
     text-align: center;
 }
+
+.triangle-left {
+    position: flex;
+    left: 0;
+	width: 0;
+	height: 0;
+	border-top: 25px solid transparent;
+	border-right: 100vw solid #9d0e1c;
+	border-bottom: 25px solid transparent;
+    z-index: -999;
+}
+
+.triangle-right {
+    position: flex;
+    right: 0;
+	width: 0;
+	height: 0;
+	border-top: 25px solid transparent;
+	border-left: 100vw solid #9d0e1c;
+	border-bottom: 25px solid transparent;
+    z-index: -999;
+}
+
 /* - - - - - - */
 
 /* Projects */
@@ -198,6 +233,9 @@ footer.active{
     height: 0vh;
     z-index: 999;
     transition: 1s;
+    background-image: url(triangles5.svg);
+    background-size: 100%;
+    background-position-y: 1800px;
 }
 
 .menu.active{
@@ -341,7 +379,7 @@ img {
     h2{
         text-align: center;
         font-family: 'Helvetica Neue', sans-serif;
-        font-weight: 200;
+        font-weight: 400;
         font-size: 40px;
         color: #000000;
       }
@@ -391,5 +429,42 @@ img {
       from {opacity: .4}
       to {opacity: 1}
     }
+    
   }
+
+  @media (min-width:1024px) { /* big landscape tablets, laptops, and desktops */ 
+
+    .contact-link{
+        text-decoration: none;
+        justify-content: center;
+        text-align: center;
+        margin-left: 20vw;
+        margin-right: 20vw;
+
+    }
+    
+    .triangle-left {
+        position: flex;
+        left: 0;
+        width: 0;
+        height: 0;
+        border-top: 3vh solid transparent;
+        border-right: 60vw solid #9d0e1c;
+        border-bottom: 3vh solid transparent;
+        z-index: -999;
+    }
+    
+    .triangle-right {
+        position: flex;
+        right: 0;
+        width: 0;
+        height: 0;
+        border-top: 3vh solid transparent;
+        border-left: 60vw solid #9d0e1c;
+        border-bottom: 3vh solid transparent;
+        z-index: -999;
+    }
+   
+}
+
 
