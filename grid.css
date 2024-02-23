@@ -20,6 +20,12 @@
     justify-content: center;
   }
 
+  img:hover {
+    -webkit-filter: invert(1); /* Chrome, Safari, Opera */
+    filter: invert(1);
+    transition: 0.5s;
+}
+
   
   /* Responsive layout - makes a two column-layout instead of four columns */
   @media screen and (max-width: 800px) {
