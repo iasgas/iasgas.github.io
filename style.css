@@ -11,7 +11,7 @@
 }
 
 @font-face {
-    font-family: Print;
+    font-family: Boogie;
     src: url(Fonts/DeFontePlus-Leger.woff)
 }
 
@@ -21,7 +21,8 @@
 
 
 html {
-    font-family: "Print"; 
+    font-family: 'Helvetica Neue', sans-serif; 
+    font-weight: 200;
     font-size: 100%
 }
 
@@ -59,14 +60,14 @@ li {
 }
 
 a {
-    color: #184168;
+    color: #000000;
     text-decoration: none;
 }
 
 h4 {
     font-family: 'Helvetica Neue', sans-serif;
     font-weight: 200;
-    color: #184168;
+    color: #000000;
     text-decoration: none;
 }
 
@@ -94,7 +95,7 @@ h4 {
 .nav-branding {
     align-items: center;
     font-size: 1.6em;
-    color: #184168;
+    color: #000000;
 }
 
 
@@ -108,7 +109,7 @@ h4 {
     justify-content: center;
     align-items: center;
     font-size: 1.6em;
-    color: #184168;
+    color: #000000;
     margin-bottom: 1em;
 }
 
@@ -119,7 +120,7 @@ h4 {
 
 .nav-info {
     font-size: 1rem;
-    color: #184168;
+    color: #000000;
 }
 
 .nav-info:hover {
@@ -132,7 +133,7 @@ h4 {
     justify-content: center;
     align-items: center;
     text-align:justify;
-    color: #184168;
+    color: #000000;
     font-size: 1rem;
     margin-left: 10%;
     margin-right: 10%;
@@ -143,9 +144,10 @@ h4 {
 
 h2{
     text-align: center;
-    font-family: Print;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 200;
     font-size: 25px;
-    color: #184168;
+    color: #000000;
     margin-top: 2.5%;
     margin-bottom: 2.5%;
   }
@@ -156,8 +158,9 @@ h2:hover {
     font-family: 'Helvetica Neue', sans-serif;
 }
 .title{
-    font-family: "Print"; 
-    color: #184168;
+    font-family: "'Helvetica Neue', sans-serif"; 
+    font-weight: 200;
+    color: #000000;
     cursor: url(point.svg) 16 16, pointer;
     transition: 0.8s;
 }
@@ -225,7 +228,8 @@ h2:hover {
     .nav-item {
         margin-top: 16px;
         margin-bottom: 1em;
-        color: #184168;
+        color: #000000;
+        font-weight: 200;
         font-size: 1rem;
     }
 
@@ -233,7 +237,7 @@ h2:hover {
         height: 100%;
         left: 0;
         top: 0;
-        color: #184168;
+        color: #000000;
         padding-top: 0%;
         padding-bottom: 10%;
     }
@@ -260,12 +264,12 @@ div.item {
     width: fit-content;
     height: auto;
     margin-top: 0;
-    color: #184168;
+    color: #000000;
 }
 
 a {
     text-decoration: none;
-    color: #184168;
+    color: #000000;
     text-align: left;
 }
 

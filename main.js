@@ -52,6 +52,11 @@ footer.addEventListener("click", () => {
     HBlock.classList.toggle("active")
 })
 
+Name.addEventListener("click", () => {
+navMenu.classList.toggle("active")
+navProjectMenu.classList.toggle("active")
+})
+
 Link.addEventListener("onmouseenter", () => {
     Dot.classList.toggle("active")
 })
