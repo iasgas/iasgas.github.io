@@ -54,6 +54,16 @@ h2{
     margin-bottom: 2.5%;
   }
 
+  h3{
+    text-align: center;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 200;
+    font-size: 22px;
+    color: #000000;
+    margin-top: 2.5%;
+    margin-bottom: 1px;
+  }
+
 h2:hover {
     font-weight: 200;
     cursor: url(point.svg) 16 16, pointer;
@@ -69,7 +79,7 @@ a{
     text-align: center;
     font-family: 'Helvetica Neue', sans-serif;
     font-weight: 200;
-    font-size: 15px;
+    font-size: 12px;
   }
 
 /* - - - - - - */
