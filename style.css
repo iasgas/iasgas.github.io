@@ -89,8 +89,8 @@ h4 {
     align-items: center;
     gap: 60px;
     background-image: url(triangles2.svg);
-    background-size: 100%;
-    background-position-y: 1000px;
+    background-size: 120%;
+    background-position-y: 1100px;
 }
 
 
