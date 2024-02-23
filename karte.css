@@ -268,13 +268,13 @@ footer.active{
     align-items: center;
     padding: 0 10%;
     margin-top: 8px;
-    background-color: white;
+    background-color: transparent;
     z-index: 1000;
 }
 
 .menu-link:hover{
     text-indent: 15px;
-    background-color: transparent;
+
 }
 
 .dot{
