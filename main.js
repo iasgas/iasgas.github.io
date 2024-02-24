@@ -21,6 +21,7 @@ const contactdrop= document.querySelector(".contact-drop");
 const contactclose= document.querySelector(".contact-close");
 const Menu = document.querySelector(".menu");
 const MenuDrop= document.querySelector(".menu-drop");
+const navMenu = document.querySelector(".nav-menu");
 const Name= document.querySelector(".name");
 const HBlock= document.querySelector(".headerblock");
 const FBlock= document.querySelector(".footerblock");
