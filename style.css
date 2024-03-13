@@ -16,13 +16,17 @@
     src: url(Fonts/DeFontePlus-Leger.woff)
 }
 
+@font-face {
+    font-family: grot;
+    src: url(Fonts/akzidenz-grotesk-light.woff)
+}
 
 
 
 
 
 html {
-    font-family: 'Helvetica Neue', sans-serif; 
+    font-family: grot; 
     font-weight: 200;
     font-size: 100%
 }
@@ -68,7 +72,7 @@ a {
 }
 
 h4 {
-    font-family: 'Helvetica Neue', sans-serif;
+    font-family: grot;
     font-weight: 200;
     color: #000000;
     text-decoration: none;
@@ -89,9 +93,7 @@ h4 {
     justify-content: space-between;
     align-items: center;
     gap: 60px;
-    background-image: url(triangles10.svg);
-    background-position: center;
-    background-repeat: no-repeat;
+    background-color: white;
 }
 
 
@@ -121,7 +123,7 @@ h4 {
 
 .nav-link:hover {
     font-weight: 200;
-    font-family: 'Helvetica Neue', sans-serif;
+    font-family: grot;
 }
 
 .nav-info {
@@ -131,7 +133,7 @@ h4 {
 
 .nav-info:hover {
     font-weight: 200;
-    font-family: 'Helvetica Neue', sans-serif;
+    font-family: grot;
 }
 
 .textbox {
@@ -150,7 +152,7 @@ h4 {
 
 h2{
     text-align: center;
-    font-family: 'Helvetica Neue', sans-serif;
+    font-family: grot;
     font-weight: 400;
     font-size: 25px;
     color: #000000;
@@ -161,7 +163,7 @@ h2{
 
 h3{
     text-align: center;
-    font-family: 'Helvetica Neue', sans-serif;
+    font-family: grot;
     font-weight: 350;
     font-size: 15px;
     color: #000000;
@@ -171,19 +173,19 @@ h3{
 
 h2:hover {
     cursor: url(point.svg) 16 16, pointer;
-    font-family: 'Helvetica Neue', sans-serif;
+    font-family: grot;
     text-decoration: underline;
 }
 
 h3:hover {
     cursor: url(point.svg) 16 16, pointer;
-    font-family: 'Helvetica Neue', sans-serif;
+    font-family: grot;
     text-decoration: underline;
 }
 
 
 .title{
-    font-family: "'Helvetica Neue', sans-serif"; 
+    font-family: "grot"; 
     font-weight: 200;
     color: #000000;
     cursor: url(point.svg) 16 16, pointer;
@@ -305,7 +307,7 @@ h3:hover {
 
     h2{
         text-align: center;
-        font-family: 'Helvetica Neue', sans-serif;
+        font-family: grot;
         font-weight: 400;
         font-size: 50px;
         color: #000000;
@@ -315,7 +317,7 @@ h3:hover {
 
       h3{
         text-align: center;
-        font-family: 'Helvetica Neue', sans-serif;
+        font-family: grot;
         font-weight: 350;
         font-size: 30px;
         color: #000000;
@@ -382,7 +384,7 @@ p{
 
 div.item:hover {
     font-weight: 200;
-    font-family: 'Helvetica Neue', sans-serif;
+    font-family: grot;
 }
 
 div.item {
