@@ -15,6 +15,7 @@ function displayImages() {
 }
 
 const header = document.querySelector("header");
+const slideshow = document.querySelector(".slideshow");
 const footer = document.querySelector("footer");
 const contact = document.querySelector(".contact");
 const contactdrop= document.querySelector(".contact-drop");
@@ -35,6 +36,7 @@ Name.addEventListener("click", () => {
     footer.classList.toggle("active")
     CenterImg.classList.toggle("active") 
     FBlock.classList.toggle("active")
+    slideshow.classList.toggle("active")
 })
 
 contactclose.addEventListener("click", () => {
