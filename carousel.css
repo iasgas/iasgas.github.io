@@ -280,14 +280,14 @@ header{
     display: flex;
     z-index: 999;
     background-color: white;
-    transition: 0.8s;
+    transition: 0.6s;
     height: 17.5%;
     align-items: center;
     justify-content: center;
 }
 
 header.active{
-    transition: 0.8s;
+    transition: 0.6s;
     z-index: -10;
     filter: blur(2px);
     margin-bottom: 5vh;
@@ -313,13 +313,13 @@ h2:hover {
     margin-top: 3vh;
     margin-bottom: 0;
     text-align: center;
-    transition: 0.8s;
+    transition: 0.6s;
 }
 
 .name.active{ 
     margin-top: 0;
     margin-bottom: 40vh;
-    transition: 0.8s;
+    transition: 0.6s;
     z-index: 1000;
 }
 
@@ -330,13 +330,13 @@ h2:hover {
     background-color: white;
     height: 0vh;
     z-index: 999;
-    transition: 0.8s;
+    transition: 0.6s;
 }
 
 .contact.active{
     background-color: white;
     height: 90vh;
-    transition: 0.8s;
+    transition: 0.6s;
 }
 
 .contact-close{
@@ -349,14 +349,14 @@ h2:hover {
     padding: 10% 0;
     position: fixed;
     top: -100%;
-    transition: 0.8s;
+    transition: 0.6s;
 }
 
 
 .contact-drop.active{
     display: flex;
     flex-direction: column;
-    transition: 0.8s;
+    transition: 0.6s;
     top: 0;
     padding-top: 0%;
 }
@@ -471,14 +471,14 @@ header{
     display: flex;
     z-index: 999;
     background-color: white;
-    transition: 0.8s;
+    transition: 0.6s;
     height: 10%;
     align-items: center;
     justify-content: center;
 }
 
 header.active{
-    transition: 0.8s;
+    transition: 0.6s;
     z-index: -10;
     filter: blur(2px);
 }
@@ -722,12 +722,12 @@ header.active{
         margin-top: 3vh;
         margin-bottom: 0;
         text-align: center;
-        transition: 0.8s;
+        transition: 0.6s;
     }
     
     .name.active{ 
         margin-bottom: 0;
-        transition: 0.8s;
+        transition: 0.6s;
     }
 }
 
