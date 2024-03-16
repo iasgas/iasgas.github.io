@@ -318,8 +318,9 @@ h2:hover {
 
 .name.active{ 
     margin-top: 0;
-    margin-bottom: 20vh;
+    margin-bottom: 40vh;
     transition: 0.8s;
+    z-index: 1000;
 }
 
 /* - - - - -*/
