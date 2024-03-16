@@ -641,10 +641,9 @@ header.active{
       .carousel__next {
         position: absolute;
         top: 0;
-        margin-top: 37.5%;
+        margin-top: 0;
         width: 50%;
         height: 100%;
-        transform: translateY(-50%);
         font-size: 0;
         outline: 0;
       }
