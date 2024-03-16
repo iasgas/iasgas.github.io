@@ -369,7 +369,7 @@ h2:hover {
     text-indent: 0px;
     align-items: center;
     padding: 0 10%;
-    margin-top: 8px;
+    margin-top: 5px;
     background-color: transparent;
     z-index: 1000;
 }
@@ -381,13 +381,19 @@ h2:hover {
     text-align: left;
 }
 
+.contact-center{
+    z-index: 1000;
+    background-color: white;
+    text-align: center;
+}
+
 .contact-right{
     z-index: 1000;
     background-color: white;
     text-align: right;
 }
 
-.contact-right:hover{
+.contact-right,.contact-center,.contact-left:hover{
     cursor: url(point.svg) 16 16, pointer;
 }
 
@@ -427,7 +433,7 @@ a{
         text-indent: 0px;
         align-items: center;
         padding: 0 30%;
-        margin-top: 8px;
+        margin-top: 5px;
         background-color: transparent;
         z-index: 1000;
 
@@ -437,6 +443,12 @@ a{
         z-index: 1000;
         background-color: white;
         text-align: left;
+    }
+
+    .contact-center{
+        z-index: 1000;
+        background-color: white;
+        text-align: center;
     }
     
     .contact-right{
