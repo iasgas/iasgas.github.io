@@ -60,8 +60,8 @@
   }
 
 .Slideshow{
-    width: 75vw;
-    height: 85vh;
+    height: 55vh;
+    width: 90vw;
     margin: auto;
     margin-top: 0vh;
     padding: 0vh 0vw;
@@ -112,7 +112,7 @@
   .carousel {
     position: relative;
     margin-top: auto;
-    padding-top: 85vh;
+    padding-top: 65vh;
     perspective: 100px;
   }
   
@@ -216,10 +216,8 @@
   .carousel__next {
     position: absolute;
     top: 0;
-    margin-top: 37.5%;
     width: 50%;
     height: 100%;
-    transform: translateY(-50%);
     font-size: 0;
     outline: 0;
   }
@@ -283,7 +281,7 @@ header{
     z-index: 999;
     background-color: white;
     transition: 0.8s;
-    height: 10%;
+    height: 17.5%;
     align-items: center;
     justify-content: center;
 }
@@ -292,6 +290,7 @@ header.active{
     transition: 0.8s;
     z-index: -10;
     filter: blur(2px);
+    margin-bottom: 5vh;
 }
 
 h2{
@@ -311,12 +310,16 @@ h2:hover {
 }
 
 .name{ 
-    margin-top: 2vh;
+    margin-top: 3vh;
+    margin-bottom: 0;
     text-align: center;
+    transition: 0.8s;
 }
 
 .name.active{ 
-    z-index: -5;
+    margin-top: 0;
+    margin-bottom: 20vh;
+    transition: 0.8s;
 }
 
 /* - - - - -*/
@@ -462,6 +465,240 @@ a{
   and (max-device-width: 1600px) 
   and (-webkit-min-device-pixel-ratio: 1) { 
 
+    /* Header */
+header{
+    display: flex;
+    z-index: 999;
+    background-color: white;
+    transition: 0.8s;
+    height: 10%;
+    align-items: center;
+    justify-content: center;
+}
+
+header.active{
+    transition: 0.8s;
+    z-index: -10;
+    filter: blur(2px);
+}
+
+    .Slideshow{
+        width: 75vw;
+        height: 85vh;
+        margin: auto;
+        margin-top: 0vh;
+        padding: 0vh 0vw;
+        justify-content: center;
+        font-family: 'Lato', sans-serif;
+      }
+    
+    .Slideshow.active{
+        z-index: -20;
+      }
+    
+      
+      * {
+        box-sizing: border-box;
+        scrollbar-color: transparent transparent; /* thumb and track color */
+        scrollbar-width: 0px;
+      }
+      
+      *::-webkit-scrollbar {
+        width: 0;
+      }
+      
+      *::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      
+      *::-webkit-scrollbar-thumb {
+        background: transparent;
+        border: none;
+      }
+      
+      * {
+        -ms-overflow-style: none;
+      }
+      
+      li {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+    
+      ol{
+        list-style: none;
+        margin: auto;
+        padding: 0;
+      }
+      
+      .carousel {
+        position: relative;
+        margin-top: auto;
+        padding-top: 85vh;
+        perspective: 100px;
+      }
+      
+      .carousel__viewport {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        overflow-x: scroll;
+        counter-reset: item;
+        overflow-y: hidden;
+        scroll-behavior: smooth;
+        scroll-snap-type: x mandatory;
+      }
+      
+      .carousel__slide {
+        position: relative;
+        flex: 0 0 100%;
+        width: 100%;
+        background-color: rgb(255, 255, 255);
+        counter-increment: item;
+      }
+      
+      .carousel__slide:nth-child(even) {
+        background-color: rgb(255, 255, 255);
+      }
+      
+      .carousel__slide:before {
+        content: counter(item);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%,-40%,70px);
+        color: #fff;
+        font-size: 2em;
+      }
+      
+      .carousel__snapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        scroll-snap-align: center;
+      }
+      
+      @media (hover: hover) {
+        .carousel__snapper {
+          animation-name: tonext, snap;
+          animation-timing-function: ease;
+          animation-duration: 4s;
+          animation-iteration-count: infinite;
+        }
+      
+        .carousel__slide:last-child .carousel__snapper {
+          animation-name: tostart, snap;
+        }
+      }
+      
+      @media (prefers-reduced-motion: reduce) {
+        .carousel__snapper {
+          animation-name: none;
+        }
+      }
+      
+      .carousel:hover .carousel__snapper,
+      .carousel:focus-within .carousel__snapper {
+        animation-name: none;
+      }
+      
+      .carousel__navigation {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        text-align: center;
+      }
+      
+      .carousel__navigation-list,
+      .carousel__navigation-item {
+        display: inline-block;
+      }
+      
+      .carousel__navigation-button {
+        display: inline-block;
+        width: 1rem;
+        height: 1rem;
+        background-color: #000000;
+        background-clip: content-box;
+        border: 0.25rem solid transparent;
+        border-radius: 50%;
+        font-size: 0;
+        transition: transform 0.1s;
+      }
+      
+      .carousel::before,
+      .carousel::after,
+      .carousel__prev,
+      .carousel__next {
+        position: absolute;
+        top: 0;
+        margin-top: 37.5%;
+        width: 50%;
+        height: 100%;
+        transform: translateY(-50%);
+        font-size: 0;
+        outline: 0;
+      }
+      
+      .carousel::before,
+      .carousel__prev {
+        left: 0;
+        cursor: url("cursor_prev.svg") 48 48, w-resize;
+      }
+      
+    
+    
+      .carousel::after,
+      .carousel__next {
+        right: 0;
+        cursor: url("cursor_next.svg") 48 48, w-resize;
+      }
+    
+      .carousel::before,
+      .carousel::after {
+        content: '';
+        z-index: 1;
+        background-color: transparent;
+        background-size: 1.5rem 1.5rem;
+        background-repeat: no-repeat;
+        background-position: center center;
+        color: #fff;
+        font-size: 2.5rem;
+        line-height: 4rem;
+        text-align: center;
+        pointer-events: none;
+      }
+    
+      
+    
+    .container{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        scroll-snap-align: center;
+    }
+    
+    img{
+        position: absolute;
+        margin: auto;
+        right: 0;
+        left: 0;
+        height: 100%;
+        width: auto;
+        align-items: center;
+        scroll-snap-align: center;
+    }
+    
+
     h2{
         text-align: center;
         font-family: grot;
@@ -478,6 +715,18 @@ a{
         font-weight: 200;
         font-size: 20px;
     
+    }
+
+    .name{ 
+        margin-top: 3vh;
+        margin-bottom: 0;
+        text-align: center;
+        transition: 0.8s;
+    }
+    
+    .name.active{ 
+        margin-bottom: 0;
+        transition: 0.8s;
     }
 }
 

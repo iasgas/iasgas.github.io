@@ -10,4 +10,5 @@ Name.addEventListener("click", () => {
     contact.classList.toggle("active")
     contactdrop.classList.toggle("active") 
     slideshow.classList.toggle("active")
+    Name.classList.toggle("active")
 })
