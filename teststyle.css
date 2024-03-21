@@ -1,23 +1,16 @@
-body {
+body{
+    position: fixed;
     width: 100%;
-    height: auto;
-    align-items: center;
-    justify-content: center;
-
+    height: 100%;
+    top: 0;
+    left: 0;
 }
 
-
-.mapdiv {
-    width: 80%;
-    height: auto;
-    align-items: center;
-    justify-content: center;
-    padding-left: 10%;
-    padding-right: 10%;
-
-}
-
-.cls-16 {
-    fill: blue;
-
+.nav-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px 10px;
+    height: 50vh;
+    width: 350px;
 }
