@@ -40,8 +40,16 @@ img{
     font-size: 20px;
 }
 
+
+
 .italic{
     font-size: 12px;
     font-style: italic;
     color: rgb(182, 182, 182);
 }
+
+.italicbig{
+    font-size: 20px;
+    font-style: italic;
+}
+
