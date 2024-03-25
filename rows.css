@@ -53,3 +53,10 @@ img{
     font-style: italic;
 }
 
+@media screen and (max-width: 599px) {
+
+    .news-item-credit{
+        font-size: 13px;
+    }
+
+}
