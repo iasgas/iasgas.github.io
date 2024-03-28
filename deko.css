@@ -4,6 +4,11 @@
 }
 
 @font-face {
+    font-family: GT;
+    src: url(Fonts/GT-Flexa-Standard-Regular.ttf)
+}
+
+@font-face {
     font-family: "GT Planar Trial Rg";
     src: url("https://db.onlinewebfonts.com/t/0a12755836cf12bb56e244daf6428849.eot");
     src: url("https://db.onlinewebfonts.com/t/0a12755836cf12bb56e244daf6428849.eot?#iefix")format("embedded-opentype"),
@@ -17,7 +22,7 @@
 
 
 .haptik {
-    font-family: "GT Planar Trial Rg";
+    font-family: "GT";
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
@@ -28,7 +33,7 @@ body {
     height: 100%;
     width: 100%;
     background: white;
-    font-family: "GT Planar Trial Rg";
+    font-family: "GT";
     line-height: 1;
     color: #000;
     margin: 0;
@@ -81,7 +86,7 @@ div {
 
 a {
     display: block;
-    font-family: "GT Planar Trial Rg";
+    font-family: "GT";
     font-size: 32px;
     font-weight: 500;
     margin: 0 0;
@@ -104,7 +109,7 @@ a {
 
 p {
     display: block;
-    font-family: "GT Planar Trial Rg";
+    font-family: "GT";
     font-size: 32px;
     font-weight: 500;
     margin: 0 0;
@@ -166,7 +171,7 @@ a.links::before {
   }
 
 .submenu {
-    font-family: "GT Planar Trial Rg";
+    font-family: "GT";
     font-size: 32px;
     font-weight: 500;
     margin: 0 0;
@@ -247,7 +252,7 @@ figure {
 
 #contact {
     position: absolute;
-    font-family: "GT Planar Trial Rg";
+    font-family: "GT";
     font-size: 32px;
     font-weight: 500;
     bottom: 0;
