@@ -29,6 +29,9 @@
 }
 
 body {
+    max-width: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
     position: relative;
     height: 100%;
     width: 100%;
@@ -280,11 +283,13 @@ figure {
     width: 100%;
     padding: 2.75vh 3vh;
     z-index: 10;
+    overflow-x: hidden;
 }
 
 #contact,
 footer {
     font-size: clamp(32px, 3.45vh, 64px);
+    overflow-x: hidden;
 }
 
 footer {
@@ -294,7 +299,7 @@ footer {
     padding-bottom: 2.75vh;
     padding-left: 6vh;
     width: 100%;
-    z-index: 1;
+    z-index: 300;
 }
 
 #instagram,
@@ -341,6 +346,7 @@ footer {
 
     #contact {
         padding: 0 0 4.75vw 5vw;
+        overflow-x: hidden;
     }
 
     .image img {
