@@ -64,6 +64,18 @@ div {
     background-color: rgba(0, 0, 0, 0);
 }
 
+.nav-container-right {
+    position: fixed;
+    overflow-y: hidden;
+    top: 0px;
+    right: 0px;
+    padding: 2.75vh 3vh 2.75vh 0;
+    z-index: 200;
+    display: block;
+    font-size: clamp(32px, 3.45vh, 64px);
+    background-color: rgba(0, 0, 0, 0);
+}
+
 .page-container {
     position: relative;
     box-sizing: border-box;
@@ -77,9 +89,17 @@ div {
     padding-left: 0px;
 }
 
+
 .name {
     line-height: 1;
     margin-bottom: 1.75vh;
+
+}
+
+.name-right {
+    line-height: 1;
+    margin-bottom: 1.75vh;
+    text-align: right;
 
 }
 
@@ -130,6 +150,7 @@ p {
     display: flex;
     flex-direction: column;
     height: 0vh;
+    margin-left: -8px;
     transition: 0.5s;
 }
 
@@ -296,6 +317,10 @@ footer {
         max-height: 100%;
     }
 
+    .nav-container-right {
+        display: none;
+    }
+
     .content-margin-top {
         display: none;
     }
@@ -325,6 +350,7 @@ footer {
     footer {
         padding: 0 0 4.75vw 10vw;
     }
+
 
 }
 
