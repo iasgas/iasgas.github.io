@@ -85,6 +85,8 @@ div {
     display: block;
     height: calc(var(--vh, 1vh) * 100);
     width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
     z-index: 20;
     padding-top: 2.75vh;
     padding-right: 0px;
@@ -315,7 +317,7 @@ footer {
     .nav-container {
         position: fixed;
         background: initial;
-        padding: 10vw 5vw 5vw 5vw;
+        padding: 2.75vh 0 2.75vh 3vh;
         font-size: 24px;
         width: 100%;
         height: initial;
