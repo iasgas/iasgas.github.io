@@ -328,13 +328,11 @@ footer {
         display: none;
     }
 
-    .content-margin-top {
+
+    .image{
         display: none;
     }
 
-    .content {
-        display: none;
-    }
 
     .dropdown {
         cursor: url(point.svg) 16 16, pointer;
