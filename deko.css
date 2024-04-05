@@ -1,3 +1,5 @@
+@import url(https://db.onlinewebfonts.com/c/6601fbe65008cbf2efe6b69f04759256?family=GT+Haptik+Bold+Regular);
+
 @font-face {
     font-family: type;
     src: url(Fonts/BPmono.woff)
@@ -17,8 +19,6 @@
         url("https://db.onlinewebfonts.com/t/0a12755836cf12bb56e244daf6428849.ttf")format("truetype"),
         url("https://db.onlinewebfonts.com/t/0a12755836cf12bb56e244daf6428849.svg#GT Planar Trial Rg")format("svg");
 }
-
-@import url(https://db.onlinewebfonts.com/c/6601fbe65008cbf2efe6b69f04759256?family=GT+Haptik+Bold+Regular);
 
 
 .haptik {
@@ -64,7 +64,7 @@ div {
     z-index: 200;
     display: block;
     font-size: clamp(32px, 3.45vh, 64px);
-    background-color: rgba(0, 0, 0, 0);
+    background-color: #00000000;
 }
 
 .nav-container-right {
