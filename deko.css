@@ -263,7 +263,7 @@ figure {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    padding: 6rem;
+    padding: 1rem;
     overflow: clip;
 }
 
