@@ -321,7 +321,7 @@ footer {
     .nav-container {
         position: fixed;
         background: initial;
-        padding: 2.75vh 0 2.75vh 3vh;
+        padding: 2.75svh 0 2.75svh 3svh;
         font-size: 24px;
         width: 100%;
         height: initial;
@@ -344,12 +344,12 @@ footer {
     }
 
     .menu-container.active {
-        height: 30vh;
+        height: 30svh;
         transition: 0.5s;
     }
 
     #contact {
-        padding: 0 0 4.75vw 5vw;
+        padding: 0 0 4.75dvw 5dvw;
         overflow-x: hidden;
     }
 
@@ -358,7 +358,7 @@ footer {
     }
 
     footer {
-        padding: 0 0 4.75vw 10vw;
+        padding: 0 0 4.75dvw 10dvw;
     }
 
 
