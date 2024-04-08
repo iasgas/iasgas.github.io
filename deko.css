@@ -22,8 +22,7 @@
 
 
 html{ 
-    overflow-x: hidden
-}
+    overflow-x: hidden}
 
 .haptik {
     font-family: "GT";
@@ -321,7 +320,7 @@ footer {
     .nav-container {
         position: fixed;
         background: initial;
-        padding: 2.75svh 0 2.75svh 3svh;
+        padding: 2.75vh 0 2.75vh 3vh;
         font-size: 24px;
         width: 100%;
         height: initial;
@@ -344,12 +343,12 @@ footer {
     }
 
     .menu-container.active {
-        height: 30svh;
+        height: 30vh;
         transition: 0.5s;
     }
 
     #contact {
-        padding: 0 0 4.75dvw 5dvw;
+        padding: 0 0 4.75vw 5vw;
         overflow-x: hidden;
     }
 
@@ -358,7 +357,7 @@ footer {
     }
 
     footer {
-        padding: 0 0 4.75dvw 10dvw;
+        padding: 0 0 4.75vw 10vw;
     }
 
 
