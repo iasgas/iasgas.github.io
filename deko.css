@@ -95,6 +95,12 @@ div {
     padding-right: 0px;
     padding-bottom: 2.75vh;
     padding-left: 0px;
+    transition: 0.5s;
+}
+
+.page-container.active{
+    margin-top: -15vh;
+    transition: 0.5s;
 }
 
 
@@ -291,6 +297,7 @@ figure {
     overflow-x: hidden;
 }
 
+
 #contact,
 footer {
     font-size: clamp(32px, 3.45vh, 64px);
@@ -306,6 +313,8 @@ footer {
     width: 100%;
     z-index: 300;
 }
+
+
 
 #instagram,
 #tel,
