@@ -327,6 +327,10 @@ footer {
 
 
 @media screen and (max-width: 599px) {
+    html{ 
+        overflow-y: hidden
+    }
+
     .nav-container {
         position: fixed;
         background: initial;
