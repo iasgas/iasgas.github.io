@@ -22,7 +22,8 @@
 
 
 html{ 
-    overflow-x: hidden}
+    overflow-x: hidden
+}
 
 .haptik {
     font-family: "GT";
@@ -341,7 +342,7 @@ footer {
     }
 
     .page-container.active{
-        margin-top: -12vh;
+        margin-top: -13vh;
         transition: 0.5s;
     }
 
