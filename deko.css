@@ -327,8 +327,22 @@ footer {
 
 
 @media screen and (max-width: 599px) {
+
     html{ 
-        overflow-y: hidden
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        transition-duration: 0.5s;
+    }
+
+    html.active{ 
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transition-duration: 0.5s;
     }
 
     .nav-container {
@@ -345,10 +359,6 @@ footer {
         display: none;
     }
 
-    .page-container.active{
-        margin-top: -14vh;
-        transition: 0.5s;
-    }
 
 
     .image{

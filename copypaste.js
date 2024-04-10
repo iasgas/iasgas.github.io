@@ -3,6 +3,7 @@ const menu = document.querySelector(".menu-container");
 const contact = document.querySelector("#contact");
 const footer = document.querySelector("footer");
 const container = document.querySelector(".page-container");
+const html = document.querySelector("html");
 
 
 Projects.addEventListener("click", () => {
@@ -11,5 +12,5 @@ Projects.addEventListener("click", () => {
 
 
 contact.addEventListener("click", () => {
-    container.classList.toggle("active")
+    html.classList.toggle("active")
 })
