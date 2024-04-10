@@ -342,7 +342,7 @@ footer {
     }
 
     .page-container.active{
-        margin-top: -13vh;
+        margin-top: -14vh;
         transition: 0.5s;
     }
 
