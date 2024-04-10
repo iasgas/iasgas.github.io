@@ -99,7 +99,7 @@ div {
 }
 
 .page-container.active{
-    margin-top: -13vh;
+    margin-top: -10vh;
     transition: 0.5s;
 }
 
