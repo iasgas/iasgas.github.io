@@ -53,6 +53,8 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background-color: rgb(255, 255, 255);
+    overflow-y: scroll;
+    scroll-margin-inline-end: 0;
 }
 
 body.active {
@@ -317,7 +319,6 @@ footer {
     padding-left: 6vh;
     width: 100%;
     z-index: 300;
-    scroll-margin-bottom: 0;
 }
 
 
