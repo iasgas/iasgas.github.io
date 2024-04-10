@@ -317,6 +317,7 @@ footer {
     padding-left: 6vh;
     width: 100%;
     z-index: 300;
+    scroll-margin-bottom: 0;
 }
 
 
