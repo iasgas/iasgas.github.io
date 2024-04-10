@@ -329,6 +329,7 @@ footer {
 @media screen and (max-width: 599px) {
 
     html{ 
+        overflow-y: hidden;
         position: fixed;
         top: 0;
         left: 0;
