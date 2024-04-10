@@ -340,6 +340,11 @@ footer {
         display: none;
     }
 
+    .page-container.active{
+        margin-top: -12vh;
+        transition: 0.5s;
+    }
+
 
     .image{
         display: none;
