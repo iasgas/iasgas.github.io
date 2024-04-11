@@ -53,9 +53,6 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background-color: rgb(255, 255, 255);
-    scroll-snap-type: y mandatory;
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
 }
 
 body.active {
