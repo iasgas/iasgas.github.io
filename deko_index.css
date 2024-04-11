@@ -22,7 +22,7 @@
 
 
 html{ 
-    overflow-x: hidden
+    overflow-x: hidden;
 }
 
 .haptik {
@@ -54,6 +54,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
     background-color: rgb(255, 255, 255);
 }
+
 
 
 div {
@@ -300,6 +301,7 @@ figure {
 }
 
 
+
 #contact,
 footer {
     font-size: clamp(32px, 3.45vh, 64px);
@@ -330,11 +332,9 @@ footer {
 @media screen and (max-width: 599px) {
 
     html{ 
-        position: relative;
-        top: 0;
-        left: 0;
-        right: 0;
+        overflow-y: hidden;
     }
+
 
     body.active {
         height: 100svh;
@@ -387,6 +387,3 @@ footer {
 
 
 }
-
-
-
