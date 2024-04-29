@@ -323,6 +323,14 @@ footer {
     padding: 2.75vh 0 2.75vh 3vh;
 }
 
+.projectfooter-right {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    text-align: right;
+    padding: 2.75vh 3vh 2.75vh 0;
+}
+
 
 
 #instagram,
