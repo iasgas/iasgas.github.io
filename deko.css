@@ -109,14 +109,12 @@ div {
 .name {
     line-height: 1;
     margin-bottom: 1.75vh;
-
 }
 
 .name-right {
     line-height: 1;
     margin-bottom: 1.75vh;
     text-align: right;
-
 }
 
 
@@ -130,6 +128,7 @@ a {
     color: #000000;
     cursor: url(point.svg) 16 16, pointer;
 }
+
 
 .right{
     margin-right: 0;
