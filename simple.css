@@ -148,7 +148,7 @@ div {
     align-content: end;
     bottom: 0px;
     right: 0px;
-    padding: 2.75 3vh 2.75vh 0;
+    padding: 2.75vh 3vh 2.75vh 0;
     z-index: 200;
     display: block;
     font-size: clamp(32px, 3.45vh, 64px);
