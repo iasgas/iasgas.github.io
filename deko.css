@@ -131,17 +131,6 @@ a {
     cursor: url(point.svg) 16 16, pointer;
 }
 
-p {
-    display: block;
-    font-family: "GT";
-    font-size: 32px;
-    font-weight: 500;
-    margin: 0 0;
-    text-decoration: none;
-    color: #000000;
-    cursor: url(point.svg) 16 16, pointer;
-    line-height: 1;
-}
 
 .right{
     margin-right: 0;
