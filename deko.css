@@ -131,7 +131,7 @@ a {
     cursor: url(point.svg) 16 16, pointer;
 }
 
-h1 {
+p {
     display: block;
     font-family: "GT";
     font-size: 32px;
