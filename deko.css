@@ -72,6 +72,7 @@ div {
     background-color: #00000000;
 }
 
+
 .nav-container-right {
     position: fixed;
     overflow-y: hidden;
@@ -124,6 +125,7 @@ a {
     font-size: 32px;
     font-weight: 500;
     margin: 0 0;
+    padding-top: 12px;
     text-decoration: none;
     color: #000000;
     cursor: url(point.svg) 16 16, pointer;
