@@ -126,8 +126,6 @@ img {
 
 
 
-
-
 div {
     display: block;
 }
@@ -196,6 +194,18 @@ a {
     font-weight: 500;
     margin: 0 0;
     padding-top: 12px;
+    text-decoration: none;
+    color: #000000;
+    cursor: url(point.svg) 16 16, pointer;
+    line-height: 1;
+}
+
+h1 {
+    display: block;
+    font-family: "GT";
+    font-size: 32px;
+    font-weight: 500;
+    margin: 0 0;
     text-decoration: none;
     color: #000000;
     cursor: url(point.svg) 16 16, pointer;
