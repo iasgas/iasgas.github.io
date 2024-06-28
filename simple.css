@@ -120,7 +120,7 @@ img {
 }
 
 .hover-title:hover{
-    color: blue;
+    text-decoration-color: blue;
 }
 
 
