@@ -119,13 +119,12 @@ img {
     visibility: visible;
 }
 
-.hover-title:hover{
-    text-decoration-color: blue;
+.hover-title a:hover{
+    color: #0040ff;
 }
 
-.hover-text:hover{
-    text-decoration-color: blue;
-}
+
+
 
 
 
