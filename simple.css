@@ -119,8 +119,8 @@ img {
     visibility: visible;
 }
 
-.hover-title-1:hover{
-    text-decoration: line-through;
+.hover-title:hover{
+    color: blue;
 }
 
 
