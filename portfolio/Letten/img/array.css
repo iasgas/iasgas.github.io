@@ -1,0 +1,189 @@
+@font-face {
+    font-family: GT;
+    src: url(../../../Fonts/LL\ Riforma\ Regular.otf)
+}
+
+html{ 
+    overflow-x: hidden;
+}
+
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background: white;
+  font-family: "GT";
+  line-height: 1;
+  color: #000;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: clamp(16px, 1.725vh, 32px);
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(255, 255, 255);
+}
+
+.nav-container {
+  position: fixed;
+  overflow-y: hidden;
+  top: 0px;
+  left: 0px;
+  padding: 2.75vh 0 2.75vh 3vh;
+  z-index: 200;
+  width: calc(100vw/4);
+  display: block;
+  font-size: clamp(32px, 3.45vh, 64px);
+  background-color: #00000000;
+}
+
+.textbox{
+  position: fixed;
+  overflow-y: hidden;
+  top: 15vh;
+  left: calc(100vw/4);
+  right: calc(100vw/2);
+  padding: 0 0 0 3vh;
+  z-index: 200;
+  display: block;
+  font-size: clamp(32px, 3.45vh, 64px);
+  background-color: #00000000;
+}
+
+p{
+  display: block;
+  font-family: "GT";
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0 0;
+  text-decoration: none;
+  color: #000000;
+  cursor: url(point.svg) 16 16, pointer;
+  line-height: 1;
+}
+
+.nav-container-middle {
+  position: fixed;
+  overflow-y: hidden;
+  top: 0px;
+  left: calc(100vw/2);
+  padding: 2.75vh 0 2.75vh 3vh;
+  z-index: 200;
+  display: block;
+  font-size: clamp(32px, 3.45vh, 64px);
+  background-color: #00000000;
+}
+
+.name {
+  line-height: 1;
+}
+
+
+a {
+  display: block;
+  font-family: "GT";
+  font-size: 32px;
+  font-weight: 500;
+  margin: 0 0;
+  text-decoration: none;
+  color: #000000;
+  cursor: url(point.svg) 16 16, pointer;
+  line-height: 1;
+}
+
+.subtitle-container {
+  position: fixed;
+  overflow-y: hidden;
+  top: 15vh;
+  left: 0;
+  width: calc(100vw/4);
+  padding: 0 0 0 3vh;
+  z-index: 200;
+  display: block;
+  font-size: clamp(32px, 3.45vh, 64px);
+  background-color: #00000000;
+}
+
+.subtitle {
+  display: block;
+  font-family: "GT";
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 0;
+  text-decoration: none;
+  color: #000000;
+  cursor: url(point.svg) 16 16, pointer;
+  line-height: 1;
+}
+
+.container{
+  background-color: transparent;
+  border: none;
+  display: flex;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 60vw;
+  height: 60vh;
+}
+
+.container-right{
+  background-color: transparent;
+  border: none;
+  display: block;
+  position: fixed;
+  top: 15vh;
+  bottom: 15vh;
+  left: 0;
+  padding: 0 0 0 3vh;
+  z-index: 5;
+  flex-direction: column;
+  width: calc(100vw/2);
+  height: calc(100vh - 30vh);
+}
+
+.container-bottom{
+  background-color: transparent;
+  border: none;
+  display: block;
+  position: fixed;
+  top: 15vh;
+  bottom: 15vh;
+  left: calc(100vw/2);
+  width: calc(calc(100vw * 0.66) - 3vh);
+  padding: 0 0 0 3vh;
+  z-index: 5;
+  flex-direction: column;
+  height: auto;
+}
+
+.container-right img{
+  width: 100%;
+  height: 100%;
+  vertical-align: top;
+  object-fit: cover;
+  object-position: left;
+}
+
+.container-bottom img{
+  width: 100%;
+  height: 100%;
+  vertical-align: top;
+  object-fit: contain;
+  object-position: left;
+}
+
+
+
+
