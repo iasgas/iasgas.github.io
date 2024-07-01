@@ -205,7 +205,18 @@ a {
     line-height: 1;
 }
 
-
+h1{
+    display: block;
+    font-family: "GT";
+    font-size: 28px;
+    font-weight: 400;
+    margin: 0 0;
+    padding-top: 12px;
+    text-decoration: none;
+    color: #000000;
+    cursor: url(point.svg) 16 16, pointer;
+    line-height: 1;
+}
 
 
 .right{
@@ -429,7 +440,7 @@ footer {
     }
     
     .nav-container-right {
-        display: none;
+        padding-bottom: 60vh;
     }
 
     #contact {
@@ -439,6 +450,7 @@ footer {
 
     a {
         padding-top: 0px;
+        font-size: 14px;
     }
 
     footer {
