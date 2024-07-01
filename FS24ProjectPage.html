@@ -72,11 +72,11 @@
         </div>
         <nav x-show="$store.menu" class="flex bg-white w-screen md:w-48 justify-end">
             <div class="flex flex-col w-48 p-2">
-                <div><a href="index.html">Home</a></div>
                 <div><a href="#">To Meet</a></div>
                 <div><a href="HS23ProjectPage.html">Dolder Sports</a></div>
                 <div><a href="FS23ProjectPage.html">Neue Hard</a></div>
                 <div><a href="#">Letten</a></div>
+                <div><a href="HS22ProjectPage.html">Geroldsareal</a></div>
             </div>
         </nav>
     </header>
@@ -257,9 +257,8 @@
                 <section class="column center sticky top-0 bg-white md:relative nopt mpt flex flex-col justify-center">
                     <div x-ref="center" class="lg:relative w-full flex flex-wrap">
                         <div @click="scrollTo('images', 'left')" class="pr-4 link uppercase"
-                            :class="{active: left == 'images' }">Images</div>
-                        <div @click="scrollTo('text', 'right')" class="pr-4 link" :class="{active: right == 'text' }">
-                            TEXT</div>
+                            :class="{active: left == 'images' }"><a>Images</a></div>
+                        <div class="pr-4 link"><a href="index.html">HOME</a></div>
                     </div>
                     <h1><em>Shifting Ground</em></h1>
                     <div class="relative z-10">
