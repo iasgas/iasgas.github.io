@@ -58,8 +58,7 @@
 
 
 
-                <section class="column nopt left scroll autoscroll-col" @mousemove="autoIntervalTest = false"
-                    @mouseleave="autoIntervalTest = true" :style="offsetTop">
+                <section class="column left scroll" :style="offsetTop">
                     <div x-show="$screen('md') || left == 'images'" id="images" class="mb-8">
 
                         <div class="w-full mb-2 overflow-hidden">
@@ -139,7 +138,7 @@
                 </section>
 
                 <section class="column right scroll" :style="offsetTop">
-                    <div x-show="right == 'text'" id="text" class="mb-5">
+                    <div x-show="right == 'text'" class="mb-5">
                         <a href="#">Revealing Encounters&nbsp;/&nbsp;Summer school in Gandria&nbsp;/&nbsp;2024</a><br><br>
                         <a href="FS24ProjectPage.html">Shifting Ground&nbsp;/&nbsp;Studio Concrete Garden&nbsp;/&nbsp;2024</a><br><br>
                         <a href="HS23ProjectPage.html">Dolder Sports&nbsp;/&nbsp;Studio Maria Conen&nbsp;/&nbsp;2023</a><br><br>
