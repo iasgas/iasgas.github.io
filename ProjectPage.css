@@ -410,6 +410,11 @@ video {
     text-justify: inter-word;
 }
 
+.mb-5 {
+    margin-bottom: 1rem;
+    font-size: medium;
+}
+
 .mb-8 {
     margin-bottom: 2rem
 }
