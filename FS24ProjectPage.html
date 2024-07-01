@@ -38,23 +38,11 @@
 
 <body x-cloak x-data :class="{ 'text-base': !$store.textsize.active, 'text-large': $store.textsize.active }">
     <header x-cloak @click.away="$store.menu = false" x-data="{ 
-    activeMenu: 'home-from-home',
     page: window.location.pathname.split('/').length,
     language: 'de',
     setMenu() {
         $store.menu = false    },
-    changeLang(lang) {
-        let split = window.location.pathname.split('/');
-        if(lang == 'en') {
-            split[2] = 'en';
-            let newpath = split.join('/');
-            window.location = newpath;
-        } else {
-            split[2] = 'de';
-            let newpath = split.join('/');
-            window.location = newpath;
-        }
-    }
+
 }" x-init="setMenu" :class="activeMenu" style="--subcolor: rgb(114, 114, 114)"
         class="text-darkgray z-50 fixed right-0 top-0 uppercase">
         <div class="absolute top-0 right-0 w-28 justify-end p-2 flex">
@@ -74,15 +62,12 @@
             <div class="flex flex-col w-48 p-2">
                 <div><a href="index.html">Home</a></div>
                 <div><a
-                        href="#"
-                        :class="{ 'active': activeMenu == 'archiv'}">To Meet</a></div>
+                        href="#">To Meet</a></div>
                 <div><a href="HS23ProjectPage.html">Dolder Sports</a></div>
                 <div><a
-                        href="#"
-                        :class="{ 'active': activeMenu == 'publikationen'}">Neue Hard</a></div>
+                        href="#">Neue Hard</a></div>
                 <div><a
-                        href="#"
-                        :class="{ 'active': activeMenu == 'jahresgaben'}">Letten</a></div>
+                        href="#">Letten</a></div>
             </div>
         </nav>
     </header>
