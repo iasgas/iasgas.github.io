@@ -66,20 +66,7 @@
 
             </div>
         </div>
-        <div x-show="!$store.menu" class="cursor-pointer relative z-60 w-48 p-2 text-right md:text-left"
-            @click="$store.menu = !$store.menu; $store.mobilemenu = false; page = window.location.pathname.split('/').length">
-            <span>Menu</span>
-        </div>
-        <nav x-show="$store.menu" class="flex bg-white w-screen md:w-48 justify-end">
-            <div class="flex flex-col w-48 p-2">
-                <div><a href="#">To Meet</a></div>
-                <div><a href="FS24ProjectPage.html">Shifting Ground</a></div>
-                <div><a href="HS23ProjectPage.html">Dolder Sports</a></div>
-                <div><a href="FS23ProjectPage.html">Neue Hard</a></div>
-                <div><a href="#">Letten</a></div>
-                <div><a href="HS22ProjectPage.html">Geroldsareal</a></div>
-            </div>
-        </nav>
+
     </header>
     <div id="title"
         class="hidden md:block opacity-0 pointer-events-none fixed top-0 left-0 w-full h-screen text-gray p-2">
