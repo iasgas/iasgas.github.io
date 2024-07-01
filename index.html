@@ -1,95 +1,312 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tobias&nbsp;Gasser</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="canonical" href="https://halle-fuer-kunst.de/public/de/archiv">
+    <title>Archiv – Halle für Kunst</title>
+    <link href="ProjectPage.css" rel="stylesheet">
 
-    <link rel="icon" type="image/x-icon" href="point.svg">
-
-    <link rel="stylesheet" href="simple.css">
-
+    <script type="text/javascript">
+        var _paq = window._paq || [];
+        /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+        _paq.push(["trackPageView"]);
+        _paq.push(["enableLinkTracking"]);
+        (function () {
+            var u = "//analytics.fm-a.dk/";
+            _paq.push(["setTrackerUrl", u + "matomo.php"]);
+            _paq.push(["setSiteId", "5"]);
+            var d = document
+                , g = d.createElement("script")
+                , s = d.getElementsByTagName("script")[0];
+            g.type = "text/javascript";
+            g.async = true;
+            g.defer = true;
+            g.src = u + "matomo.js";
+            s.parentNode.insertBefore(g, s);
+        }
+        )();
+    </script>
+    <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "WebSite",
+                "name": "Halle für Kunst",
+                "url": "https://halle-fuer-kunst.de/public/de",
+                "image": "https://halle-fuer-kunst.de/public/media/pages/archiv/20-jahre-halle-fuer-kunst-lueneburg/b53c04d4b0-1718869395/52-600x400-1280x.jpg",
+            }</script>
+    <script src="https://unpkg.com/infinite-scroll@4/dist/infinite-scroll.pkgd.min.js"></script>
 </head>
 
-
-<body>
-
-    <div class="nav-container">
-
-        <div class="name">
-            <h1 href="index.html">Tobias Andri <br> Gasser
-            </h1>
-        </div>
-    </div>
-
-    <div class="nav-container-right">
-
-        <div class="name-right">
-
-            <div class="hover-title"> 
-                <a href="#" class="hover-text">Revealing Encounters&nbsp;/&nbsp;Summer school in Gandria&nbsp;/&nbsp;2024</a>
-            </div>
-            <div class="hover-image"> 
-                <img src="CAROUSEL/Gandria_Brunnen.jpg" alt="">
-            </div>
-
-            <div class="hover-title"> 
-                <a href="FS24ProjectPage.html" class="hover-text">Shifting Ground&nbsp;/&nbsp;Studio Concrete Garden&nbsp;/&nbsp;2024</a>
-            </div>
-            <div class="hover-image"> 
-                <img src="portfolio/Neophytes/img/Turm_040624-web.jpg" alt="">
-            </div>
-
-            <div class="hover-title"> 
-                <a href="HS23ProjectPage.html" class="hover-text">Dolder Sports&nbsp;/&nbsp;Studio Maria Conen&nbsp;/&nbsp;2023</a>
-            </div>
-            <div class="hover-image"> 
-                <img src="portfolio/Dolder/img/Modellfoto_3-web.jpg" alt="">
-            </div>
-
-            <div class="hover-title"> 
-                <a href="FS23ProjectPage.html" class="hover-text">Neue Hard&nbsp;/&nbsp;Studio Roger Boltshauser&nbsp;/&nbsp;2023</a>
-            </div>
-            <div class="hover-image"> 
-                <img src="portfolio/NeueHard/img/11.jpg" alt="">
-            </div>
-
-            <div class="hover-title"> 
-                <a href="SD23ProjectPage.html" class="hover-text">Dynamo&nbsp;/&nbsp;Structural Design&nbsp;/&nbsp;2023</a>
-            </div>
-            <div class="hover-image"> 
-                <img src="portfolio/Letten/img/TreppenhausDetail-web.jpg" alt="">
-            </div>
-
-            <div class="hover-title"> 
-                <a href="HS22ProjectPage.html" class="hover-text">Geroldsareal&nbsp;/&nbsp;Studio Roger Boltshauser&nbsp;/&nbsp;2022</a>
-            </div>
-            <div class="hover-image"> 
-                <img src="portfolio/Geroldsareal/img/Innenrender_Tobias_Gasser-web.jpg" alt="">
+<body x-data :class="{ 'text-base': !$store.textsize.active, 'text-large': $store.textsize.active }">
+    <header x-cloak @click.away="$store.menu = false" x-data="{ 
+    activeMenu: 'archiv',
+    page: window.location.pathname.split('/').length,
+    language: 'de',
+    setMenu() {
+        $store.menu = false    },
+    changeLang(lang) {
+        let split = window.location.pathname.split('/');
+        if(lang == 'en') {
+            split[2] = 'en';
+            let newpath = split.join('/');
+            window.location = newpath;
+        } else {
+            split[2] = 'de';
+            let newpath = split.join('/');
+            window.location = newpath;
+        }
+    }
+}" x-init="setMenu" :class="activeMenu" style="--subcolor: rgb(114, 114, 114)"
+        class="text-darkgray z-50 fixed right-0 top-0 uppercase">
+        <div class="absolute top-0 right-0 w-28 justify-end p-2 flex">
+            <div class="flex z-20">
+                <div x-show="!$store.textsize.active && $screen('md')" @click="$store.textsize.toggle()"
+                    class="pr-4 cursor-pointer">
+                    <span class="text-small">a</span>
+                    &rarr;A
+                </div>
+                <div x-show="$store.textsize.active && $screen('md')" @click="$store.textsize.toggle()"
+                    class="pr-4 cursor-pointer">
+                    A &rarr;<span class="text-base">a</span>
+                </div>
             </div>
         </div>
+
+    </header>
+    <div id="title"
+        class="hidden md:block opacity-0 pointer-events-none fixed top-0 left-0 w-full h-screen text-gray p-2">
+        <h1 class="text-big absolute left-2 transition-all duration-1000">TOBIAS</h1>
+        <h1 class="text-big text-center w-1/3 absolute left-1/3 transition-all duration-1000 lg:pr-48">ANDRI</h1>
+        <h1 class="text-big text-right w-1/3 absolute left-2/3 transition-all duration-1000 pr-2 lg:pr-48">GASSER</h1>
     </div>
-
-
-    <div class="page-container">
-
-        <div id="contact" >Contact</div>
-
+    <div id="hometitle"
+        class="hidden opacity-0 uppercase pointer-events-none p-2 fixed bottom-0 md:bottom-auto md:top-1/2 left-1/2 transform -translate-x-1/2 md:-translate-y-1/2 md:flex justify-between"
+        style="color: rgb(0,0,0)">
+        <h1 class="lg:text-big">HALLE &nbsp;FÜR</h1>
+        <h1 class="lg:text-big">&nbsp;KUNST &nbsp;Lüneburg</h1>
     </div>
+    <div id="hometitle"
+        class="mobile opacity-0 uppercase pointer-events-none p-2 w-full h-full fixed top-0 pt-36 left-0 flex md:hidden flex-col justify-between"
+        style="color: rgb(0,0,0)">
+        <div class="flex justify-between">
+            <h1 class="lg:text-big">HALLE</h1>
+            <h1 class="relative top-16">FÜR</h1>
+            <h1 class="relative top-80">KUNST</h1>
+        </div>
+        <h1 class="w-full text-right">Lüneburg</h1>
+    </div>
+    <div data-barba="wrapper">
+        <main x-cloak x-data="{ 
+            mobilemenu: false,
+            filter: null, 
+            search: false, 
+            checkUrl(name) {
+                var path = window.location.pathname.split('/')[3]
+                var filter = path ? path.split(':')[0] : null;
+                if(filter == 'tag') {
+                    path = window.location.pathname.split('/')[4];
+                    filter = path ? path.split(':')[0] : null;
+                    return filter == name && this.filter == null
+                } else {
+                    return filter == name && this.filter == null
+                }
+            },
+            changeFilter(name) {
+                this.search = false;
+                if(this.filter === name) {
+                    this.filter = null;
+                } else {
+                    this.filter = name;
+                }
+            },
 
-    <footer>
-        
-        <div id="mail"><a href="mailto:tobias.gasser1@gmail.com" rel="nofollow">Mail</a></div>
+            
+          }" x-init="filter = null" data-barba="container" data-barba-namespace="projects"
+            class="flex flex-col overflow-x-hidden">
+            <div x-show="!$store.mobilemenu" @click="$store.mobilemenu = !$store.mobilemenu; $store.menu = false"
+                class="block link lg:hidden fixed top-0 left-0 p-2 uppercase cursor-pointer"
+                :class="{ 'z-50 bg-transparent w-auto': $store.menu, 'z-30 bg-white w-full': !$store.menu }">Info
+            </div>
+            <div x-show="$store.mobilemenu || $screen('lg')"
+                class="filters-menu bg-white lg:bg-transparent fixed lg:relative top-0 left-0 lg:top-auto lg:left-0 w-full flex flex-col overflow-y-auto"
+                :class="{ 'z-45 h-screen lg:h-auto': $store.mobilemenu, 'z-40 h-auto lg:h-auto': !$store.mobilemenu }">
+                <div class="link lg:hidden p-2 uppercase mb-4" @click="$store.mobilemenu = false; $store.menu = true">
+                    Close</div>
+                <div class="no-transition z-30 p-2 w-auto lg:fixed lg:top-0 lg:left-0">
+                    <div class="flex flex-col lg:pt-44" @click="$store.mobilemenu = false">
+                        <a class="uppercase pr-4 " href="mailto:tobias.gasser1@gmail.com" rel="nofollow">Mail</a>
+                        <a class="uppercase pr-4" href="https://www.instagram.com/tobiasagasser/" target="_blank">Instagram</a>
+                    </div>
+                </div>
+                <div class="blur-box uppercase lg:fixed w-full lg:w-48 lg:right-0 lg:z-40 lg:pt-44 p-2">
+                    <div>
+                        <form x-cloak x-data="{
+    isvalid: false,
+    val(event) {
+        if(event.target.value.length > 0) {
+            this.isvalid = true;
+        } else {
+            this.isvalid = false
+        }
+    }
+}" class="w-full">
+                            <div class="field flex">
+                                <input @input="val(event)" class="mt-0 flex-grow-1" placeholder="TOBIAS ANDRI GASSER" type="text"
+                                    name="q" value="">
+                                <input x-show="isvalid" class="mt-0 nomt cursor-pointer" type="submit" value="&rarr;">
+                            </div>
+                            <div class="field flex">
+                                <input @input="val(event)" class="mt-0 flex-grow-1" placeholder="Cand. BSC ETHZ" type="text"
+                                    name="q" value="">
+                                <input x-show="isvalid" class="mt-0 nomt cursor-pointer" type="submit" value="&rarr;">
+                            </div>
+                        </form>
+                    </div>
 
-        <div id="instagram"><a href="https://www.instagram.com/tobiasagasser/" target="_blank">Instagram</a></div>
+                </div>
+                <div x-show="filter == 'year' || checkUrl('year')"
+                    class="lg:fixed w-full lg:w-48 lg:h-screen lg:overflow-y-auto lg:pt-76 lg:right-0 p-2 z-30">
+                    
+                </div>
+                <div x-show="filter == 'artist' || checkUrl('subtitle')"
+                    class="lg:fixed w-full lg:w-48 lg:h-screen lg:overflow-y-auto lg:pt-76 lg:right-0 p-2 z-30">
+                </div>
 
-    </footer>
+                <div x-show="filter == 'curators' || checkUrl('curators')"
+                    class="lg:fixed w-full lg:w-48 lg:h-screen lg:overflow-y-auto lg:pt-76 lg:right-0 p-2 z-30">
+                </div>
 
+                <div x-show="filter == 'authors' || checkUrl('authors')"
+                    class="lg:fixed w-full lg:w-48 lg:h-screen lg:overflow-y-auto lg:pt-76 lg:right-0 p-2 z-30">
+                </div>
+
+                <div x-show="filter == 'editors' || checkUrl('editors')"
+                    class="lg:fixed w-full lg:w-48 lg:h-screen lg:overflow-y-auto lg:pt-76 lg:right-0 p-2 z-30">
+                </div>
+
+                <div x-show="filter == 'speakers' || checkUrl('speakers')"
+                    class="lg:fixed w-full lg:w-48 lg:h-screen lg:overflow-y-auto lg:pt-76 lg:right-0 p-2 z-30">
+                </div>
+            </div>
+            
+            <div class="wrapper z-20 flex flex-col md:flex-row w-full lg:pr-48">
+                <section class="hidden md:block column left"></section>
+                <section class="column center">
+                    <div class="infscro">
+                        <a class="infscro__next" href="#"></a>
+                        <div class="infoscro__inner">
+                            <a x-cloak
+                                @mouseenter="$store.teaser.active = true; $store.teaser.src = 'https://halle-fuer-kunst.de/public/media/pages/archiv/nach-h-a-l-l/97230418ba-1718869919/nach-h-a-l-l-hfk-duene-juni-600x.jpg'; $store.teaser.left = event.clientX; $store.teaser.bottom = event.clientY"
+                                @mousemove="$store.teaser.left = event.clientX; $store.teaser.bottom = event.clientY"
+                                @mouseleave="$store.teaser.active = false; $store.teaser.src = null"
+                                @click="$store.teaser.active = false"
+                                href="#"
+                                class="block relative w-full mb-8 text-black group" style="color: rgb()"
+                                id="nach-h-a-l-l">
+                                <h1 class="relative z-10">
+                                    <em>Revealing Encounters</em>
+                                </h1>
+                                <div class="relative z-10">
+                                    <span class="uppercase">Summer school &nbsp;&nbsp;</span>
+                                    <span class="whitespace-nowrap">15. June 2024 – 23. June 2024 </span>
+                                </div>
+                            </a>
+                            <a x-cloak
+                                @mouseenter="$store.teaser.active = true; $store.teaser.src = ''; $store.teaser.left = event.clientX; $store.teaser.bottom = event.clientY"
+                                @mousemove="$store.teaser.left = event.clientX; $store.teaser.bottom = event.clientY"
+                                @mouseleave="$store.teaser.active = false; $store.teaser.src = null"
+                                @click="$store.teaser.active = false"
+                                href="FS24ProjectPage.html"
+                                class="block relative w-full mb-8 text-black group" style="color: rgb()"
+                                id="ausstellungsumbau">
+                                <h1 class="relative z-10">
+                                    <em>Shifting Ground</em>
+                                </h1>
+                                <div class="relative z-10">
+                                    <span class="uppercase">Studio Concrete Garden &nbsp;&nbsp;</span>
+                                    <span class="whitespace-nowrap">Spring 2024 </span>
+                                </div>
+                            </a>
+                            <a x-cloak
+                                @mouseenter="$store.teaser.active = true; $store.teaser.src = 'https://halle-fuer-kunst.de/public/media/pages/archiv/a-minute-or-two/3e0c12c2f0-1718869918/dsc3185-600x.jpg'; $store.teaser.left = event.clientX; $store.teaser.bottom = event.clientY"
+                                @mousemove="$store.teaser.left = event.clientX; $store.teaser.bottom = event.clientY"
+                                @mouseleave="$store.teaser.active = false; $store.teaser.src = null"
+                                @click="$store.teaser.active = false"
+                                href="HS23ProjectPage.html"
+                                class="block relative w-full mb-8 text-black group" style="color: rgb()"
+                                id="a-minute-or-two">
+                                <h1 class="relative z-10 ">Dolder Sports </h1>
+                                <div class="relative z-10">
+                                    <span class="uppercase">Studio Maria Conen &nbsp;&nbsp;</span>
+                                    <span class="whitespace-nowrap">Autumn 2023 </span>
+                                </div>
+                            </a>
+                            <a x-cloak
+                                @mouseenter="$store.teaser.active = true; $store.teaser.src = 'https://halle-fuer-kunst.de/public/media/pages/archiv/home-from-home/19c51cb758-1718869918/home-from-home-600x.jpg'; $store.teaser.left = event.clientX; $store.teaser.bottom = event.clientY"
+                                @mousemove="$store.teaser.left = event.clientX; $store.teaser.bottom = event.clientY"
+                                @mouseleave="$store.teaser.active = false; $store.teaser.src = null"
+                                @click="$store.teaser.active = false"
+                                href="FS23ProjectPage.html"
+                                class="block relative w-full mb-8 text-black group" style="color: rgb()"
+                                id="home-from-home">
+                                <h1 class="relative z-10">
+                                    <em>Neue Hard</em>
+                                </h1>
+                                <div class="relative z-10">
+                                    <span class="uppercase">Studio Roger Boltshauser &nbsp;&nbsp;</span>
+                                    <span class="whitespace-nowrap">Spring 2023 </span>
+                                </div>
+                            </a>
+                            <a x-cloak
+                                @mouseenter="$store.teaser.active = true; $store.teaser.src = ''; $store.teaser.left = event.clientX; $store.teaser.bottom = event.clientY"
+                                @mousemove="$store.teaser.left = event.clientX; $store.teaser.bottom = event.clientY"
+                                @mouseleave="$store.teaser.active = false; $store.teaser.src = null"
+                                @click="$store.teaser.active = false"
+                                href="SD23ProjectPage.html"
+                                class="block relative w-full mb-8 text-black group" style="color: rgb()"
+                                id="oeffnungszeiten-feiertage">
+                                <h1 class="relative z-10">
+                                    <em>Letten</em>
+                                </h1>
+                                <div class="relative z-10">
+                                    <span class="uppercase">Structural Design &nbsp;&nbsp;</span>
+                                    <span class="whitespace-nowrap">Spring 2023 </span>
+                                </div>
+                            </a>
+                            <a x-cloak
+                                @mouseenter="$store.teaser.active = true; $store.teaser.src = 'https://raw.github.com/iasgas/image-repo/CAROUSEL/11.jpg'; $store.teaser.left = event.clientX; $store.teaser.bottom = event.clientY"
+                                @mousemove="$store.teaser.left = event.clientX; $store.teaser.bottom = event.clientY"
+                                @mouseleave="$store.teaser.active = false; $store.teaser.src = null"
+                                @click="$store.teaser.active = false"
+                                href="HS22ProjectPage.html"
+                                class="block relative w-full mb-8 text-black group" style="color: rgb()"
+                                id="weihnachtsfeier-jahresgaben-2023">
+                                <h1 class="relative z-10">
+                                    <em>Geroldsareal</em>
+                                </h1>
+                                <div class="relative z-10">
+                                    <span class="uppercase">Studio Roger Boltshauser &nbsp;&nbsp;</span>
+                                    <span class="whitespace-nowrap">Autumn 2022 </span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="h-20"></div>
+                </section>
+                <section class="hidden md:block column right"></section>
+            </div>
+            <div x-cloak x-show="$store.teaser.active && $store.teaser.src && $screen('md')"
+                class="fixed z-30 max-w-prose h-96 pointer-events-none transform -translate-y-1/2"
+                :style="`top: ${$store.teaser.bottom}px; left: ${$store.teaser.left}px`">
+                <img class="h-full w-auto" :src="$store.teaser.src" alt="teaser" />
+            </div>
+        </main>
+    </div>
+    <script src="InfiniteScroll.js"></script>
+    <script src="ProjectPage.js"></script>
 </body>
-
-
-<script src="simple.js"></script>
-
 
 </html>
