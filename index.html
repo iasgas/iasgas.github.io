@@ -37,7 +37,7 @@
                 "url": "https://halle-fuer-kunst.de/public/de",
                 "image": "https://halle-fuer-kunst.de/public/media/pages/archiv/20-jahre-halle-fuer-kunst-lueneburg/b53c04d4b0-1718869395/52-600x400-1280x.jpg",
             }</script>
-    <script src="InfiniteScroll.js"></script>
+    <script src="https://unpkg.com/infinite-scroll@4/dist/infinite-scroll.pkgd.min.js"></script>
 </head>
 
 <body x-data :class="{ 'text-base': !$store.textsize.active, 'text-large': $store.textsize.active }">
@@ -85,18 +85,17 @@
     <div id="hometitle"
         class="hidden opacity-0 uppercase pointer-events-none p-2 fixed bottom-0 md:bottom-auto md:top-1/2 left-1/2 transform -translate-x-1/2 md:-translate-y-1/2 md:flex justify-between"
         style="color: rgb(0,0,0)">
-        <h1 class="lg:text-big">HALLE &nbsp;FÜR</h1>
-        <h1 class="lg:text-big">&nbsp;KUNST &nbsp;Lüneburg</h1>
+        <h1 class="lg:text-big">TOBIAS &nbsp;ANDRI</h1>
+        <h1 class="lg:text-big">GASSER</h1>
     </div>
     <div id="hometitle"
         class="mobile opacity-0 uppercase pointer-events-none p-2 w-full h-full fixed top-0 pt-36 left-0 flex md:hidden flex-col justify-between"
         style="color: rgb(0,0,0)">
         <div class="flex justify-between">
-            <h1 class="lg:text-big">HALLE</h1>
-            <h1 class="relative top-16">FÜR</h1>
-            <h1 class="relative top-80">KUNST</h1>
+            <h1 class="lg:text-big">TOBIAS</h1>
+            <h1 class="relative top-16">ANDRI</h1>
+            <h1 class="relative top-80">GASSER</h1>
         </div>
-        <h1 class="w-full text-right">Lüneburg</h1>
     </div>
     <div data-barba="wrapper">
         <main x-cloak x-data="{ 
