@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="canonical" href="https://halle-fuer-kunst.de/public/de/archiv">
     <title>Tobias Gasser</title>
+
+    <link rel="icon" type="image/x-icon" href="point.svg">
     <link href="ProjectPage.css" rel="stylesheet">
 
     <script type="text/javascript">
@@ -29,14 +30,7 @@
         }
         )();
     </script>
-    <script type="application/ld+json">
-            {
-                "@context": "https://schema.org",
-                "@type": "WebSite",
-                "name": "Halle für Kunst",
-                "url": "https://halle-fuer-kunst.de/public/de",
-                "image": "https://halle-fuer-kunst.de/public/media/pages/archiv/20-jahre-halle-fuer-kunst-lueneburg/b53c04d4b0-1718869395/52-600x400-1280x.jpg",
-            }</script>
+
     <script src="https://unpkg.com/infinite-scroll@4/dist/infinite-scroll.pkgd.min.js"></script>
 </head>
 
@@ -198,7 +192,7 @@
                         <a class="infscro__next" href="#"></a>
                         <div class="infoscro__inner">
                             <a x-cloak
-                                @mouseenter="$store.teaser.active = true; $store.teaser.src = ''; $store.teaser.left = event.clientX; $store.teaser.bottom = event.clientY"
+                                @mouseenter="$store.teaser.active = true; $store.teaser.src = 'https://tobiasgasser.ch/portfolio/Gandria/img/Gandria_Brunnen.jpg'; $store.teaser.left = event.clientX; $store.teaser.bottom = event.clientY"
                                 @mousemove="$store.teaser.left = event.clientX; $store.teaser.bottom = event.clientY"
                                 @mouseleave="$store.teaser.active = false; $store.teaser.src = null"
                                 @click="$store.teaser.active = false"
