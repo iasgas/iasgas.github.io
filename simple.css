@@ -48,7 +48,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: clamp(16px, 1.725vh, 32px);
+    font-size: clamp(16px, 1.725vh, 28px);
     line-height: 1;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -141,7 +141,7 @@ div {
     padding: 2.75vh 0 2.75vh 3vh;
     z-index: 200;
     display: block;
-    font-size: clamp(32px, 3.45vh, 64px);
+    font-size: clamp(28px, 3.45vh, 64px);
     background-color: #00000000;
 }
 
@@ -154,7 +154,7 @@ div {
     padding: 2.75vh 3vh 2.75vh 0;
     z-index: 200;
     display: block;
-    font-size: clamp(32px, 3.45vh, 64px);
+    font-size: clamp(28px, 3.45vh, 64px);
     background-color: rgba(0, 0, 0, 0);
 }
 
@@ -194,7 +194,7 @@ div {
 a {
     display: block;
     font-family: "GT";
-    font-size: 32px;
+    font-size: 28px;
     font-weight: 500;
     margin: 0 0;
     padding-top: 12px;
@@ -220,7 +220,7 @@ a {
 p {
     display: block;
     font-family: "GT";
-    font-size: 32px;
+    font-size: 28px;
     font-weight: 500;
     margin: 0 0;
     margin-block-start: 0px;
@@ -283,7 +283,7 @@ a.links::before {
 
 .submenu {
     font-family: "GT";
-    font-size: 32px;
+    font-size: 28px;
     font-weight: 500;
     margin: 0 0;
     margin-block-end: 1em;
@@ -364,7 +364,7 @@ figure {
 #contact {
     position: absolute;
     font-family: "GT";
-    font-size: 32px;
+    font-size: 28px;
     font-weight: 500;
     bottom: 0;
     width: 100%;
@@ -378,7 +378,7 @@ figure {
 
 #contact,
 footer {
-    font-size: clamp(32px, 3.45vh, 64px);
+    font-size: clamp(28px, 3.45vh, 64px);
     overflow-x: hidden;
 }
 
