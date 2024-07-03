@@ -118,6 +118,7 @@ pre {
     margin: 0
 }
 
+
 button {
     background-color: transparent;
     background-image: none
@@ -938,7 +939,7 @@ strong {
 
 em,
 i {
-    font-style: normal
+    font-style: italic
 }
 
 body,
@@ -967,6 +968,7 @@ em,
 i {
     font-family: RiformaLL-MediumItalic, sans-serif
 }
+
 
 ol,
 ul {
@@ -1210,14 +1212,14 @@ header.home a {
 @font-face {
     font-display: swap;
     font-family: RiformaLL-Medium;
-    font-weight: 400;
+    font-weight: 500;
     src: url(/Fonts/LL\ Riforma\ Regular.otf)
 }
 
 @font-face {
     font-display: swap;
     font-family: RiformaLL-MediumItalic;
-    font-weight: 400;
+    font-weight: 500;
     src: url(/Fonts/LL\ Riforma\ Regular.otf)
 }
 
@@ -1226,7 +1228,7 @@ header.home a {
 @font-face {
     font-display: swap;
     font-family: RiformaLL-Bold;
-    font-weight: 400;
+    font-weight: 600;
     src: url(/Fonts/LL\ Riforma\ Regular.otf)
 }
 
