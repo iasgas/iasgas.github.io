@@ -1213,14 +1213,14 @@ header.home a {
     font-display: swap;
     font-family: RiformaLL-Medium;
     font-weight: 500;
-    src: url(/Fonts/LL\ Riforma\ Regular.otf)
+    src: url(/Fonts/FavoritC.ttf)
 }
 
 @font-face {
     font-display: swap;
     font-family: RiformaLL-MediumItalic;
     font-weight: 500;
-    src: url(/Fonts/LL\ Riforma\ Regular.otf)
+    src: url(/Fonts/FavoritC-Italic.ttf)
 }
 
 
@@ -1229,7 +1229,7 @@ header.home a {
     font-display: swap;
     font-family: RiformaLL-Bold;
     font-weight: 600;
-    src: url(/Fonts/LL\ Riforma\ Regular.otf)
+    src: url(/Fonts/FavoritC-Bold.ttf)
 }
 
 .decal {
