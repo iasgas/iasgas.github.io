@@ -1213,14 +1213,14 @@ header.home a {
     font-display: swap;
     font-family: RiformaLL-Medium;
     font-weight: 500;
-    src: url(/Fonts/FavoritC.ttf)
+    src: url(/Fonts/Geist-Medium.woff2)
 }
 
 @font-face {
     font-display: swap;
     font-family: RiformaLL-MediumItalic;
     font-weight: 500;
-    src: url(/Fonts/FavoritC-Italic.ttf)
+    src: url(/Fonts/Geist-Medium.woff2)
 }
 
 
@@ -1229,7 +1229,7 @@ header.home a {
     font-display: swap;
     font-family: RiformaLL-Bold;
     font-weight: 600;
-    src: url(/Fonts/FavoritC-Bold.ttf)
+    src: url(/Fonts/Geist-Bold.woff2)
 }
 
 .decal {
