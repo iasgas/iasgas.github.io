@@ -128,19 +128,19 @@
                     @mouseleave="autoIntervalTest = true" :style="offsetTop">
                     <div x-show="$screen('md') || left == 'images'" id="images" class="mb-8">
                         <div class="w-full mb-2 overflow-hidden">
-                            <img @click="lightbox = true; image = 0" alt=""
-                                class="w-full lazyload blur-up cursor-pointer" data-sizes="auto"
-                                src="portfolio/NeueHard/img/3.og_17.09.jpg" />
-                            <figcaption class="pt-2 text-small">
-                                <p>Floorplan 1:200, <em>Neue Hard.</em> 3rd floor.</p>
-                            </figcaption>
-                        </div>
-                        <div class="w-full mb-2 overflow-hidden">
                             <img @click="lightbox = true; image = 1" alt=" …"
                                 class="w-full lazyload blur-up cursor-pointer" data-sizes="auto"
                                 src="portfolio/NeueHard/img/Situationsplan-web.jpg" />
                             <figcaption class="pt-2 text-small">
                                 <p>Site plan 1:500, <em>Neue Hard.</em></p>
+                            </figcaption>
+                        </div>
+                        <div class="w-full mb-2 overflow-hidden">
+                            <img @click="lightbox = true; image = 0" alt=""
+                                class="w-full lazyload blur-up cursor-pointer" data-sizes="auto"
+                                src="portfolio/NeueHard/img/3.og_17.09.jpg" />
+                            <figcaption class="pt-2 text-small">
+                                <p>Floorplan 1:200, <em>Neue Hard.</em> 3rd floor.</p>
                             </figcaption>
                         </div>
                         <div class="w-full mb-2 overflow-hidden">
