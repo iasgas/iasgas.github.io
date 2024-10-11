@@ -65,7 +65,7 @@
     </div>
     <nav x-show="$store.menu" class="flex bg-white w-screen md:w-48 justify-end" :class="{ 'bg-white md:bg-transparent': page > 2, 'bg-transparent': page < 3 }">
         <div class="flex flex-col w-48 p-2">
-                <div @click="$store.menu = false; $store.teaser.active = false; activeMenu = 'home'"><a href="de.html" :class="{ 'active': activeMenu == 'home'}">Home</a></div>
+                <div @click="$store.menu = false; $store.teaser.active = false; activeMenu = 'home'"><a href="index.html" :class="{ 'active': activeMenu == 'home'}">Home</a></div>
                 <div @click="$store.menu = false; $store.teaser.active = false; activeMenu = 'archiv'"><a href="archive.html" :class="{ 'active': activeMenu == 'archive'}">Archive</a></div>
                 <div @click="$store.menu = false; $store.teaser.active = false; activeMenu = 'archiv'"><a href="" :class="{ 'active': activeMenu == 'archiv'}">Resume</a></div>
                 <div @click="$store.menu = false; $store.teaser.active = false; activeMenu = 'archiv'"><a class="uppercase pr-4 " href="mailto:tobias.gasser1@gmail.com" rel="nofollow">Mail</a></div>
