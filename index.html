@@ -69,7 +69,7 @@
     class="flex w-screen md:w-48 justify-end bg-transparent"
     :class="{ 'bg-white sm:bg-transparent': $store.menu }">
         <div class="flex flex-col w-48 p-2">
-                <div @click="$store.menu = false; $store.teaser.active = false; activeMenu = 'home'"><a href="de.html" :class="{ 'active': activeMenu == 'home'}">Home</a></div>
+                <div @click="$store.menu = false; $store.teaser.active = false; activeMenu = 'home'"><a href="index.html" :class="{ 'active': activeMenu == 'home'}">Home</a></div>
                 <div @click="$store.menu = false; $store.teaser.active = false; activeMenu = 'archive'"><a href="archive.html" :class="{ 'active': activeMenu == 'archive'}">Archive</a></div>
                 <div @click="$store.menu = false; $store.teaser.active = false; activeMenu = 'resume'"><a href="" :class="{ 'active': activeMenu == 'resume'}">Resume</a></div>
                 <div @click="$store.menu = false; $store.teaser.active = false; activeMenu = 'archiv'"><a class="uppercase pr-4 " href="mailto:tobias.gasser1@gmail.com" rel="nofollow">Mail</a></div>
