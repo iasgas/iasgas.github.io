@@ -213,6 +213,7 @@
                     <div x-ref="center" class="lg:relative w-full flex flex-wrap">
                         <div @click="scrollTo('images', 'left')" class="pr-4 link uppercase"
                             :class="{active: left == 'images' }"><a>Images</a></div>
+                            <div class="pr-4 link" @click="window.history.back()">BACK</div>
                     </div>
                     <h1>Revealing Encounters</h1>
                     <div class="relative z-10">
