@@ -66,8 +66,8 @@
         <span>Menu</span>
     </div>
     <nav x-show="$store.menu" 
-    class="flex w-screen md:w-48 justify-end bg-transparent"
-    :class="{ 'bg-white sm:bg-transparent': $store.menu }">
+    class="flex w-screen md:w-48 justify-end bg-transparent sm:bg-white"
+    :class="{ 'sm:bg-white': $store.menu, 'bg-transparent': !$store.menu }">
         <div class="flex flex-col w-48 p-2">
                 <div @click="$store.menu = false; $store.teaser.active = false; activeMenu = 'home'"><a href="index.html" :class="{ 'active': activeMenu == 'home'}">Home</a></div>
                 <div @click="$store.menu = false; $store.teaser.active = false; activeMenu = 'archive'"><a href="archive.html" :class="{ 'active': activeMenu == 'archive'}">Archive</a></div>
