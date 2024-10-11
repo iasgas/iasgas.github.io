@@ -37,8 +37,7 @@
 </head>
 
 
-
-<body x-data :class="{ 'text-base': !$store.textsize.active, 'text-large': $store.textsize.active }" style="background-color: rgb(0, 99, 146);">
+<body x-data :class="{ 'text-base': !$store.textsize.active, 'text-large': $store.textsize.active }" class="fixed-background" style="background-color: rgb(0, 99, 146);">
     <header x-cloak @click.away="$store.menu = false" x-data="{ 
     activeMenu: 'home',
     page: window.location.pathname.split('/').length,
