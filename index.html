@@ -158,6 +158,21 @@
         </main>
     </div>
     <script src="ProjectPage.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Reset title visibility
+            var titleElement = document.getElementById("title");
+            titleElement.classList.remove("hidden");
+            titleElement.style.opacity = "1"; // Make it visible
+            titleElement.style.pointerEvents = "auto"; // Enable interactions
+        
+            // Optionally, you can add animations or transitions if needed
+            // setTimeout to give a delay for the appearance, if you have animations
+            setTimeout(() => {
+                titleElement.style.opacity = "1"; // Ensure it stays visible
+            }, 100); // Adjust timing as necessary
+        });
+        </script>
 </body>
 
 </html>
