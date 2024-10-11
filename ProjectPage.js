@@ -5469,9 +5469,9 @@
           var Hn = null,
             Yn = document.querySelector("header"),
             Xn = document.querySelector("#title"),
-            Wn = document.querySelector("#hometitle"),
-            Vn = document.querySelector("#hometitle.mobile"),
-            Gn = document.querySelectorAll("#hometitle.mobile h1");
+            var Wn = document.querySelector("#hometitle-mobile");
+            var Vn = document.querySelector("#hometitle-desktop");
+            var Gn = document.querySelectorAll(".hometitle.mobile h1");
   
           function Kn() {
             for (var t = Xn.children, e = 0; e < t.length; e++) t[e].style.top = Math.floor(Math.random() * (window.innerHeight - 120)) + 68 + "px"
