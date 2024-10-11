@@ -1233,10 +1233,6 @@ header.home a {
     src: url(/Fonts/LL\ Riforma\ Bold.otf.otf)
 }
 
-nav{
-    transform: translateX(-50%)
-}
-
 .decal {
     transform: translateX(-50%)
 }
@@ -1259,12 +1255,6 @@ nav{
 }
 
 @media (min-width:768px) {
-
-    .sm\:bg-white{
-        background-color: white
-    }
-
-
     .md\:relative {
         position: relative
     }

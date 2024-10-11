@@ -33,8 +33,6 @@
 
 </head>
 
-
-
 <body x-data :class="{ 'text-base': !$store.textsize.active, 'text-large': $store.textsize.active }" style="background: rgb(0, 99, 146, 57)">
     <header x-cloak @click.away="$store.menu = false" x-data="{ 
     activeMenu: 'home',
@@ -65,14 +63,14 @@
     <div x-show="!$store.menu" class="cursor-pointer relative z-60 w-48 p-2 text-right md:text-left" @click="$store.menu = !$store.menu; $store.mobilemenu = false; page = window.location.pathname.split('/').length">
         <span>Menu</span>
     </div>
-    <nav x-show="$store.menu" class="flex bg-white w-screen md:w-48 justify-end md:bg-transparent" :class="{ 'bg-white md:bg-transparent': page > 2, 'bg-transparent': page < 3 }">
+    <nav x-show="$store.menu" class="flex bg-white w-screen md:w-48 justify-end" :class="{ 'bg-white md:bg-transparent': page > 2, 'bg-transparent': page < 3 }">
         <div class="flex flex-col w-48 p-2">
-                <div @click="$store.menu = false; $store.teaser.active = false; activeMenu = 'home'"><a href="index.html" :class="{ 'active': activeMenu == 'home'}">Home</a></div>
-                <div @click="$store.menu = false; $store.teaser.active = false; activeMenu = 'archive'"><a href="archive.html" :class="{ 'active': activeMenu == 'archive'}">Archive</a></div>
-                <div @click="$store.menu = false; $store.teaser.active = false; activeMenu = 'resume'"><a href="" :class="{ 'active': activeMenu == 'resume'}">Resume</a></div>
+                <div @click="$store.menu = false; $store.teaser.active = false; activeMenu = 'home'"><a href="de.html" :class="{ 'active': activeMenu == 'home'}">Home</a></div>
+                <div @click="$store.menu = false; $store.teaser.active = false; activeMenu = 'archiv'"><a href="archive.html" :class="{ 'active': activeMenu == 'archive'}">Archive</a></div>
+                <div @click="$store.menu = false; $store.teaser.active = false; activeMenu = 'archiv'"><a href="" :class="{ 'active': activeMenu == 'archiv'}">Resume</a></div>
                 <div @click="$store.menu = false; $store.teaser.active = false; activeMenu = 'archiv'"><a class="uppercase pr-4 " href="mailto:tobias.gasser1@gmail.com" rel="nofollow">Mail</a></div>
                 <div @click="$store.menu = false; $store.teaser.active = false; activeMenu = 'archiv'"><a class="uppercase pr-4" href="https://www.instagram.com/tobias.andri/" target="_blank">Instagram</a></div>
-        </div>
+                </div>
     </nav>
 </header>    <div id="title" class="hidden md:block opacity-0 pointer-events-none fixed top-0 left-0 w-full h-screen text-gray p-2">
 	<h1 class="text-big absolute left-2 transition-all duration-1000">TOBIAS</h1>
