@@ -789,7 +789,6 @@ video {
 }
 
 .text-big {
-    font-family: RiformaLL-Bold;
     font-size: 3.5rem;
     line-height: 1.2
 }
@@ -948,7 +947,7 @@ i {
 
 body,
 html {
-    font-family: RiformaLL-Medium, sans-serif
+    font-family: RiformaLL-Bold, sans-serif
 }
 
 body {
