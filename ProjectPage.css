@@ -139,7 +139,7 @@ ul {
 }
 
 html {
-    font-family: RiformaLL-Bold, sans-serif;
+    font-family: RiformaLL-Medium, sans-serif;
     line-height: 1.5
 }
 
@@ -947,7 +947,7 @@ i {
 
 body,
 html {
-    font-family: RiformaLL-Bold, sans-serif
+    font-family: RiformaLL-Medium, sans-serif
 }
 
 body {
@@ -1216,14 +1216,14 @@ header.home a {
     font-display: swap;
     font-family: RiformaLL-Medium;
     font-weight: 500;
-    src: url(/Fonts/LL\ Riforma\ Regular.otf)
+    src: url(/Fonts/Geist-Medium.otf)
 }
 
 @font-face {
     font-display: swap;
     font-family: RiformaLL-MediumItalic;
     font-weight: 500;
-    src: url(/Fonts/LL\ Riforma\ Regular.otf)
+    src: url(/Fonts/Geist-Medium.otf)
 }
 
 
