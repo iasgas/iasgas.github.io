@@ -1216,16 +1216,15 @@ header.home a {
     font-display: swap;
     font-family: RiformaLL-Medium;
     font-weight: 500;
-    src: url(/Fonts/Geist-Medium.otf)
+    src: url(/Fonts/RiformaLLSub-MediumSubset.woff2)
 }
 
 @font-face {
     font-display: swap;
     font-family: RiformaLL-MediumItalic;
     font-weight: 500;
-    src: url(/Fonts/Geist-Medium.otf)
+    src: url(/Fonts/RiformaLLSub-MediumItalicSubset.woff2)
 }
-
 
 
 @font-face {
