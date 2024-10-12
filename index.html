@@ -38,7 +38,7 @@
 
 
 
-<body x-data :class="{ 'text-base': !$store.textsize.active, 'text-large': $store.textsize.active }" style="background-color: rgb(166, 43, 15);">
+<body x-data :class="{ 'text-base': !$store.textsize.active, 'text-large': $store.textsize.active }" style="background-color: rgb(#325473);">
     <header x-cloak @click.away="$store.menu = false" x-data="{ 
     activeMenu: 'home',
     page: window.location.pathname.split('/').length,
@@ -97,7 +97,7 @@
 	</div>
 	<h1 class="w-full text-right">GASSER</h1>
 </div>    <div data-barba="wrapper">
-        <main data-barba="container" data-barba-namespace="home" class="flex" data-color="166, 43, 15">
+        <main data-barba="container" data-barba-namespace="home" class="flex" data-color="#325473">
                     <div class="wrapper z-20 flex flex-col md:flex-row w-full pt-44 md:pt-0 pb-20 md:pb-0 lg:pr-44">
                 <section class="column left hidden md:block">
                     <div x-cloak x-data="{ active: false }">
