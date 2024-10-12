@@ -139,7 +139,7 @@ ul {
 }
 
 html {
-    font-family: RiformaLL-Medium, sans-serif;
+    font-family: RiformaLL-Bold, sans-serif;
     line-height: 1.5
 }
 
@@ -1232,7 +1232,7 @@ header.home a {
     font-display: swap;
     font-family: RiformaLL-Bold;
     font-weight: 600;
-    src: url(/Fonts/LL\ Riforma\ Bold.otf.otf)
+    src: url(/Fonts/LL\ Riforma\ Bold.otf)
 }
 
 .decal {
