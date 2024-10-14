@@ -133,60 +133,60 @@
                 class="z-20 h-full wrapper flex flex-col md:flex-row overflow-y-auto overflow-x-hidden w-full md:h-screen lg:pr-48">
 
 
+
                 <section class="column nopt left scroll autoscroll-col" @mousemove="autoIntervalTest = false"
                     @mouseleave="autoIntervalTest = true" :style="offsetTop">
                     <div x-show="$screen('md') || left == 'images'" id="images" class="mb-8">
                         <div class="w-full mb-2 overflow-hidden">
                             <img @click="lightbox = true; image = 0" alt=""
                                 class="w-full lazyload blur-up cursor-pointer" data-sizes="auto"
-                                src="portfolio/Letten/img/PlattformDetail-web.jpg" />
+                                src="portfolio/Habitats/img/habitats_situation-web.jpg" />
                         </div>
                         <div class="w-full mb-2 overflow-hidden">
                             <img @click="lightbox = true; image = 1" alt=" …"
                                 class="w-full lazyload blur-up cursor-pointer" data-sizes="auto"
-                                src="portfolio/Letten/img/Lageplan-web.jpg" />
-                            <figcaption class="pt-2 text-small">
-                                <p>Site plan 1:200, <em>Zurich, Letten.</em></p>
-                            </figcaption>
+                                src="portfolio/Habitats/img/habitats_02-web.jpg" />
                         </div>
                         <div class="w-full mb-2 overflow-hidden">
                             <img @click="lightbox = true; image = 2" alt=" …"
                                 class="w-full lazyload blur-up cursor-pointer" data-sizes="auto"
-                                src="portfolio/Letten/img/Rot-Blau-Axo-web.jpg" />
+                                src="portfolio/Habitats/img/habitats_bestand-web.jpg" />
                         </div>
                         <div class="w-full mb-2 overflow-hidden">
                             <img @click="lightbox = true; image = 3" alt=" …"
                                 class="w-full lazyload blur-up cursor-pointer" data-sizes="auto"
-                                src="portfolio/Letten/img/TreppenhausDetail-web.jpg" />
-                            <figcaption class="pt-2 text-small">
-                                <p>Visualisation, <em>Zurich, Letten.</em>View from existing Stairwell.</p>
-                            </figcaption>
+                                src="portfolio/Habitats/img/habitats_04-web.jpg" />
                         </div>
                         <div class="w-full mb-2 overflow-hidden">
                             <img @click="lightbox = true; image = 4" alt=" …"
                                 class="w-full lazyload blur-up cursor-pointer" data-sizes="auto"
-                                src="portfolio/Letten/img/unten_SW-web.jpg" />
+                                src="portfolio/Habitats/img/habitats_innenhof-web.jpg" />
                         </div>
                         <div class="w-full mb-2 overflow-hidden">
                             <img @click="lightbox = true; image = 5" alt=" …"
                                 class="w-full lazyload blur-up cursor-pointer" data-sizes="auto"
-                                src="portfolio/Letten/img/Rot-Blau-Ansicht-web.jpg" />
+                                src="portfolio/Habitats/img/habitats_ruderal-web.jpg" />
                         </div>
 
                         <div class="w-full mb-2 overflow-hidden">
                             <img @click="lightbox = true; image = 6" alt=" …"
                                 class="w-full lazyload blur-up cursor-pointer" data-sizes="auto"
-                                src="portfolio/Letten/img/GehwegDetail-web.jpg" />
+                                src="portfolio/Habitats/img/habitats_03-web.jpg" />
                         </div>
                         <div class="w-full mb-2 overflow-hidden">
                             <img @click="lightbox = true; image = 7" alt=" …"
                                 class="w-full lazyload blur-up cursor-pointer" data-sizes="auto"
-                                src="portfolio/Letten/img/oben_SW-web.jpg" />
+                                src="portfolio/Habitats/img/habitats_05-web.jpg" />
                         </div>
                         <div class="w-full mb-2 overflow-hidden">
                             <img @click="lightbox = true; image = 8" alt=" …"
                                 class="w-full lazyload blur-up cursor-pointer" data-sizes="auto"
-                                src="portfolio/Letten/img/SpannDetail-web.jpg" />
+                                src="portfolio/Habitats/img/habitats_06-web.jpg" />
+                        </div>
+                        <div class="w-full mb-2 overflow-hidden">
+                            <img @click="lightbox = true; image = 9" alt=" …"
+                                class="w-full lazyload blur-up cursor-pointer" data-sizes="auto"
+                                src="portfolio/Habitats/img/habitats_07-web.jpg" />
                         </div>
                     </div>
 
@@ -201,17 +201,16 @@
                             :class="{active: left == 'images' }"><a>Images</a></div>
                             <div class="pr-4 link" @click="window.history.back()">BACK</div>
                     </div>
-                    <h1>Letten</h1>
+                    <h1>Unveiling Habitats</h1>
                     <div class="relative z-10">
-                        <span class="uppercase">Structural Design&nbsp;&nbsp;</span> <br>
-                        20. February 2023 – 01. June 2023
+                        <span class="uppercase">elective course&nbsp;&nbsp;</span> <br>
+                        20. February 2024 – 1. June 2024
                     </div>
                 </section>
 
                 <section class="column right scroll" :style="offsetTop">
                     <div x-show="right == 'text'" id="text" class="mb-4">
-                        <p>Spring Semester 2023, <em>ETH Zurich.</em></p>
-
+                        <p>Elective course lead by Flurina Gradin, <em>ETH Zürich.</em> In collaboration with Noah.</p>
                     </div>
                 </section>
 

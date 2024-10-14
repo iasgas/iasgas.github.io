@@ -230,6 +230,22 @@
                                 </div>
                             </a>
                             <a x-cloak
+                            @mouseenter="$store.teaser.active = true; $store.teaser.src = 'https://tobiasgasser.ch/portfolio/Habitats/img/habitats_02-web.jpg'; $store.teaser.left = event.clientX; $store.teaser.bottom = event.clientY"
+                            @mousemove="$store.teaser.left = event.clientX; $store.teaser.bottom = event.clientY"
+                            @mouseleave="$store.teaser.active = false; $store.teaser.src = null"
+                            @click="$store.teaser.active = false"
+                            href="UH24ProjectPage.html"
+                            class="block relative w-full mb-8 text-black group" style="color: rgb()"
+                            id="nach-h-a-l-l">
+                            <h1 class="relative z-10">
+                                Unveiling Habitats
+                            </h1>
+                            <div class="relative z-10">
+                                <span class="uppercase">Elective course &nbsp;&nbsp;</span>
+                                <span class="whitespace-nowrap">Spring 2024 </span>
+                            </div>
+                        </a>
+                            <a x-cloak
                                 @mouseenter="$store.teaser.active = true; $store.teaser.src = 'https://tobiasgasser.ch/portfolio/Dolder/img/Modellfoto_3-web.jpg'; $store.teaser.left = event.clientX; $store.teaser.bottom = event.clientY"
                                 @mousemove="$store.teaser.left = event.clientX; $store.teaser.bottom = event.clientY"
                                 @mouseleave="$store.teaser.active = false; $store.teaser.src = null"
