@@ -241,6 +241,79 @@
         </main>
     </div>
     <script src="ProjectPage.js"></script>
+    <script src="gallery.js"></script>
+    <script src="slider.js"></script>
+    <script src="slider-custom.js"></script>
+    <script src="isotope.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const navigationLinks = document.querySelectorAll('.navigation-links');
+        const gridElement = document.querySelector('.project-container');
+        const isotopeInstance = new Isotope(gridElement, {
+            itemSelector: '.isotope',
+            percentPosition: true,
+            filter: '.selected-work',
+            transitionDuration: '0s',
+            hiddenStyle: { opacity: 0 },
+            visibleStyle: { opacity: 1 }
+        });
+        navigationLinks.forEach(function(buttonGroup) {
+            buttonGroup.addEventListener('click', function(event) {
+                const button = event.target.closest('button');
+                if (!button) return;
+                window.scrollTo(0, 0);
+                document.querySelectorAll('.carousel-cell .video-select').forEach(video => video.muted = true);
+                if (document.body.classList.contains('about-on')) {
+                    document.body.classList.replace('about-on', 'about-off');
+                }
+                const filterValue = button.getAttribute('data-filter');
+                isotopeInstance.arrange({ filter: filterValue });
+                document.querySelectorAll('.isotope').forEach(isotopeEl => isotopeEl.classList.remove('zoomed'));
+                buttonGroup.querySelectorAll('.is-checked').forEach(btn => btn.classList.remove('is-checked'));
+                button.classList.add('is-checked');
+                /*
+                document.querySelectorAll('.main-carousel').forEach(function(carousel) {
+                    const flkty = Flickity.data(carousel);
+                    if (flkty) {
+                        const totalSlides = flkty.slides.length;
+                        const randomIndex = Math.floor(Math.random() * totalSlides);
+                        flkty.select(randomIndex);
+                    }
+                });
+                */
+                if (document.body.classList.contains('menu-on')) {
+                    document.body.classList.replace('menu-on', 'menu-off');
+                }
+                const projectInner = document.querySelector('.project-container');
+                const firstCarouselInProject = projectInner.querySelector('.isotope');
+                if (firstCarouselInProject) {
+                    const scrollOffset = firstCarouselInProject.offsetTop;
+                    projectInner.scrollTo(0, 0);;
+                }
+                document.querySelectorAll('.isotope').forEach(isotopeEl => {
+                    if (isotopeEl.classList.contains('show-info')) {
+                        isotopeEl.classList.replace('show-info', 'hide-info');
+                    }
+                });
+                if (!document.body.classList.contains('overview-full')) {
+                    document.querySelectorAll('.carousel-container').forEach(el => {
+                        const blurProject = el.querySelector('.blur-project');
+                        if (blurProject) {
+                            blurProject.style.transition = 'none';
+                            setTimeout(() => blurProject.style.transition = '', 10);
+                        }
+                        el.style.transition = 'none';
+                        el.classList.remove('show-info', 'zoomed');
+                        el.classList.add('gallery-transform');
+                        setTimeout(() => el.style.transition = '', 10);
+                           setTimeout(() => el.classList.remove('gallery-transform'), 10);
+                    });
+                    setTimeout(addZoomedClassToRandomCarousel, 5);
+                }
+            });
+        });
+    });
+    </script>
 
 </body>
 
