@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Tobias&nbsp;Gasser</title>
+    <link href="ProjectPage.css" rel="stylesheet">
+
+    <link rel="icon" type="image/x-icon" href="point_blue.svg">
+
+    <script type="text/javascript">
+        var _paq = window._paq || [];
+        /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+        _paq.push(["trackPageView"]);
+        _paq.push(["enableLinkTracking"]);
+        (function () {
+            var u = "//analytics.fm-a.dk/";
+            _paq.push(["setTrackerUrl", u + "matomo.php"]);
+            _paq.push(["setSiteId", "5"]);
+            var d = document,
+                g = d.createElement("script"),
+                s = d.getElementsByTagName("script")[0];
+            g.type = "text/javascript";
+            g.async = true;
+            g.defer = true;
+            g.src = u + "matomo.js";
+            s.parentNode.insertBefore(g, s);
+        })();
+    </script>
+
+    <script src="InfiniteScroll.js"></script>
+
+</head>
+
+<body x-cloak x-data :class="{ 'text-base': !$store.textsize.active, 'text-large': $store.textsize.active }">
+    <header x-cloak @click.away="$store.menu = false" x-data="{ 
+    activeMenu: 'home-from-home',
+    page: window.location.pathname.split('/').length,
+    language: 'de',
+    setMenu() {
+        $store.menu = false    },
+    changeLang(lang) {
+        let split = window.location.pathname.split('/');
+        if(lang == 'en') {
+            split[2] = 'en';
+            let newpath = split.join('/');
+            window.location = newpath;
+        } else {
+            split[2] = 'de';
+            let newpath = split.join('/');
+            window.location = newpath;
+        }
+    }
+}" x-init="setMenu" :class="activeMenu" style="--subcolor: rgb(114, 114, 114)"
+        class="text-darkgray z-50 fixed right-0 top-0 uppercase">
+        <div class="absolute top-0 right-0 w-28 justify-end p-2 flex">
+            <div class="flex z-20">
+                <div x-show="!$store.textsize.active && $screen('md')" @click="$store.textsize.toggle()" class="pr-4 cursor-pointer"><span class="text-small">a</span>&rarr;A</div>
+                <div x-show="$store.textsize.active && $screen('md')" @click="$store.textsize.toggle()" class="pr-4 cursor-pointer">A&rarr;<span class="text-base">a</span></div>
+    
+            </div>
+        </div>
+        <div x-show="!$store.menu" class="cursor-pointer relative z-60 w-48 p-2 text-right md:text-left" @click="$store.menu = !$store.menu; $store.mobilemenu = false; page = window.location.pathname.split('/').length">
+            <span>Menu</span>
+        </div>
+        <nav x-show="$store.menu" class="flex bg-white w-screen md:w-48 justify-end md:bg-transparent" :class="{ 'bg-white md:bg-transparent': page > 2, 'bg-transparent': page < 3 }">
+            <div class="flex flex-col w-48 p-2">
+                    <div @click="$store.menu = false; $store.teaser.active = false; activeMenu = 'home'"><a href="index.html" :class="{ 'active': activeMenu == 'home'}">Home</a></div>
+                    <div @click="$store.menu = false; $store.teaser.active = false; activeMenu = 'archiv'"><a href="archive.html" :class="{ 'active': activeMenu == 'archiv'}">Archive</a></div>
+                    <div @click="$store.menu = false; $store.teaser.active = false; activeMenu = 'archiv'"><a href="resume.html" :class="{ 'active': activeMenu == 'archiv'}">Resume</a></div>
+                    <div @click="$store.menu = false; $store.teaser.active = false; activeMenu = 'archiv'"><a class="uppercase pr-4 " href="mailto:tobias.gasser1@gmail.com" rel="nofollow">Mail</a></div>
+                    <div @click="$store.menu = false; $store.teaser.active = false; activeMenu = 'archiv'"><a class="uppercase pr-4" href="https://www.instagram.com/tobias.andri/" target="_blank">Instagram</a></div>
+                    </div>
+        </nav>
+
+    </header>
+    <div id="title"
+        class="hidden md:block opacity-0 pointer-events-none fixed top-0 left-0 w-full h-screen text-gray p-2">
+        <h1 class="text-big absolute left-2 transition-all duration-1000">TOBIAS</h1>
+        <h1 class="text-big text-center w-1/3 absolute left-1/3 transition-all duration-1000 lg:pr-48">ANDRI</h1>
+        <h1 class="text-big text-right w-1/3 absolute left-2/3 transition-all duration-1000 pr-2 lg:pr-48">GASSER</h1>
+    </div>
+
+
+
+    <div data-barba="wrapper">
+        <main data-barba="container" data-barba-namespace="project" class="flex flex-col h-screen">
+            <div x-cloak x-data="{
+            lightbox: false,
+            image: 0,
+            left: 'images',
+            right: 'text',
+            mobilemenu: false,
+            offsetTop: 0,
+            autoIntervalTest: true,
+            getPadding(el) {
+                setTimeout(() => {
+                if($screen('md')) {
+                    this.offsetTop = 'padding-top: ' + el.offsetTop + 'px'
+                } else {
+                    this.offsetTop = '';
+                }
+                }, 50);
+            },
+            scrollTo(id, side) {
+                this.autoIntervalTest = (side == 'left') ? false : true;                
+                side == 'right' ? this.right = id : this.left = id;
+                let item = document.querySelector('#' + id);
+                item.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start',
+                });
+            },
+            move() {
+                let el = document.querySelector('.autoscroll-col');
+                if($screen('md')) {
+                    el.scrollBy(0, 1);
+                }
+            },
+            checkScroll(event) {
+                if(window.scrollY > window.innerHeight * 0.4) {
+                    this.mobilemenu = true;
+                } else {
+                    this.mobilemenu = false;
+                }
+            }
+            }" x-init="$interval(move, {timer: 20, delay: 2000, forceInterval: true}); getPadding($refs.center)"
+                @resize.window="getPadding($refs.center)" @scroll.window="checkScroll(event)"
+                class="z-20 h-full wrapper flex flex-col md:flex-row overflow-y-auto overflow-x-hidden w-full md:h-screen lg:pr-48">
+
+
+
+                <section class="column left scroll" :style="offsetTop">
+                    <div x-show="$screen('md') || left == 'images'" id="images" class="mb-8">
+                        <div class="w-full mb-2 overflow-hidden">
+                            <img @click="lightbox = true; image = 1" alt=" …"
+                                class="w-full lazyload blur-up cursor-pointer" data-sizes="auto"
+                                src="portfolio/NeueHard/img/Situationsplan-web.jpg" />
+                            <figcaption class="pt-2 text-small">
+                                <p>Site plan 1:500, <em>Neue Hard.</em></p>
+                            </figcaption>
+                        </div>
+                        <div class="w-full mb-2 overflow-hidden">
+                            <img @click="lightbox = true; image = 2" alt=" …"
+                                class="w-full lazyload blur-up cursor-pointer" data-sizes="auto"
+                                src="portfolio/NeueHard/img/11.jpg" />
+                        </div>
+                        <div class="w-full mb-2 overflow-hidden">
+                            <img @click="lightbox = true; image = 6" alt=" …"
+                                class="w-full lazyload blur-up cursor-pointer" data-sizes="auto"
+                                src="portfolio/NeueHard/img/01.jpg" />
+                        </div>
+                        <div class="w-full mb-2 overflow-hidden">
+                            <img @click="lightbox = true; image = 0" alt=""
+                                class="w-full lazyload blur-up cursor-pointer" data-sizes="auto"
+                                src="portfolio/NeueHard/img/3.og_17.09.jpg" />
+                            <figcaption class="pt-2 text-small">
+                                <p>Floorplan 1:200, <em>Neue Hard.</em> 3rd floor.</p>
+                            </figcaption>
+                        </div>
+                        <div class="w-full mb-2 overflow-hidden">
+                            <img @click="lightbox = true; image = 4" alt=" …"
+                                class="w-full lazyload blur-up cursor-pointer" data-sizes="auto"
+                                src="portfolio/NeueHard/img/AussenRenderColorgraded_Backround.jpg" />
+                            <figcaption class="pt-2 text-small">
+                                <p>Visualisation, <em>Neue Hard.</em> </p>
+                            </figcaption>
+                        </div>
+                        <div class="w-full mb-2 overflow-hidden">
+                            <img @click="lightbox = true; image = 3" alt=" …"
+                                class="w-full lazyload blur-up cursor-pointer" data-sizes="auto"
+                                src="portfolio/NeueHard/img/schnitt_21.09.24.jpg" />
+                        </div>
+                        <div class="w-full mb-2 overflow-hidden">
+                            <img @click="lightbox = true; image = 4" alt=" …"
+                                class="w-full lazyload blur-up cursor-pointer" data-sizes="auto"
+                                src="portfolio/NeueHard/img/GR_21.09.24.jpg" />
+                        </div>
+                        <div class="w-full mb-2 overflow-hidden">
+                            <img @click="lightbox = true; image = 5" alt=" …"
+                                class="w-full lazyload blur-up cursor-pointer" data-sizes="auto"
+                                src="portfolio/NeueHard/img/6OGSK-web.jpg" />
+                            <figcaption class="pt-2 text-small">
+                                <p>Floorplan 1:200, <em>Neue Hard.</em> 6th floor.</p>
+                            </figcaption>
+                        </div>
+                        <div class="w-full mb-2 overflow-hidden">
+                            <img @click="lightbox = true; image = 8" alt=" …"
+                                class="w-full lazyload blur-up cursor-pointer" data-sizes="auto"
+                                src="portfolio/NeueHard/img/InnenColorgraded-web.jpg" />
+                            <figcaption class="pt-2 text-small">
+                                <p>Visualisation, <em>Neue Hard.</em> </p>
+                            </figcaption>
+                        </div>
+                        <div class="w-full mb-2 overflow-hidden">
+                            <img @click="lightbox = true; image = 9" alt="Detailansicht Rock …"
+                                class="w-full lazyload blur-up cursor-pointer" data-sizes="auto"
+                                src="portfolio/NeueHard/img/Schnitt_2_1-125.jpg" />
+                        </div>
+                        <div class="w-full mb-2 overflow-hidden">
+                            <img @click="lightbox = true; image = 10" alt="Detailansicht Ringe …"
+                                class="w-full lazyload blur-up cursor-pointer" data-sizes="auto"
+                                src="portfolio/NeueHard/img/HydroColorgraded.jpg" />
+                            <figcaption class="pt-2 text-small">
+                                <p>Visualisation, <em>Neue Hard.</em> </p>
+                            </figcaption>
+                        </div>
+                        <div class="w-full mb-2 overflow-hidden">
+                            <img @click="lightbox = true; image = 7" alt=" …"
+                                class="w-full lazyload blur-up cursor-pointer" data-sizes="auto"
+                                src="portfolio/NeueHard/img/Konstr.Axo_portfolio.jpg" />
+                            <figcaption class="pt-2 text-small">
+                                <p>Axonometric 1:50, <em>Neue Hard.</em> Hydroponics on the roof.</p>
+                            </figcaption>
+                        </div>
+                    </div>
+
+
+
+
+                </section>
+
+                <section class="column center scroll" :style="offsetTop">
+                    <div x-show="$screen('md') || left == 'images'" id="images" class="mb-8">
+                        <div class="w-full mb-2 overflow-hidden">
+                            <img @click="lightbox = true; image = 1" alt=" …"
+                                class="w-full lazyload blur-up cursor-pointer" data-sizes="auto"
+                                src="portfolio/NeueHard/img/Situationsplan-web.jpg" />
+                            <figcaption class="pt-2 text-small">
+                                <p>Site plan 1:500, <em>Neue Hard.</em></p>
+                            </figcaption>
+                        </div>
+                        <div class="w-full mb-2 overflow-hidden">
+                            <img @click="lightbox = true; image = 2" alt=" …"
+                                class="w-full lazyload blur-up cursor-pointer" data-sizes="auto"
+                                src="portfolio/NeueHard/img/11.jpg" />
+                        </div>
+                        <div class="w-full mb-2 overflow-hidden">
+                            <img @click="lightbox = true; image = 6" alt=" …"
+                                class="w-full lazyload blur-up cursor-pointer" data-sizes="auto"
+                                src="portfolio/NeueHard/img/01.jpg" />
+                        </div>
+                        <div class="w-full mb-2 overflow-hidden">
+                            <img @click="lightbox = true; image = 0" alt=""
+                                class="w-full lazyload blur-up cursor-pointer" data-sizes="auto"
+                                src="portfolio/NeueHard/img/3.og_17.09.jpg" />
+                            <figcaption class="pt-2 text-small">
+                                <p>Floorplan 1:200, <em>Neue Hard.</em> 3rd floor.</p>
+                            </figcaption>
+                        </div>
+                        <div class="w-full mb-2 overflow-hidden">
+                            <img @click="lightbox = true; image = 4" alt=" …"
+                                class="w-full lazyload blur-up cursor-pointer" data-sizes="auto"
+                                src="portfolio/NeueHard/img/AussenRenderColorgraded_Backround.jpg" />
+                            <figcaption class="pt-2 text-small">
+                                <p>Visualisation, <em>Neue Hard.</em> </p>
+                            </figcaption>
+                        </div>
+                        <div class="w-full mb-2 overflow-hidden">
+                            <img @click="lightbox = true; image = 3" alt=" …"
+                                class="w-full lazyload blur-up cursor-pointer" data-sizes="auto"
+                                src="portfolio/NeueHard/img/schnitt_21.09.24.jpg" />
+                        </div>
+                        <div class="w-full mb-2 overflow-hidden">
+                            <img @click="lightbox = true; image = 4" alt=" …"
+                                class="w-full lazyload blur-up cursor-pointer" data-sizes="auto"
+                                src="portfolio/NeueHard/img/GR_21.09.24.jpg" />
+                        </div>
+                        <div class="w-full mb-2 overflow-hidden">
+                            <img @click="lightbox = true; image = 5" alt=" …"
+                                class="w-full lazyload blur-up cursor-pointer" data-sizes="auto"
+                                src="portfolio/NeueHard/img/6OGSK-web.jpg" />
+                            <figcaption class="pt-2 text-small">
+                                <p>Floorplan 1:200, <em>Neue Hard.</em> 6th floor.</p>
+                            </figcaption>
+                        </div>
+                        <div class="w-full mb-2 overflow-hidden">
+                            <img @click="lightbox = true; image = 8" alt=" …"
+                                class="w-full lazyload blur-up cursor-pointer" data-sizes="auto"
+                                src="portfolio/NeueHard/img/InnenColorgraded-web.jpg" />
+                            <figcaption class="pt-2 text-small">
+                                <p>Visualisation, <em>Neue Hard.</em> </p>
+                            </figcaption>
+                        </div>
+                        <div class="w-full mb-2 overflow-hidden">
+                            <img @click="lightbox = true; image = 9" alt="Detailansicht Rock …"
+                                class="w-full lazyload blur-up cursor-pointer" data-sizes="auto"
+                                src="portfolio/NeueHard/img/Schnitt_2_1-125.jpg" />
+                        </div>
+                        <div class="w-full mb-2 overflow-hidden">
+                            <img @click="lightbox = true; image = 10" alt="Detailansicht Ringe …"
+                                class="w-full lazyload blur-up cursor-pointer" data-sizes="auto"
+                                src="portfolio/NeueHard/img/HydroColorgraded.jpg" />
+                            <figcaption class="pt-2 text-small">
+                                <p>Visualisation, <em>Neue Hard.</em> </p>
+                            </figcaption>
+                        </div>
+                        <div class="w-full mb-2 overflow-hidden">
+                            <img @click="lightbox = true; image = 7" alt=" …"
+                                class="w-full lazyload blur-up cursor-pointer" data-sizes="auto"
+                                src="portfolio/NeueHard/img/Konstr.Axo_portfolio.jpg" />
+                            <figcaption class="pt-2 text-small">
+                                <p>Axonometric 1:50, <em>Neue Hard.</em> Hydroponics on the roof.</p>
+                            </figcaption>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="column right sticky top-0 bg-white md:relative nopt mpt flex flex-col justify-center">
+                    <div x-ref="center" class="lg:relative w-full flex flex-wrap">
+                        <div @click="scrollTo('images', 'left')" class="pr-4 link uppercase"
+                            :class="{active: left == 'images' }"><a>Images</a></div>
+                            <div class="pr-4 link" @click="window.history.back()">BACK</div>
+                    </div>
+                    <h1>Neue Hard</h1>
+                    <div class="relative z-10">
+                        <span class="uppercase">Studio Roger Boltshauser&nbsp;&nbsp;</span> <br>
+                        20. February 2023 – 01. June 2023
+                    </div>
+                </section>
+
+            </div>
+        </main>
+    </div>
+
+    <script src="ProjectPage.js"></script>
+</body>
+
+</html>
