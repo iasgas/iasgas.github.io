@@ -1367,7 +1367,8 @@ mark {
 .menu-off .about-click,
 .menu-off .contact,
 .menu-off .instagram {
-  opacity: 0;
+  opacity: 1;
+  /* opacity 0 makes about button dissapear when not hovered        */
   transition: opacity 0s var(--easing-cubic);
 }
 
@@ -1478,6 +1479,8 @@ mark {
   right: 0px;
   mix-blend-mode: difference;
 }
+
+
 
 .about-imprint-container {
   overflow-y: scroll;
