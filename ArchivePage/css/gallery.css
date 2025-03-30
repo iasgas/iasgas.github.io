@@ -218,7 +218,7 @@ html, body {
 .index-body .navigation .p, 
 .index-body .tooltip,
 .index-body .gallery-description .index-carousel-status {
-  font-size: 24px !important;
+  font-size: 14px !important;
   line-height: 1.05 !important;
 }
 
@@ -1040,6 +1040,14 @@ a, a:active, a:hover, a:focus, a:focus-within, a:visited, a:visited:hover{
   border: 0;
   outline: none;
   border: 0;
+}
+
+.site-title{
+  z-index: 1000;
+}
+
+.site-links{
+  z-index: 1000;
 }
 
 .link-cursor {
@@ -1880,6 +1888,10 @@ mark.special-about {
 
 @media screen and (max-width: 800px) {
 
+  .site-title {
+    width: 75vw;
+  }
+
   .zoomed .carousel-cell.width-50.second img, .zoomed .carousel-cell.width-50.second video, .index-body .carousel-cell.width-50.second img, .index-body .carousel-cell.width-50.second video {
     object-position: center !important;
   }
@@ -2034,6 +2046,10 @@ mark.special-about {
 
 
 @media screen and (max-width: 600px) {
+
+  .site-title {
+    width: 100vw;
+  }
 
   .carousel-container:hover .carousel-cell img,
   .carousel-container:hover .carousel-cell video,
