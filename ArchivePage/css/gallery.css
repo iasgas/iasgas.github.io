@@ -21,16 +21,16 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
-  font-family: America, sans-serif
+  font-family: Haas, sans-serif
 }
 
 @font-face {
   font-display: swap;
-  font-family: America;
+  font-family: Haas;
   font-weight: 500;
   font-feature-settings: "kern" 1; 
   font-kerning: normal;
-  src: url(/Fonts/GT/GT-America-Standard-Regular-Trial.otf)
+  src: url(/Fonts/NeueHaasDisplayRoman.ttf)
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -61,7 +61,7 @@ table {
 /*RESET END*/
 
 html {
-  font-family: America, sans-serif;
+  font-family: Haas, sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   font-size: 100%;
@@ -179,7 +179,7 @@ html::-webkit-scrollbar {
 
 h1, h2, h3, h4, h5, h6, p,
 .h1, .h2, .h3, .h4, .h5, .h6, .p, .tooltip, html, body {
-  font-family: America, sans-serif;
+  font-family: Haas, sans-serif;
   font-style: normal;
   font-weight: 500;
   -webkit-font-variant-ligatures: common-ligatures;
