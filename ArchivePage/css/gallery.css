@@ -21,12 +21,12 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
-  font-family: Haptik, sans-serif
+  font-family: Geist, sans-serif
 }
 
 @font-face {
   font-display: swap;
-  font-family: Haptik;
+  font-family: Geist;
   font-weight: 500;
   src: url(/Fonts/Geist-Regular.otf)
 }
@@ -59,7 +59,7 @@ table {
 /*RESET END*/
 
 html {
-  font-family: Haptik, sans-serif;
+  font-family: Geist, sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   font-size: 100%;
@@ -177,7 +177,7 @@ html::-webkit-scrollbar {
 
 h1, h2, h3, h4, h5, h6, p,
 .h1, .h2, .h3, .h4, .h5, .h6, .p, .tooltip, html, body {
-  font-family: Haptik, sans-serif;
+  font-family: Geist, sans-serif;
   font-style: normal;
   font-weight: 500;
   -webkit-font-variant-ligatures: common-ligatures;
