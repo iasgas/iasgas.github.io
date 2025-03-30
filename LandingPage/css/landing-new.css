@@ -17,12 +17,12 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
-  font-family: RiformaLL-Medium, sans-serif
+  font-family: Haptik, sans-serif
 }
 
 @font-face {
   font-display: swap;
-  font-family: RiformaLL-Medium;
+  font-family: Haptik;
   font-weight: 500;
   src: url(/Fonts/GT\ Haptik\ Regular.ttf)
 }
@@ -132,7 +132,7 @@ html::-webkit-scrollbar {
 
 h1, h2, h3, h4, h5, h6, p,
 .h1, .h2, .h3, .h4, .h5, .h6, .p, .tooltip, html, body {
-  font-family: RiformaLL-Medium, sans-serif;
+  font-family: Haptik, sans-serif;
   font-style: normal;
   font-weight: 500;
   -webkit-font-variant-ligatures: common-ligatures;
