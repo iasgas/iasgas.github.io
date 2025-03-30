@@ -21,14 +21,14 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
-  font-family: OpenSans, sans-serif
+  font-family: America, sans-serif
 }
 
 @font-face {
   font-display: swap;
-  font-family: OpenSans;
+  font-family: America;
   font-weight: 500;
-  src: url(/Fonts/OpenSans-VariableFont_wdth\,wght.ttf)
+  src: url(/Fonts/GT/GT-America-Condensed-Regular-Trial.otf)
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -59,7 +59,7 @@ table {
 /*RESET END*/
 
 html {
-  font-family: OpenSans, sans-serif;
+  font-family: America, sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   font-size: 100%;
@@ -177,7 +177,7 @@ html::-webkit-scrollbar {
 
 h1, h2, h3, h4, h5, h6, p,
 .h1, .h2, .h3, .h4, .h5, .h6, .p, .tooltip, html, body {
-  font-family: OpenSans, sans-serif;
+  font-family: America, sans-serif;
   font-style: normal;
   font-weight: 500;
   -webkit-font-variant-ligatures: common-ligatures;
