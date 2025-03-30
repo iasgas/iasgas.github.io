@@ -24,6 +24,7 @@ time, mark, audio, video {
   font-display: swap;
   font-family: America;
   font-weight: 500;
+  letter-spacing: 0;
   -moz-font-feature-settings: "kern" 1;
   -ms-font-feature-settings: "kern" 1;
   -o-font-feature-settings: "kern" 1;
