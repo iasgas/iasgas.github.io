@@ -28,6 +28,8 @@ time, mark, audio, video {
   font-display: swap;
   font-family: America;
   font-weight: 500;
+  font-feature-settings: "kern" 1; 
+  font-kerning: normal;
   src: url(/Fonts/GT/GT-America-Standard-Regular-Trial.otf)
 }
 
