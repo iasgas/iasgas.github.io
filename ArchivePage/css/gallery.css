@@ -21,14 +21,14 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
-  font-family: Space, sans-serif
+  font-family: OpenSans, sans-serif
 }
 
 @font-face {
   font-display: swap;
-  font-family: Space;
+  font-family: OpenSans;
   font-weight: 500;
-  src: url(/Fonts/SpaceGrotesk-VariableFont_wght.ttf)
+  src: url(/Fonts/OpenSans-VariableFont_wdth\,wght.ttf)
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -59,7 +59,7 @@ table {
 /*RESET END*/
 
 html {
-  font-family: Space, sans-serif;
+  font-family: OpenSans, sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   font-size: 100%;
@@ -177,7 +177,7 @@ html::-webkit-scrollbar {
 
 h1, h2, h3, h4, h5, h6, p,
 .h1, .h2, .h3, .h4, .h5, .h6, .p, .tooltip, html, body {
-  font-family: Space, sans-serif;
+  font-family: OpenSans, sans-serif;
   font-style: normal;
   font-weight: 500;
   -webkit-font-variant-ligatures: common-ligatures;
