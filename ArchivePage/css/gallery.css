@@ -30,7 +30,7 @@ time, mark, audio, video {
   font-weight: 500;
   font-feature-settings: "kern" 1; 
   font-kerning: normal;
-  src: url(/Fonts/NeueHaasDisplayRoman.ttf)
+  src: url(/Fonts/monument/MonumentGrotesk-Bold.ttf)
 }
 
 /* HTML5 display-role reset for older browsers */
