@@ -2,8 +2,8 @@
 /* FONTS
 ============================== */
 @font-face{
-	font-family: 'Skala';
-	src: url('../../../Fonts/monument/MonumentGrotesk-Medium.ttf') format('ttf');
+	font-family: 'Monument';
+	src: url('../../Fonts/monument/MonumentGrotesk-Medium.ttf') format('ttf');
 	font-weight: normal;
 	font-style: normal;
 	font-display: block;
