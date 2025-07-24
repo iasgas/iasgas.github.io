@@ -1,0 +1,92 @@
+
+/* NAV BAR
+============================== */
+#nav-bar.intro span{
+	-webkit-transition: none;
+		  -o-transition: none;
+			  transition: none;
+}
+#nav-bar.completed span{
+	-webkit-transition: width var(--speedx2) var(--ease);
+		  -o-transition: width var(--speedx2) var(--ease);
+			  transition: width var(--speedx2) var(--ease);
+}
+#nav-bar{
+	position: fixed;
+	top: calc(var(--h)/2 - 15px);
+	left: 0;
+	width: 100vw;
+	max-width: calc(100vw - var(--sides));
+	height: 30px;
+	padding-left: var(--sides);
+	display: -webkit-box;
+	overflow: hidden;
+	pointer-events: none;
+	z-index: 8;
+}
+#nav-bar span{
+	position: relative;
+	width: 1px;
+	height: 30px;
+	display: block;
+	border-left: 1px solid;
+	border-color: var(--ctext);
+	float: left;
+	-webkit-transition: width var(--speed) var(--ease);
+		  -o-transition: width var(--speed) var(--ease);
+			  transition: width var(--speed) var(--ease);
+}
+#nav-bar span::after{
+	content: '';
+	width: 0%;
+	height: 100%;
+	background-color: var(--ctext);
+	display: block;
+}
+#nav-bar.banner-active-intro span::after{
+	animation: widthBarOpen calc(var(--speed) + var(--speedx2) + var(--speed_2)) var(--ease) forwards;
+}
+#nav-bar.banner-active span::after{
+	animation: widthBarOpen var(--speed_2) var(--ease) forwards;
+}
+#nav-bar.banner-close span::after{
+	animation: widthBarClose var(--speed_2) var(--ease) forwards;
+}
+@keyframes widthBarOpen{
+	from{
+		width: 0%;
+	}
+	to{
+		width: 100%;
+	}
+}
+@keyframes widthBarClose{
+	from{
+		width: 100%;
+	}
+	to{
+		width: 0%;
+	}
+}
+body #nav-bar:not(.intro).target-archive span,
+.page-archive #nav-bar:not(.intro) span{
+	width: calc((100% + var(--gap))/32) !important;
+}
+body #nav-bar:not(.intro).target-news span,
+.page-news #nav-bar:not(.intro) span{
+	width: calc((100% + var(--gap))/32*2) !important;
+}
+body #nav-bar:not(.intro).target-project span,
+.page-project #nav-bar:not(.intro) span{
+	width: calc((100% + var(--gap))/32*4) !important;
+}
+body #nav-bar:not(.intro).target-profile span,
+.page-profile #nav-bar:not(.intro) span{
+	width: calc((100% + var(--gap))/32*8) !important;
+}
+@media (max-width: 320px){
+	body #nav-bar:not(.intro).target-archive span,
+	.page-archive #nav-bar:not(.intro) span{
+		width: calc((100% + var(--gap))/32*2) !important;
+	}
+}

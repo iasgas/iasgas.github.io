@@ -1,329 +1,649 @@
-<!DOCTYPE html>
-<html lang="de">
+<!doctype html>
+
+<html lang="en-US">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Tobias Gasser</title>
-
-    <link rel="icon" type="image/x-icon" href="point_red.svg">
-    <link href="ProjectPage.css" rel="stylesheet">
-
-    <script type="text/javascript">
-        var _paq = window._paq || [];
-        /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-        _paq.push(["trackPageView"]);
-        _paq.push(["enableLinkTracking"]);
-        (function () {
-            var u = "//analytics.fm-a.dk/";
-            _paq.push(["setTrackerUrl", u + "matomo.php"]);
-            _paq.push(["setSiteId", "5"]);
-            var d = document
-                , g = d.createElement("script")
-                , s = d.getElementsByTagName("script")[0];
-            g.type = "text/javascript";
-            g.async = true;
-            g.defer = true;
-            g.src = u + "matomo.js";
-            s.parentNode.insertBefore(g, s);
-        }
-        )();
-    </script>
-
-    <script src="InfiniteScroll.js"></script>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="description"
+		content="">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="format-detection" content="date=no">
+	<meta name="format-detection" content="address=no">
+	<meta name="format-detection" content="email=no">
+	<title>Tobias | Archive</title>
+	<link rel="canonical" href="https://tobiasgasser.ch/archive">
+	<link rel="icon" href="../point_red.svg" type="image/png">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<meta property="og:locale" content="en-US">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Tobias Andri Gasser">
+	<meta property="og:site_name" content="Tobias Andri Gasser">
+	<meta property="og:url" content="https://tobiasgasser.ch/">
+	<meta property="og:description"
+		content="">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/arvgta/ajaxify@8.1.5/ajaxify.min.js"></script>
+	<script defer src="https://cdn.jsdelivr.net/npm/jquery-bez@1.0.11/lib/jquery.bez.min.js"></script>
+	<script defer src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
+	<script src="assets/js/global.js"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+		gtag('config', 'G-LRJPW7P31T');
+	</script>
 </head>
 
-<body x-data :class="{ 'text-base': !$store.textsize.active, 'text-large': $store.textsize.active }">
-    <header x-cloak @click.away="$store.menu = false" x-data="{ 
-    activeMenu: 'archiv',
-    page: window.location.pathname.split('/').length,
-    language: 'de',
-    setMenu() {
-        $store.menu = false    },
-    changeLang(lang) {
-        let split = window.location.pathname.split('/');
-        if(lang == 'en') {
-            split[2] = 'en';
-            let newpath = split.join('/');
-            window.location = newpath;
-        } else {
-            split[2] = 'de';
-            let newpath = split.join('/');
-            window.location = newpath;
-        }
-    }
-}" x-init="setMenu" :class="activeMenu" style="--subcolor: rgb(114, 114, 114)"
-        class="text-darkgray z-50 fixed right-0 top-0 uppercase">
-        <div class="absolute top-0 right-0 w-28 justify-end p-2 flex">
-            <div class="flex z-20">
-                <div x-show="!$store.textsize.active && $screen('md')" @click="$store.textsize.toggle()" class="pr-4 cursor-pointer"><span class="text-small">a</span>&rarr;A</div>
-                <div x-show="$store.textsize.active && $screen('md')" @click="$store.textsize.toggle()" class="pr-4 cursor-pointer">A&rarr;<span class="text-base">a</span></div>
-    
-            </div>
-        </div>
-        <div x-show="!$store.menu" class="cursor-pointer relative z-60 w-48 p-2 text-right md:text-left" @click="$store.menu = !$store.menu; $store.mobilemenu = false; page = window.location.pathname.split('/').length">
-            <span>Menu</span>
-        </div>
-        <nav x-show="$store.menu" class="flex bg-white w-screen md:w-48 justify-end md:bg-transparent" :class="{ 'bg-white md:bg-transparent': page > 2, 'bg-transparent': page < 3 }">
-            <div class="flex flex-col w-48 p-2">
-                    <div @click="$store.menu = false; $store.teaser.active = false; activeMenu = 'home'"><a href="index.html" :class="{ 'active': activeMenu == 'home'}">Home</a></div>
-                    <div @click="$store.menu = false; $store.teaser.active = false; activeMenu = 'archiv'"><a href="archive.html" :class="{ 'active': activeMenu == 'archiv'}">Archive</a></div>
-                    <div @click="$store.menu = false; $store.teaser.active = false; activeMenu = 'archiv'"><a href="https://tobiasgasser.ch/gallery.html" onclick="window.location='gallery.html'; return false;" :class="{ 'active': activeMenu == 'archiv'}">Gallery</a></div>
-                    <div @click="$store.menu = false; $store.teaser.active = false; activeMenu = 'archiv'"><a class="uppercase pr-4 " href="mailto:tobias.gasser1@gmail.com" rel="nofollow">Mail</a></div>
-                    <div @click="$store.menu = false; $store.teaser.active = false; activeMenu = 'archiv'"><a class="uppercase pr-4" href="https://www.instagram.com/tobias.andri/" target="_blank">Instagram</a></div>
-                    </div>
-        </nav>
+<body>
 
-    </header>
-    <div id="title"
-        class="hidden md:block opacity-0 pointer-events-none fixed top-0 left-0 w-full h-screen text-gray p-2">
-        <h1 class="text-big absolute left-2 transition-all duration-1000">TOBIAS</h1>
-        <h1 class="text-big text-center w-1/3 absolute left-1/3 transition-all duration-1000 lg:pr-48">ANDRI</h1>
-        <h1 class="text-big text-right w-1/3 absolute left-2/3 transition-all duration-1000 pr-2 lg:pr-48">GASSER</h1>
-    </div>
-    <div id="hometitle"
-        class="hidden opacity-0 uppercase pointer-events-none p-2 fixed bottom-0 md:bottom-auto md:top-1/2 left-1/2 transform -translate-x-1/2 md:-translate-y-1/2 md:flex justify-between"
-        style="color: rgb(0,0,0)">
-        <h1 class="lg:text-big">TOBIAS &nbsp;ANDRI</h1>
-        <h1 class="lg:text-big">GASSER</h1>
-    </div>
-    <div id="hometitle"
-        class="mobile opacity-0 uppercase pointer-events-none p-2 w-full h-full fixed top-0 pt-36 left-0 flex md:hidden flex-col justify-between"
-        style="color: rgb(0,0,0)">
-        <div class="flex justify-between">
-            <h1 class="lg:text-big">TOBIAS</h1>
-            <h1 class="relative top-16">ANDRI</h1>
-            <h1 class="relative top-80">GASSER</h1>
-        </div>
-    </div>
-    <div data-barba="wrapper">
-        <main x-cloak x-data="{ 
-            mobilemenu: false,
-            filter: null, 
-            search: false, 
-            checkUrl(name) {
-                var path = window.location.pathname.split('/')[3]
-                var filter = path ? path.split(':')[0] : null;
-                if(filter == 'tag') {
-                    path = window.location.pathname.split('/')[4];
-                    filter = path ? path.split(':')[0] : null;
-                    return filter == name && this.filter == null
-                } else {
-                    return filter == name && this.filter == null
-                }
-            },
-            changeFilter(name) {
-                this.search = false;
-                if(this.filter === name) {
-                    this.filter = null;
-                } else {
-                    this.filter = name;
-                }
-            },
+	<!--Loader-->
+	<div id="loader"></div>
 
-            
-          }" x-init="filter = null" data-barba="container" data-barba-namespace="projects"
-            class="flex flex-col overflow-x-hidden">
-            <div x-show="!$store.mobilemenu" @click="$store.mobilemenu = !$store.mobilemenu; $store.menu = false"
-                class="block link lg:hidden fixed top-0 left-0 p-2 uppercase cursor-pointer"
-                :class="{ 'z-50 bg-transparent w-auto': $store.menu, 'z-30 bg-white w-full': !$store.menu }">Info
-            </div>
-            <div x-show="$store.mobilemenu || $screen('lg')"
-                class="filters-menu bg-white lg:bg-transparent fixed lg:relative top-0 left-0 lg:top-auto lg:left-0 w-full flex flex-col overflow-y-auto"
-                :class="{ 'z-45 h-screen lg:h-auto': $store.mobilemenu, 'z-40 h-auto lg:h-auto': !$store.mobilemenu }">
-                <div class="link lg:hidden p-2 uppercase mb-4" @click="$store.mobilemenu = false; $store.menu = true">
-                    Close</div>
-                <div class="no-transition z-30 p-2 w-auto lg:fixed lg:top-0 lg:left-0">
-                    <div class="flex flex-col lg:pt-44" @click="$store.mobilemenu = false">
-                        <a class="uppercase pr-4 " href="mailto:tobias.gasser1@gmail.com" rel="nofollow">Mail</a>
-                        <a class="uppercase pr-4" href="https://www.instagram.com/tobias.andri/" target="_blank">Instagram</a>
-                    </div>
-                </div>
-                <div class="blur-box uppercase lg:fixed w-full lg:w-48 lg:right-0 lg:z-40 lg:pt-44 p-2">
-                    <div>
-                        <form x-cloak x-data="{
-    isvalid: false,
-    val(event) {
-        if(event.target.value.length > 0) {
-            this.isvalid = true;
-        } else {
-            this.isvalid = false
-        }
-    }
-}" class="w-full">
-                            <div class="field flex">
-                                <input @input="val(event)" class="mt-0 flex-grow-1" placeholder="TOBIAS ANDRI GASSER" type="text"
-                                    name="q" value="">
-                                <input x-show="isvalid" class="mt-0 nomt cursor-pointer" type="submit" value="&rarr;">
-                            </div>
-                            <div class="field flex">
-                                <input @input="val(event)" class="mt-0 flex-grow-1" placeholder="Cand. BSC ETHZ" type="text"
-                                    name="q" value="">
-                                <input x-show="isvalid" class="mt-0 nomt cursor-pointer" type="submit" value="&rarr;">
-                            </div>
-                        </form>
-                    </div>
 
-                </div>
-                <div x-show="filter == 'year' || checkUrl('year')"
-                    class="lg:fixed w-full lg:w-48 lg:h-screen lg:overflow-y-auto lg:pt-76 lg:right-0 p-2 z-30">
-                    
-                </div>
-                <div x-show="filter == 'artist' || checkUrl('subtitle')"
-                    class="lg:fixed w-full lg:w-48 lg:h-screen lg:overflow-y-auto lg:pt-76 lg:right-0 p-2 z-30">
-                </div>
 
-                <div x-show="filter == 'curators' || checkUrl('curators')"
-                    class="lg:fixed w-full lg:w-48 lg:h-screen lg:overflow-y-auto lg:pt-76 lg:right-0 p-2 z-30">
-                </div>
+	<!--Wrapper-->
+	<div id="wrapper" class="transition page-archive">
 
-                <div x-show="filter == 'authors' || checkUrl('authors')"
-                    class="lg:fixed w-full lg:w-48 lg:h-screen lg:overflow-y-auto lg:pt-76 lg:right-0 p-2 z-30">
-                </div>
+		<!--Header-->
+		<header class="menu">
 
-                <div x-show="filter == 'editors' || checkUrl('editors')"
-                    class="lg:fixed w-full lg:w-48 lg:h-screen lg:overflow-y-auto lg:pt-76 lg:right-0 p-2 z-30">
-                </div>
+			<!--Logo-->
+			<wrap class="capsule">
+				<a id="logo" class="menu-item" href="profile.html" data-target="target-profile">
+					<span class="pos-wrapper box">
+						<wrap>About</wrap>
+					</span>
+				</a>
+			</wrap>
 
-                <div x-show="filter == 'speakers' || checkUrl('speakers')"
-                    class="lg:fixed w-full lg:w-48 lg:h-screen lg:overflow-y-auto lg:pt-76 lg:right-0 p-2 z-30">
-                </div>
-            </div>
-            
-            <div class="wrapper z-20 flex flex-col md:flex-row w-full lg:pr-48">
-                <section class="hidden md:block column left"></section>
-                <section class="column center">
-                    <div class="infscro">
-                        <a class="infscro__next" href="#"></a>
-                        <div class="infoscro__inner">
-                            <a x-cloak
-                                @mouseenter="$store.teaser.active = true; $store.teaser.src = 'https://tobiasgasser.ch/portfolio/Gandria/fisch-web.jpg'; $store.teaser.left = event.clientX; $store.teaser.bottom = event.clientY"
-                                @mousemove="$store.teaser.left = event.clientX; $store.teaser.bottom = event.clientY"
-                                @mouseleave="$store.teaser.active = false; $store.teaser.src = null"
-                                @click="$store.teaser.active = false"
-                                href="SS24ProjectPage.html"
-                                class="block relative w-full mb-8 text-black group" style="color: rgb()"
-                                id="nach-h-a-l-l">
-                                <h1 class="relative z-10">
-                                    Revealing Encounters
-                                </h1>
-                                <div class="relative z-10">
-                                    <span class="uppercase">Summer school &nbsp;&nbsp;</span>
-                                    <span class="whitespace-nowrap">15. June 2024 – 23. June 2024 </span>
-                                </div>
-                            </a>
-                            <a x-cloak
-                                @mouseenter="$store.teaser.active = true; $store.teaser.src = 'https://tobiasgasser.ch/portfolio/Neophytes/img/kreis_040624-web.jpg'; $store.teaser.left = event.clientX; $store.teaser.bottom = event.clientY"
-                                @mousemove="$store.teaser.left = event.clientX; $store.teaser.bottom = event.clientY"
-                                @mouseleave="$store.teaser.active = false; $store.teaser.src = null"
-                                @click="$store.teaser.active = false"
-                                href="FS24ProjectPage.html"
-                                class="block relative w-full mb-8 text-black group" style="color: rgb()"
-                                id="ausstellungsumbau">
-                                <h1 class="relative z-10">
-                                    Shifting Ground
-                                </h1>
-                                <div class="relative z-10">
-                                    <span class="uppercase">Studio Concrete Garden &nbsp;&nbsp;</span>
-                                    <span class="whitespace-nowrap">Spring 2024 </span>
-                                </div>
-                            </a>
-                            <a x-cloak
-                            @mouseenter="$store.teaser.active = true; $store.teaser.src = 'https://tobiasgasser.ch/portfolio/Habitats/img/habitats_04-web.jpg'; $store.teaser.left = event.clientX; $store.teaser.bottom = event.clientY"
-                            @mousemove="$store.teaser.left = event.clientX; $store.teaser.bottom = event.clientY"
-                            @mouseleave="$store.teaser.active = false; $store.teaser.src = null"
-                            @click="$store.teaser.active = false"
-                            href="UH24ProjectPage.html"
-                            class="block relative w-full mb-8 text-black group" style="color: rgb()"
-                            id="nach-h-a-l-l">
-                            <h1 class="relative z-10">
-                                Unveiling Habitats
-                            </h1>
-                            <div class="relative z-10">
-                                <span class="uppercase">Elective course &nbsp;&nbsp;</span>
-                                <span class="whitespace-nowrap">Spring 2024 </span>
-                            </div>
-                        </a>
-                            <a x-cloak
-                                @mouseenter="$store.teaser.active = true; $store.teaser.src = 'https://tobiasgasser.ch/portfolio/Dolder/img/Modellfoto_3-web.jpg'; $store.teaser.left = event.clientX; $store.teaser.bottom = event.clientY"
-                                @mousemove="$store.teaser.left = event.clientX; $store.teaser.bottom = event.clientY"
-                                @mouseleave="$store.teaser.active = false; $store.teaser.src = null"
-                                @click="$store.teaser.active = false"
-                                href="HS23ProjectPage.html"
-                                class="block relative w-full mb-8 text-black group" style="color: rgb()"
-                                id="a-minute-or-two">
-                                <h1 class="relative z-10 ">
-                                    Dolder Sports
-                                </h1>
-                                <div class="relative z-10">
-                                    <span class="uppercase">Studio Maria Conen &nbsp;&nbsp;</span>
-                                    <span class="whitespace-nowrap">Autumn 2023 </span>
-                                </div>
-                            </a>
-                            <a x-cloak
-                                @mouseenter="$store.teaser.active = true; $store.teaser.src = 'https://tobiasgasser.ch/portfolio/NeueHard/img/InnenColorgraded-web.jpg'; $store.teaser.left = event.clientX; $store.teaser.bottom = event.clientY"
-                                @mousemove="$store.teaser.left = event.clientX; $store.teaser.bottom = event.clientY"
-                                @mouseleave="$store.teaser.active = false; $store.teaser.src = null"
-                                @click="$store.teaser.active = false"
-                                href="FS23ProjectPage.html"
-                                class="block relative w-full mb-8 text-black group" style="color: rgb()"
-                                id="home-from-home">
-                                <h1 class="relative z-10">
-                                    Neue Hard
-                                </h1>
-                                <div class="relative z-10">
-                                    <span class="uppercase">Studio Roger Boltshauser &nbsp;&nbsp;</span>
-                                    <span class="whitespace-nowrap">Spring 2023 </span>
-                                </div>
-                            </a>
-                            <a x-cloak
-                                @mouseenter="$store.teaser.active = true; $store.teaser.src = 'https://tobiasgasser.ch/portfolio/Letten/img/Lageplan-web.jpg'; $store.teaser.left = event.clientX; $store.teaser.bottom = event.clientY"
-                                @mousemove="$store.teaser.left = event.clientX; $store.teaser.bottom = event.clientY"
-                                @mouseleave="$store.teaser.active = false; $store.teaser.src = null"
-                                @click="$store.teaser.active = false"
-                                href="SD23ProjectPage.html"
-                                class="block relative w-full mb-8 text-black group" style="color: rgb()"
-                                id="oeffnungszeiten-feiertage">
-                                <h1 class="relative z-10">
-                                    Letten
-                                </h1>
-                                <div class="relative z-10">
-                                    <span class="uppercase">Structural Design &nbsp;&nbsp;</span>
-                                    <span class="whitespace-nowrap">Spring 2023 </span>
-                                </div>
-                            </a>
-                            <a x-cloak
-                                @mouseenter="$store.teaser.active = true; $store.teaser.src = 'https://tobiasgasser.ch/portfolio/Geroldsareal/img/Innenrender_Tobias_Gasser-web.jpg'; $store.teaser.left = event.clientX; $store.teaser.bottom = event.clientY"
-                                @mousemove="$store.teaser.left = event.clientX; $store.teaser.bottom = event.clientY"
-                                @mouseleave="$store.teaser.active = false; $store.teaser.src = null"
-                                @click="$store.teaser.active = false"
-                                href="HS22ProjectPage.html"
-                                class="block relative w-full mb-8 text-black group" style="color: rgb()"
-                                id="weihnachtsfeier-jahresgaben-2023">
-                                <h1 class="relative z-10">
-                                    Geroldsareal
-                                </h1>
-                                <div class="relative z-10">
-                                    <span class="uppercase">Studio Roger Boltshauser &nbsp;&nbsp;</span>
-                                    <span class="whitespace-nowrap">Autumn 2022 </span>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="h-20"></div>
-                </section>
-                <section class="hidden md:block column right"></section>
-            </div>
-            <div x-cloak x-show="$store.teaser.active && $store.teaser.src && $screen('md')"
-                class="fixed z-30 max-w-prose h-96 pointer-events-none transform -translate-y-1/2"
-                :style="`top: ${$store.teaser.bottom}px; left: ${$store.teaser.left}px`">
-                <img class="h-full w-auto" :src="$store.teaser.src" alt="teaser" />
-            </div>
-        </main>
-    </div>
-    <script src="InfiniteScroll.js"></script>
-    <script src="ProjectPage.js"></script>
+			<!--News-->
+			<wrap class="capsule">
+				<a class="menu-item" href="index.html" data-target="target-news">
+					<span class="pos-wrapper box">
+						<wrap>Work</wrap>
+					</span>
+				</a>
+			</wrap>
+
+			<!--Archive-->
+			<wrap class="capsule">
+				<a class="menu-item active" href="archive.html?sort=date"
+					data-target="target-archive">
+					<span class="pos-wrapper box">
+						<wrap>Archive</wrap>
+					</span>
+				</a>
+			</wrap>
+
+			<!--Dark Mode-->
+			<wrap class="capsule">
+				<div id="dark-mode" class="menu-item">
+					<span class="pos-wrapper box">
+						<wrap>Invert</wrap>
+					</span>
+					</a>
+			</wrap>
+
+		</header>
+		<!--Scroll Bar-->
+		<div id="scroll-bar-wrapper">
+			<input id="scroll-bar" type="range" min="0" max="100" step=".1" value="0" style="display: none">
+		</div>
+		<!--Bar-->
+		<div id="nav-bar">
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+		<!--Filters-->
+		<div id="filters" class="menu collapsed-content-wrapper">
+
+			<!--Industry-->
+			<wrap id="industry" class="capsule">
+				<!--Title-->
+				<div class="menu-item trigger">
+					<span class="pos-wrapper box">
+						<wrap>Industry</wrap>
+					</span>
+				</div>
+				<!--Content-->
+				<div class="collapsed" style="display: none">
+					<div class="collapsed-item filter" data-wrapper="#archive" data-url="arts-culture"
+						data-type="industry" data-filter="category" data-class=".arts-culture"
+						style="transition-delay: 250ms;">Arts &amp; Culture</div>
+					<div class="collapsed-item filter" data-wrapper="#archive" data-url="business-institutions"
+						data-type="industry" data-filter="category" data-class=".business-institutions"
+						style="transition-delay: 200ms;">Business &amp; Institutions</div>
+					<div class="collapsed-item filter" data-wrapper="#archive" data-url="design-architecture"
+						data-type="industry" data-filter="category" data-class=".design-architecture"
+						style="transition-delay: 150ms;">Design &amp; Architecture</div>
+					<div class="collapsed-item filter" data-wrapper="#archive" data-url="research-development"
+						data-type="industry" data-filter="category" data-class=".research-development"
+						style="transition-delay: 100ms;">Research &amp; Development</div>
+					<div class="collapsed-item filter" data-wrapper="#archive" data-url="sports-fashion"
+						data-type="industry" data-filter="category" data-class=".sports-fashion"
+						style="transition-delay: 50ms;">Sports &amp; Fashion</div>
+				</div>
+			</wrap>
+
+			<!--Services-->
+			<wrap id="services" class="capsule">
+				<!--Title-->
+				<div class="menu-item trigger">
+					<span class="pos-wrapper box">
+						<wrap>Service</wrap>
+					</span>
+				</div>
+				<!--Content-->
+				<div class="collapsed" style="display: none">
+					<div class="collapsed-item filter" data-wrapper="#archive-wrapper" data-url="animation"
+						data-type="services" data-filter="tag" data-class=".animation" style="transition-delay: 650ms;">
+						Animation</div>
+					<div class="collapsed-item filter" data-wrapper="#archive-wrapper" data-url="art-direction"
+						data-type="services" data-filter="tag" data-class=".art-direction"
+						style="transition-delay: 600ms;">Art Direction</div>
+					<div class="collapsed-item filter" data-wrapper="#archive-wrapper" data-url="branding"
+						data-type="services" data-filter="tag" data-class=".branding" style="transition-delay: 550ms;">
+						Branding</div>
+					<div class="collapsed-item filter" data-wrapper="#archive-wrapper" data-url="creative-consulting"
+						data-type="services" data-filter="tag" data-class=".creative-consulting"
+						style="transition-delay: 500ms;">Creative Consulting</div>
+					<div class="collapsed-item filter" data-wrapper="#archive-wrapper" data-url="exhibition-graphics"
+						data-type="services" data-filter="tag" data-class=".exhibition-graphics"
+						style="transition-delay: 450ms;">Exhibition Graphics</div>
+					<div class="collapsed-item filter" data-wrapper="#archive-wrapper" data-url="graphic-illustration"
+						data-type="services" data-filter="tag" data-class=".graphic-illustration"
+						style="transition-delay: 400ms;">Graphic Illustration</div>
+					<div class="collapsed-item filter" data-wrapper="#archive-wrapper" data-url="information-design"
+						data-type="services" data-filter="tag" data-class=".information-design"
+						style="transition-delay: 350ms;">Information Design</div>
+					<div class="collapsed-item filter" data-wrapper="#archive-wrapper" data-url="photography"
+						data-type="services" data-filter="tag" data-class=".photography"
+						style="transition-delay: 300ms;">Photography</div>
+					<div class="collapsed-item filter" data-wrapper="#archive-wrapper" data-url="print-editorial-design"
+						data-type="services" data-filter="tag" data-class=".print-editorial-design"
+						style="transition-delay: 250ms;">Print &amp; Editorial Design</div>
+					<div class="collapsed-item filter" data-wrapper="#archive-wrapper" data-url="type-design"
+						data-type="services" data-filter="tag" data-class=".type-design"
+						style="transition-delay: 200ms;">Type Design</div>
+					<div class="collapsed-item filter" data-wrapper="#archive-wrapper" data-url="visual-identity"
+						data-type="services" data-filter="tag" data-class=".visual-identity"
+						style="transition-delay: 150ms;">Visual Identity</div>
+					<div class="collapsed-item filter" data-wrapper="#archive-wrapper" data-url="wayfinding-signage"
+						data-type="services" data-filter="tag" data-class=".wayfinding-signage"
+						style="transition-delay: 100ms;">Wayfinding &amp; Signage</div>
+					<div class="collapsed-item filter" data-wrapper="#archive-wrapper" data-url="web-design"
+						data-type="services" data-filter="tag" data-class=".web-design" style="transition-delay: 50ms;">
+						Web Design</div>
+				</div>
+			</wrap>
+
+			<!--Sorting-->
+			<wrap id="sorting" class="capsule">
+				<!--Title-->
+				<div class="menu-item trigger">
+					<span class="pos-wrapper box">
+						<wrap>Sorting</wrap>
+					</span>
+				</div>
+				<!--Content-->
+				<div class="collapsed" style="display: none">
+					<div id="sort-title" class="collapsed-item sort" data-sort="title" style="transition-delay: 100ms">
+						Alphabetical</div>
+					<div id="sort-date" class="collapsed-item sort active" data-sort="date"
+						style="transition-delay: 50ms">Chronological</div>
+				</div>
+			</wrap>
+
+			<!--Clear Filters-->
+			<div id="clear-all" style="display: none">
+				<span class="pos-wrapper">
+					<wrap>
+						<span>✕</span>
+						<span>Clear</span>
+					</wrap>
+				</span>
+			</div>
+
+		</div>
+
+		<!--Main-->
+		<main style="display: none">
+
+			<div id="archive-wrapper">
+				<!--Projects-->
+				<div id="archive">
+
+
+						<a class="project col-8 col-mob-4 arts-culture sports-fashion art-direction graphic-illustration type-design visual-identity"
+							data-title="Plastic" data-date="20250701" data-pos="1" href="work/plastics.html"
+							data-target="target-project">
+
+							<!--Thumbnail-->
+							<picture class="thumbnail picture">
+								<source
+									data-srcset="media/plastic-7-25/black-styrofoam.jpg"
+									media="(max-width: 768px)">
+								<source
+									data-srcset="media/plastic-7-25/black-styrofoam.jpg"
+									media="(min-width: 769px) and (max-width: 1180px)">
+								<source
+									data-srcset="media/plastic-7-25/black-styrofoam.jpg"
+									media="(min-width: 1181px)">
+								<!--Thumb-->
+								<img class="thumb"
+									src="media/plastic-7-25/black-styrofoam.jpg"
+									alt="Plastics" />
+							</picture>
+
+							<!--Title-->
+							<span class="project-title pos-wrapper text-small">
+								<wrap>
+									Plastics 2025 </wrap>
+							</span>
+
+						</a>
+
+
+						<a class="project col-8 col-mob-4 arts-culture animation art-direction graphic-illustration type-design visual-identity"
+							data-title="Carrara" data-date="20250201" data-pos="2"
+							href="https://tobiasgasser.ch/carrara/" data-target="target-project">
+
+							<!--Thumbnail-->
+							<picture class="thumbnail picture">
+								<source
+									data-srcset="media/carrara-2-25/carrara-01-web.jpg"
+									media="(max-width: 768px)">
+								<source
+									data-srcset="media/carrara-2-25/carrara-01-web.jpg"
+									media="(min-width: 769px) and (max-width: 1180px)">
+								<source
+									data-srcset="media/carrara-2-25/carrara-01-web.jpg"
+									media="(min-width: 1181px)">
+								<!--Thumb-->
+								<img class="thumb"
+									src="media/carrara-2-25/carrara-01-web.jpg"
+									alt="Carrara 2025" />
+							</picture>
+
+							<!--Title-->
+							<span class="project-title pos-wrapper text-small">
+								<wrap>
+									Carrara 2025 </wrap>
+							</span>
+
+						</a>
+
+						<a class="project col-8 col-mob-4 arts-culture animation art-direction graphic-illustration type-design visual-identity"
+							data-title="Gandria" data-date="20240630" data-pos="3"
+							href="https://tobiasgasser.ch/Gandria/" data-target="target-project">
+
+							<!--Thumbnail-->
+							<picture class="thumbnail picture">
+								<source
+									data-srcset="media/gandria-6-24/gandria-tobias-andri-gasser-08.jpg"
+									media="(max-width: 768px)">
+								<source
+									data-srcset="media/gandria-6-24/gandria-tobias-andri-gasser-08.jpg"
+									media="(min-width: 769px) and (max-width: 1180px)">
+								<source
+									data-srcset="media/gandria-6-24/gandria-tobias-andri-gasser-08.jpg"
+									media="(min-width: 1181px)">
+								<!--Thumb-->
+								<img class="thumb"
+									src="media/gandria-6-24/gandria-tobias-andri-gasser-08.jpg"
+									alt="Gandria 2024" />
+							</picture>
+
+							<!--Title-->
+							<span class="project-title pos-wrapper text-small">
+								<wrap>
+									Gandria 2024 </wrap>
+							</span>
+
+						</a>
+
+						<a class="project col-8 col-mob-4 arts-culture animation art-direction graphic-illustration type-design visual-identity"
+							data-title="FS 24" data-date="20240601" data-pos="4"
+							href="https://tobiasgasser.ch/FS24/" data-target="target-project">
+
+							<!--Thumbnail-->
+							<picture class="thumbnail picture">
+								<source
+									data-srcset="media/shifting-ground-5-24/Turm-web.jpg"
+									media="(max-width: 768px)">
+								<source
+									data-srcset="media/shifting-ground-5-24/Turm-web.jpg"
+									media="(min-width: 769px) and (max-width: 1180px)">
+								<source
+									data-srcset="media/shifting-ground-5-24/Turm-web.jpg"
+									media="(min-width: 1181px)">
+								<!--Thumb-->
+								<img class="thumb"
+									src="media/shifting-ground-5-24/Turm-web.jpg"
+									alt="FS24" />
+							</picture>
+
+							<!--Title-->
+							<span class="project-title pos-wrapper text-small">
+								<wrap>
+									FS 2024 </wrap>
+							</span>
+
+						</a>
+
+						<a class="project col-8 col-mob-4 arts-culture animation art-direction graphic-illustration type-design visual-identity"
+							data-title="Unveiling Habitats" data-date="20240530" data-pos="5"
+							href="https://tobiasgasser.ch/UnveilingHabitats/" data-target="target-project">
+
+							<!--Thumbnail-->
+							<picture class="thumbnail picture">
+								<source
+									data-srcset="media/seebahnhöfe-5-24/habitats-03-web.jpg"
+									media="(max-width: 768px)">
+								<source
+									data-srcset="media/seebahnhöfe-5-24/habitats-03-web.jpg"
+									media="(min-width: 769px) and (max-width: 1180px)">
+								<source
+									data-srcset="media/seebahnhöfe-5-24/habitats-03-web.jpg"
+									media="(min-width: 1181px)">
+								<!--Thumb-->
+								<img class="thumb"
+									src="media/seebahnhöfe-5-24/habitats-03-web.jpg"
+									alt="Unveiling Habitats" />
+							</picture>
+
+							<!--Title-->
+							<span class="project-title pos-wrapper text-small">
+								<wrap>
+									Unveiling Habitats</wrap>
+							</span>
+
+						</a>
+
+					
+
+					<a class="project col-8 col-mob-4 arts-culture animation art-direction graphic-illustration type-design visual-identity"
+						data-title="Chalberhau" data-date="20240401" data-pos="6"
+						href="https://tobiasgasser.ch/Chalberhau/" data-target="target-project">
+
+						<!--Thumbnail-->
+						<picture class="thumbnail picture">
+							<source
+								data-srcset="media/chalberhau-4-24/chalberhau-tobias-andri-gasser-11.jpg"
+								media="(max-width: 768px)">
+							<source
+								data-srcset="media/chalberhau-4-24/chalberhau-tobias-andri-gasser-11.jpg"
+								media="(min-width: 769px) and (max-width: 1180px)">
+							<source
+								data-srcset="media/chalberhau-4-24/chalberhau-tobias-andri-gasser-11.jpg"
+								media="(min-width: 1181px)">
+							<!--Thumb-->
+							<img class="thumb"
+								src="media/chalberhau-4-24/chalberhau-tobias-andri-gasser-11.jpg"
+								alt="Chalberhau" />
+						</picture>
+
+						<!--Title-->
+						<span class="project-title pos-wrapper text-small">
+							<wrap>
+								Chalberhau Landfill 2024 </wrap>
+						</span>
+
+					</a>
+
+					<a class="project col-8 col-mob-4 arts-culture animation art-direction graphic-illustration type-design visual-identity"
+						data-title="Asturias" data-date="20240201" data-pos="7"
+						href="https://tobiasgasser.ch/Asturias/" data-target="target-project">
+
+						<!--Thumbnail-->
+						<picture class="thumbnail picture">
+							<source
+								data-srcset="media/asturias-2-24/Asturias-tobias-andri-gasser-4.jpg"
+								media="(max-width: 768px)">
+							<source
+								data-srcset="media/asturias-2-24/Asturias-tobias-andri-gasser-4.jpg"
+								media="(min-width: 769px) and (max-width: 1180px)">
+							<source
+								data-srcset="media/asturias-2-24/Asturias-tobias-andri-gasser-4.jpg"
+								media="(min-width: 1181px)">
+							<!--Thumb-->
+							<img class="thumb"
+								src="media/asturias-2-24/Asturias-tobias-andri-gasser-4.jpg"
+								alt="Asturias" />
+						</picture>
+
+						<!--Title-->
+						<span class="project-title pos-wrapper text-small">
+							<wrap>
+								Asturias 2024 </wrap>
+						</span>
+
+					</a>
+
+					<a class="project col-8 col-mob-4 arts-culture animation art-direction graphic-illustration type-design visual-identity"
+						data-title="HS 23" data-date="20231223" data-pos="8"
+						href="https://tobiasgasser.ch/HS23/" data-target="target-project">
+
+						<!--Thumbnail-->
+						<picture class="thumbnail picture">
+							<source
+								data-srcset="media/doldersport-12-23/endgebäude-01-web.jpg"
+								media="(max-width: 768px)">
+							<source
+								data-srcset="media/doldersport-12-23/endgebäude-01-web.jpg"
+								media="(min-width: 769px) and (max-width: 1180px)">
+							<source
+								data-srcset="media/doldersport-12-23/endgebäude-01-web.jpg"
+								media="(min-width: 1181px)">
+							<!--Thumb-->
+							<img class="thumb"
+								src="media/doldersport-12-23/endgebäude-01-web.jpg"
+								alt="HS 2023" />
+						</picture>
+
+						<!--Title-->
+						<span class="project-title pos-wrapper text-small">
+							<wrap>
+								HS 2023 </wrap>
+						</span>
+
+					</a>
+
+					<a class="project col-8 col-mob-4 arts-culture animation art-direction graphic-illustration type-design visual-identity"
+						data-title="Kunsteisbahn" data-date="20231001" data-pos="9"
+						href="https://tobiasgasser.ch/Dolder/" data-target="target-project">
+
+						<!--Thumbnail-->
+						<picture class="thumbnail picture">
+							<source
+								data-srcset="media/dolder-10-23/dolder-tobias-andri-gasser_02.jpg"
+								media="(max-width: 768px)">
+							<source
+								data-srcset="media/dolder-10-23/dolder-tobias-andri-gasser_02.jpg"
+								media="(min-width: 769px) and (max-width: 1180px)">
+							<source
+								data-srcset="media/dolder-10-23/dolder-tobias-andri-gasser_02.jpg"
+								media="(min-width: 1181px)">
+							<!--Thumb-->
+							<img class="thumb"
+								src="media/dolder-10-23/dolder-tobias-andri-gasser_02.jpg"
+								alt="Dolder ice rink" />
+						</picture>
+
+						<!--Title-->
+						<span class="project-title pos-wrapper text-small">
+							<wrap>
+								Dolder ice rink 2023 </wrap>
+						</span>
+
+					</a>
+
+					<a class="project col-8 col-mob-4 arts-culture animation art-direction graphic-illustration type-design visual-identity"
+						data-title="Waldhaus" data-date="20230901" data-pos="10"
+						href="https://tobiasgasser.ch/Waldhaus/" data-target="target-project">
+
+						<!--Thumbnail-->
+						<picture class="thumbnail picture">
+							<source
+								data-srcset="media/waldhaus-9-23/waldhaus-tobias-andri-gasser-8.jpg"
+								media="(max-width: 768px)">
+							<source
+								data-srcset="media/waldhaus-9-23/waldhaus-tobias-andri-gasser-8.jpg"
+								media="(min-width: 769px) and (max-width: 1180px)">
+							<source
+								data-srcset="media/waldhaus-9-23/waldhaus-tobias-andri-gasser-8.jpg"
+								media="(min-width: 1181px)">
+							<!--Thumb-->
+							<img class="thumb"
+								src="media/waldhaus-9-23/waldhaus-tobias-andri-gasser-8.jpg"
+								alt="Waldhaus 2023" />
+						</picture>
+
+						<!--Title-->
+						<span class="project-title pos-wrapper text-small">
+							<wrap>
+								Dolder Waldhaus 2023 </wrap>
+						</span>
+
+					</a>
+
+					<a class="project col-8 col-mob-4 arts-culture animation art-direction graphic-illustration type-design visual-identity"
+						data-title="FS 23" data-date="20230601" data-pos="11"
+						href="https://tobiasgasser.ch/FS23/" data-target="target-project">
+
+						<!--Thumbnail-->
+						<picture class="thumbnail picture">
+							<source
+								data-srcset="media/schwarzeräume-5-23/aussen-web.jpg"
+								media="(max-width: 768px)">
+							<source
+								data-srcset="media/schwarzeräume-5-23/aussen-web.jpg"
+								media="(min-width: 769px) and (max-width: 1180px)">
+							<source
+								data-srcset="media/schwarzeräume-5-23/aussen-web.jpg"
+								media="(min-width: 1181px)">
+							<!--Thumb-->
+							<img class="thumb"
+								src="media/schwarzeräume-5-23/aussen-web.jpg"
+								alt="FS 2023" />
+						</picture>
+
+						<!--Title-->
+						<span class="project-title pos-wrapper text-small">
+							<wrap>
+								FS 2023 </wrap>
+						</span>
+
+					</a>
+
+					<a class="project col-8 col-mob-4 arts-culture animation art-direction graphic-illustration type-design visual-identity"
+						data-title="Neue Hard" data-date="20230301" data-pos="12"
+						href="https://tobiasgasser.ch/NeueHard/" data-target="target-project">
+
+						<!--Thumbnail-->
+						<picture class="thumbnail picture">
+							<source
+								data-srcset="media/neue-hard-3-23/neue-hard-tobias-andri-gasser_01.jpg"
+								media="(max-width: 768px)">
+							<source
+								data-srcset="media/neue-hard-3-23/neue-hard-tobias-andri-gasser_01.jpg"
+								media="(min-width: 769px) and (max-width: 1180px)">
+							<source
+								data-srcset="media/neue-hard-3-23/neue-hard-tobias-andri-gasser_01.jpg"
+								media="(min-width: 1181px)">
+							<!--Thumb-->
+							<img class="thumb"
+								src="media/neue-hard-3-23/neue-hard-tobias-andri-gasser_01.jpg"
+								alt="Neue Hard" />
+						</picture>
+
+						<!--Title-->
+						<span class="project-title pos-wrapper text-small">
+							<wrap>
+								Neue Hard </wrap>
+						</span>
+
+					</a>
+
+					<a class="project col-8 col-mob-4 arts-culture animation art-direction graphic-illustration type-design visual-identity"
+						data-title="Geroldsareal" data-date="20221223" data-pos="13"
+						href="https://tobiasgasser.ch/Gerolds/" data-target="target-project">
+
+						<!--Thumbnail-->
+						<picture class="thumbnail picture">
+							<source
+								data-srcset="media/geroldsareal-12-22/interior.jpg"
+								media="(max-width: 768px)">
+							<source
+								data-srcset="media/geroldsareal-12-22/interior.jpg"
+								media="(min-width: 769px) and (max-width: 1180px)">
+							<source
+								data-srcset="media/geroldsareal-12-22/interior.jpg"
+								media="(min-width: 1181px)">
+							<!--Thumb-->
+							<img class="thumb"
+								src="media/geroldsareal-12-22/interior.jpg"
+								alt="HS 2022" />
+						</picture>
+
+						<!--Title-->
+						<span class="project-title pos-wrapper text-small">
+							<wrap>
+								HS 2022 </wrap>
+						</span>
+
+					</a>
+
+
+
+				</div>
+			</div>
+
+			<!--Footer-->
+			<footer>
+
+
+
+
+			</footer>
+
+		</main>
+
+	</div>
+
+
 </body>
 
 </html>

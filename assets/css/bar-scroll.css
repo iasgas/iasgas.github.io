@@ -1,0 +1,58 @@
+
+/* SCROLL BAR
+============================== */
+#scroll-bar-wrapper{
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: var(--sides);
+	height: 100%;
+	display: grid;
+	z-index: 99;
+}
+.mobile #scroll-bar-wrapper{
+	pointer-events: none;
+}
+#scroll-bar{
+	width: var(--h);
+	height: var(--sides);
+	margin: 0;
+	padding: 0;
+	background: none;
+	background-color: transparent;
+	border: none;
+	-webkit-border-radius: 0;
+		-moz-border-radius: 0;
+			  border-radius: 0;
+	-webkit-appearance: none;
+		-moz-appearance: none;
+			  appearance: none;
+	-webkit-transform: rotate(90deg) translatex(calc(var(--sides)*-1));
+		-moz-transform: rotate(90deg) translatex(calc(var(--sides)*-1));
+		 -ms-transform: rotate(90deg) translatex(calc(var(--sides)*-1));
+			  transform: rotate(90deg) translatex(calc(var(--sides)*-1));
+	transform-origin: bottom left;
+	cursor: pointer;
+}
+#scroll-bar::-webkit-slider-thumb{
+	width: 30px;
+	height: 1px;
+	background-color: var(--ctext);
+	border: none;
+	-webkit-appearance: none;
+		-moz-appearance: none;
+			  appearance: none;
+	box-shadow: none;
+	cursor: pointer;
+}
+#scroll-bar::-moz-range-thumb{
+	width: 30px;
+	height: 1px;
+	background-color: var(--ctext);
+	border: none;
+	-webkit-appearance: none;
+		-moz-appearance: none;
+			  appearance: none;
+	box-shadow: none;
+	cursor: pointer;
+}

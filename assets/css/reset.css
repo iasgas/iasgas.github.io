@@ -1,0 +1,35 @@
+
+/* RESET CSS
+============================== */
+*{
+	box-sizing: border-box;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+html, body, div, span,
+header, footer, section, article, aside, menu, nav,
+h1, h2, h3, h4, h5, h6,
+p, ol, ul, li, a, strong, b, i, s, address, sub, sup,
+form, label,
+iframe, embed, audio{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font: inherit;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+::-webkit-scrollbar{
+	width: 0 !important;
+	display: none !important;
+	-webkit-appearance: none;
+}
+:focus{
+	outline: none !important;
+}
+:focus::-ms-value{
+	color: inherit;
+	background-color: none;
+}
+::-moz-focus-inner{
+	border: none !important;
+}

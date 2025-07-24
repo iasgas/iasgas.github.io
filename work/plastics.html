@@ -1,0 +1,361 @@
+<!doctype html>
+
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description"
+        content="">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="date=no">
+    <meta name="format-detection" content="address=no">
+    <meta name="format-detection" content="email=no">
+    <title>Work | Plastics</title>
+    <link rel="canonical" href="https://tobiasgasser.ch/plastics">
+	<link rel="icon" href="../point_red.svg" type="image/png">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <meta property="og:locale" content="en-US">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Tobias Andri Gasser">
+    <meta property="og:site_name" content="Tobias Andri Gasser">
+    <meta property="og:url" content="https://tobiasgasser.ch/">
+    <meta property="og:description"
+        content="">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/arvgta/ajaxify@8.1.5/ajaxify.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/jquery-bez@1.0.11/lib/jquery.bez.min.js"></script>
+    <script defer src="../assets/js/jquery.validate.min.js"></script>
+    <script src="../assets/js/global.js"></script>
+
+</head>
+
+<body>
+
+    <!--Loader-->
+    <div id="loader"></div>
+
+
+
+
+    <!--Wrapper-->
+    <div id="wrapper" class="transition page-project">
+
+        <!--Header-->
+        <header class="menu">
+
+            <!--Logo-->
+            <wrap class="capsule">
+                <a id="logo" class="menu-item" href="../profile/.html" data-target="target-profile">
+                    <span class="pos-wrapper box">
+                        <wrap>About</wrap>
+                    </span>
+                </a>
+            </wrap>
+
+            <!--News-->
+            <wrap class="capsule">
+                <a class="menu-item" href="../work.html" data-target="target-news">
+                    <span class="pos-wrapper box">
+                        <wrap>Work</wrap>
+                    </span>
+                </a>
+            </wrap>
+
+            <!--Archive-->
+            <wrap class="capsule">
+                <a class="menu-item" href="../archive.html?sort=date" data-target="target-archive">
+                    <span class="pos-wrapper box">
+                        <wrap>Archive</wrap>
+                    </span>
+                </a>
+            </wrap>
+
+            <!--Dark Mode-->
+            <wrap class="capsule">
+                <div id="dark-mode" class="menu-item">
+                    <span class="pos-wrapper box">
+                        <wrap>Invert</wrap>
+                    </span>
+                    </a>
+            </wrap>
+
+        </header>
+        <!--Scroll Bar-->
+        <div id="scroll-bar-wrapper">
+            <input id="scroll-bar" type="range" min="0" max="100" step=".1" value="0" style="display: none">
+        </div>
+        <!--Bar-->
+        <div id="nav-bar">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <!--Filters-->
+        <div id="filters" class="menu collapsed-content-wrapper" style="display: none;">
+
+            <!--Industry-->
+            <wrap id="industry" class="capsule">
+                <!--Title-->
+                <div class="menu-item trigger">
+                    <span class="pos-wrapper box">
+                        <wrap>Industry</wrap>
+                    </span>
+                </div>
+                <!--Content-->
+                <div class="collapsed" style="display: none">
+                    <div class="collapsed-item filter" data-wrapper="#archive" data-url="arts-culture"
+                        data-type="industry" data-filter="category" data-class=".arts-culture"
+                        style="transition-delay: 250ms;">Arts &amp; Culture</div>
+                    <div class="collapsed-item filter" data-wrapper="#archive" data-url="business-institutions"
+                        data-type="industry" data-filter="category" data-class=".business-institutions"
+                        style="transition-delay: 200ms;">Business &amp; Institutions</div>
+                    <div class="collapsed-item filter" data-wrapper="#archive" data-url="design-architecture"
+                        data-type="industry" data-filter="category" data-class=".design-architecture"
+                        style="transition-delay: 150ms;">Design &amp; Architecture</div>
+                    <div class="collapsed-item filter" data-wrapper="#archive" data-url="research-development"
+                        data-type="industry" data-filter="category" data-class=".research-development"
+                        style="transition-delay: 100ms;">Research &amp; Development</div>
+                    <div class="collapsed-item filter" data-wrapper="#archive" data-url="sports-fashion"
+                        data-type="industry" data-filter="category" data-class=".sports-fashion"
+                        style="transition-delay: 50ms;">Sports &amp; Fashion</div>
+                </div>
+            </wrap>
+
+            <!--Services-->
+            <wrap id="services" class="capsule">
+                <!--Title-->
+                <div class="menu-item trigger">
+                    <span class="pos-wrapper box">
+                        <wrap>Service</wrap>
+                    </span>
+                </div>
+                <!--Content-->
+                <div class="collapsed" style="display: none">
+                    <div class="collapsed-item filter" data-wrapper="#archive-wrapper" data-url="animation"
+                        data-type="services" data-filter="tag" data-class=".animation" style="transition-delay: 650ms;">
+                        Animation</div>
+                    <div class="collapsed-item filter" data-wrapper="#archive-wrapper" data-url="art-direction"
+                        data-type="services" data-filter="tag" data-class=".art-direction"
+                        style="transition-delay: 600ms;">Art Direction</div>
+                    <div class="collapsed-item filter" data-wrapper="#archive-wrapper" data-url="branding"
+                        data-type="services" data-filter="tag" data-class=".branding" style="transition-delay: 550ms;">
+                        Branding</div>
+                    <div class="collapsed-item filter" data-wrapper="#archive-wrapper" data-url="creative-consulting"
+                        data-type="services" data-filter="tag" data-class=".creative-consulting"
+                        style="transition-delay: 500ms;">Creative Consulting</div>
+                    <div class="collapsed-item filter" data-wrapper="#archive-wrapper" data-url="exhibition-graphics"
+                        data-type="services" data-filter="tag" data-class=".exhibition-graphics"
+                        style="transition-delay: 450ms;">Exhibition Graphics</div>
+                    <div class="collapsed-item filter" data-wrapper="#archive-wrapper" data-url="graphic-illustration"
+                        data-type="services" data-filter="tag" data-class=".graphic-illustration"
+                        style="transition-delay: 400ms;">Graphic Illustration</div>
+                    <div class="collapsed-item filter" data-wrapper="#archive-wrapper" data-url="information-design"
+                        data-type="services" data-filter="tag" data-class=".information-design"
+                        style="transition-delay: 350ms;">Information Design</div>
+                    <div class="collapsed-item filter" data-wrapper="#archive-wrapper" data-url="photography"
+                        data-type="services" data-filter="tag" data-class=".photography"
+                        style="transition-delay: 300ms;">Photography</div>
+                    <div class="collapsed-item filter" data-wrapper="#archive-wrapper" data-url="print-editorial-design"
+                        data-type="services" data-filter="tag" data-class=".print-editorial-design"
+                        style="transition-delay: 250ms;">Print &amp; Editorial Design</div>
+                    <div class="collapsed-item filter" data-wrapper="#archive-wrapper" data-url="type-design"
+                        data-type="services" data-filter="tag" data-class=".type-design"
+                        style="transition-delay: 200ms;">Type Design</div>
+                    <div class="collapsed-item filter" data-wrapper="#archive-wrapper" data-url="visual-identity"
+                        data-type="services" data-filter="tag" data-class=".visual-identity"
+                        style="transition-delay: 150ms;">Visual Identity</div>
+                    <div class="collapsed-item filter" data-wrapper="#archive-wrapper" data-url="wayfinding-signage"
+                        data-type="services" data-filter="tag" data-class=".wayfinding-signage"
+                        style="transition-delay: 100ms;">Wayfinding &amp; Signage</div>
+                    <div class="collapsed-item filter" data-wrapper="#archive-wrapper" data-url="web-design"
+                        data-type="services" data-filter="tag" data-class=".web-design" style="transition-delay: 50ms;">
+                        Web Design</div>
+                </div>
+            </wrap>
+
+            <!--Sorting-->
+            <wrap id="sorting" class="capsule">
+                <!--Title-->
+                <div class="menu-item trigger">
+                    <span class="pos-wrapper box">
+                        <wrap>Sorting</wrap>
+                    </span>
+                </div>
+                <!--Content-->
+                <div class="collapsed" style="display: none">
+                    <div id="sort-title" class="collapsed-item sort" data-sort="title" style="transition-delay: 100ms">
+                        Alphabetical</div>
+                    <div id="sort-date" class="collapsed-item sort active" data-sort="date"
+                        style="transition-delay: 50ms">Chronological</div>
+                </div>
+            </wrap>
+
+
+        </div>
+
+        <!--Main-->
+        <main style="display: none">
+
+            <!--Project-->
+            <div id="project">
+
+                <!--Infos Wrapper-->
+                <section class="animated">
+
+                    <!--Title-->
+                    <div id="project-title" class="section-title text-big">
+                        Nike Air Max Day </div>
+
+                    <!--Infos-->
+                    <div class="project-infos">
+
+                        <!--Description-->
+                        <div class="section-content project-description text-big">
+                            <p class="project-lead">Infusing street culture with universal air</p>
+                            <p>For Air Max Day Zurich, Nike and Titolo entrusted us with creating the promotional
+                                campaign and scenography across the event’s various digital and physical spaces. Playing
+                                with breathing shapes and the depths of universal space, our design fuses Air Max Dn’s
+                                dynamism with the theme of ‘alternate reality’. With spatial interventions blurring the
+                                boundaries of the factual, it unfolds a fascinating world that engages the community in
+                                celebrating street culture.</p>
+                        </div>
+
+                        <!--Credits-->
+                        <div class="project-credits pos-wrapper">
+                            <wrap>
+
+                                <!--Industry-->
+                                <div>
+                                    <!--Title-->
+                                    <span>Industry</span>
+                                    <!--Content-->
+                                    <span>
+
+                                        <a href="https://skaladesign.ch/archive/?=sports-fashion"
+                                            data-target="target-archive">
+                                            Sports &amp; Fashion</a>
+                                    </span>
+                                </div>
+
+                                <!--Services-->
+                                <div>
+                                    <!--Title-->
+                                    <span>Services</span>
+                                    <!--Content-->
+                                    <span>
+
+                                        <a href="https://skaladesign.ch/archive/?=animation"
+                                            data-target="target-archive">
+                                            Animation</a>,
+
+                                        <a href="https://skaladesign.ch/archive/?=art-direction"
+                                            data-target="target-archive">
+                                            Art Direction</a>,
+
+                                        <a href="https://skaladesign.ch/archive/?=visual-identity"
+                                            data-target="target-archive">
+                                            Visual Identity</a>
+                                    </span>
+                                </div>
+
+
+
+                            </wrap>
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <!--Modules-->
+                <div id="modules">
+
+                    <!--Media-->
+                    <div class="module-media col-4 col-mob-4 animated" style="transition-delay: 150ms">
+                        <!--Thumbnail-->
+                        <picture class="thumbnail picture">
+                            <source
+                                data-srcset="../media/plastic-7-25/black-styrofoam.jpg"
+                                media="(max-width: 768px)">
+                            <source
+                                data-srcset="../media/plastic-7-25/black-styrofoam.jpg"
+                                media="(min-width: 769px) and (max-width: 1180px)">
+                            <source
+                                data-srcset="../media/plastic-7-25/black-styrofoam.jpg"
+                                media="(min-width: 1181px)">
+                            <!--Thumb-->
+                            <img class="thumb"
+                                src="../media/plastic-7-25/black-styrofoam.jpg"
+                                alt="Plastics" />
+                        </picture>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!--Footer-->
+            <footer>
+
+                <!--Top-->
+                <div id="scroll-top" style="display: none">
+                    <span class="arrow">↑</span>
+                    <span>Top</span>
+                </div>
+
+
+
+
+                <!--Next Project-->
+                <a id="related-news" href="https://skaladesign.ch/plants-intelligence/">
+                    <span>Next project</span>
+                    <span class="arrow">→</span>
+                </a>
+
+
+                <!--Next Project-->
+                <a id="related-archive" href="https://skaladesign.ch/nike-by-you-china/">
+                    <span>Next project</span>
+                    <span class="arrow">→</span>
+                </a>
+
+            </footer>
+
+        </main>
+
+    </div>
+
+</body>
+
+</html>
