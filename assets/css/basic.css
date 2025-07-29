@@ -21,13 +21,13 @@ body{
 	width: 100vw;
 	height: 100%;
 	margin: auto;
-	font-family: 'Haas', Helvetica, Arial, sans-serif;
+	font-family: 'Haas';
 	font-variant-ligatures: discretionary-ligatures;
 	font-feature-settings: 'liga';
 	-webkit-text-size-adjust: none;
 	-moz-osx-font-smoothing: grayscale;
 	 -webkit-font-smoothing: antialiased;
-				font-smoothing: antialiased;
+	font-smooth: antialiased;
 	font-size: var(--fs);
 	font-style: normal;
 	font-weight: normal;
@@ -40,7 +40,7 @@ input{
 	width: 100%;
 	margin: 0;
 	display: inline-block;
-	font-family: 'Haas', Helvetica, Arial, sans-serif;
+	font-family: 'Haas';
 	font-size: var(--fs);
 	line-height: normal;
 	color: var(--cbg);
