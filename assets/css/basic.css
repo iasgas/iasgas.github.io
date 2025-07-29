@@ -21,7 +21,7 @@ body{
 	width: 100vw;
 	height: 100%;
 	margin: auto;
-	font-family: 'Monument', Helvetica, Arial, sans-serif;
+	font-family: 'Haas', Helvetica, Arial, sans-serif;
 	font-variant-ligatures: discretionary-ligatures;
 	font-feature-settings: 'liga';
 	-webkit-text-size-adjust: none;
@@ -40,7 +40,7 @@ input{
 	width: 100%;
 	margin: 0;
 	display: inline-block;
-	font-family: 'Monument', Helvetica, Arial, sans-serif;
+	font-family: 'Haas', Helvetica, Arial, sans-serif;
 	font-size: var(--fs);
 	line-height: normal;
 	color: var(--cbg);

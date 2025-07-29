@@ -9,6 +9,13 @@
 	font-display: block;
 }
 
+@font-face {
+	font-display: swap;
+	font-family: Haas;
+	font-weight: 500;
+	src: url(../../Fonts/NeueHaasDisplayRoman.ttf)
+  }
+
 /* TEXTS
 ============================== */
 .text-small{
