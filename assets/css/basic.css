@@ -31,7 +31,7 @@ body{
 	font-size: var(--fs);
 	font-style: normal;
 	font-weight: normal;
-	line-height: var(--lh);
+	line-height: 1;
 	color: var(--ctext);
 	background-color: var(--cbg);
 	overflow-x: hidden;
