@@ -13,6 +13,8 @@
 	font-display: swap;
 	font-family: Haas;
 	font-weight: 500;
+	line-height: 1;
+	top: -3px;
 	src: url(../../Fonts/monument/MonumentGrotesk-Medium.ttf)
   }
 
