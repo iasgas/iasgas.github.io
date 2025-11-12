@@ -30,6 +30,136 @@
 	<script src="assets/js/global.js"></script>
 
 </head>
+<style>
+    /* overlay styles — keeps original layout intact but blocks interaction until unlocked */
+    #pw-overlay {
+      position: fixed;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgb(255, 255, 255);
+      z-index: 99999;
+      padding: 24px;
+    }
+    #pw-card {
+      width: min(520px, 96%);
+      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+      color: #000000;
+      padding: 22px;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+    }
+    #pw-card h2 { margin: 0 0 8px; font-size:18px; }
+    #pw-card p { margin: 0 0 14px; color: #000000; font-size:14px; }
+    #pw-input { width:100%; padding:10px; background-color: #000000;}
+    #pw-btn { width:100%; margin-top:10px; padding:10px; }
+    #pw-msg { margin-top:10px; font-size:13px; color:#000000; display:none; }
+    @media (max-width:420px){ #pw-card{padding:16px} }
+  </style>
+  
+  <div id="pw-overlay" aria-hidden="false">
+    <div id="pw-card" role="dialog" aria-label="Password required">
+      <!--<h2>Enter password</h2>-->
+      <input id="pw-input" type="password" placeholder="Password" autocomplete="off" />
+      <button id="pw-btn">Unlock</button>
+      <div id="pw-msg">Wrong password — try again.</div>
+    </div>
+  </div>
+  
+  <script>
+  /*
+    Client-side gate:
+    - Seeds a per-visitor localStorage salt+hash if none present (so every first-time visitor gets the same default).
+    - Default salt+hash correspond to password: "letmein"
+    - On unlock the overlay is removed and interaction with page restored.
+  */
+  
+  /* DEFAULT (hardcoded) — salt + SHA-256(salt + "letmein") */
+  /* These values are visible in the page (client-side) — not secret. */
+  const PW_SALT_KEY = '__cs_pw_salt';
+  const PW_HASH_KEY = '__cs_pw_hash';
+  const DEFAULT_SALT = '98e27f5181ea6ec8681b13c4235238f0';
+  const DEFAULT_HASH = 'c47e5472ea24a1636b4abd103735b4964a7763ef5590139f8f084aa74e6ba4a7';
+  
+  /* Seed defaults once per visitor */
+  if (!localStorage.getItem(PW_SALT_KEY) && !localStorage.getItem(PW_HASH_KEY)) {
+    try {
+      localStorage.setItem(PW_SALT_KEY, DEFAULT_SALT);
+      localStorage.setItem(PW_HASH_KEY, DEFAULT_HASH);
+    } catch (e) {
+      // localStorage disabled: we'll still check ephemeral values below
+    }
+  }
+  
+  /* helper: string -> ArrayBuffer */
+  function toBuffer(s){ return new TextEncoder().encode(s); }
+  function bufToHex(buf){
+    const a = new Uint8Array(buf);
+    return Array.from(a).map(b=>b.toString(16).padStart(2,'0')).join('');
+  }
+  async function sha256Hex(s){
+    const buf = await crypto.subtle.digest('SHA-256', toBuffer(s));
+    return bufToHex(buf);
+  }
+  
+  /* verify password */
+  async function verify(plain){
+    const salt = localStorage.getItem(PW_SALT_KEY) || DEFAULT_SALT;
+    const expected = localStorage.getItem(PW_HASH_KEY) || DEFAULT_HASH;
+    const h = await sha256Hex(salt + plain);
+    return h === expected;
+  }
+  
+  /* UI wiring */
+  const overlay = document.getElementById('pw-overlay');
+  const input = document.getElementById('pw-input');
+  const btn = document.getElementById('pw-btn');
+  const msg = document.getElementById('pw-msg');
+  
+  /* focus first */
+  input.focus();
+  input.addEventListener('keydown', function(e){ if (e.key === 'Enter') btn.click(); });
+  
+  btn.addEventListener('click', async function(){
+    msg.style.display = 'none';
+    btn.disabled = true;
+    btn.textContent = 'Checking...';
+    const val = input.value || '';
+    try {
+      const ok = await verify(val);
+      if (ok) {
+        // remove overlay and enable interaction
+        overlay.style.display = 'none';
+        overlay.setAttribute('aria-hidden','true');
+        // optional: clear input value
+        input.value = '';
+      } else {
+        msg.style.display = 'block';
+        btn.disabled = false;
+        btn.textContent = 'Unlock';
+        input.focus();
+      }
+    } catch (err) {
+      console.error(err);
+      msg.textContent = 'Error — try again';
+      msg.style.display = 'block';
+      btn.disabled = false;
+      btn.textContent = 'Unlock';
+    }
+  });
+  
+  /* Prevent interaction with the page underneath while overlay is visible.
+     (Some pages capture keyboard — this helps but cannot guarantee absolute prevention.) */
+  document.addEventListener('focus', function(ev){
+    if (overlay.style.display !== 'none' && !overlay.contains(ev.target)) {
+      ev.stopPropagation();
+      input.focus();
+    }
+  }, true);
+  
+  /* If you prefer the overlay to auto-seed into a different storage strategy
+     (e.g., no localStorage), you can modify the script to not write localStorage. */
+  </script>
 
 <body>
 
@@ -341,7 +471,7 @@
 
 						<a class="project col-8 col-mob-4 research-documentary drawing photograph sem-work"
 							data-title="Unveiling Habitats" data-date="20240530" data-pos="5"
-							href="https://tobiasgasser.ch/UnveilingHabitats/" data-target="target-project">
+							href="work/habitats.html" data-target="target-project">
 
 							<!--Thumbnail-->
 							<picture class="thumbnail picture">
