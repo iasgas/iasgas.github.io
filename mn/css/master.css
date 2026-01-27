@@ -82,12 +82,12 @@ header .menu-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: right;
-  -ms-flex-align: right;
-  align-items: right;
-  -webkit-box-pack: right;
-  -ms-flex-pack: right;
-  justify-content: right;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   width: 100%;
   -webkit-box-flex: 1;
   -ms-flex: 1;
@@ -291,6 +291,14 @@ header .menu-wrapper .menu {
 /* .hide {
     opacity: 0 !important;
 } */
+
+.list-wrapper {
+  opacity: 1;
+}
+
+.show-list .list-wrapper {
+  opacity: 0;
+}
 
 /* ANIMATION */
 .show-index .project-image {
@@ -496,7 +504,6 @@ h1{
 .show-text .project-description {
   opacity: 1;
 }
-
 
 .photo-wrapper { 
   display: none;

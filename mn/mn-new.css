@@ -1,0 +1,158 @@
+:root{
+    /* Small */
+    --fss: 1.1rem; 
+    --lhs: 1.2;
+  
+    /* Big */
+    --fsl: 1.3rem;     
+    --lhl: 1.2;     
+  }
+
+.tg-grid {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 1rem
+}
+
+.text-small{
+	font-size: var(--fss);
+	line-height: var(--lhs);
+	letter-spacing: var(--lss);
+}
+
+.text-big{
+	font-size: var(--fsl);
+	line-height: var(--lhl);
+	letter-spacing: var(--lsl);
+    margin-block-start: 0;
+    font-weight: bolder;
+}
+
+a:hover{
+    text-decoration: none;
+    color: #969696;
+}
+
+.blocked{
+    font-size: var(--fss);
+	line-height: var(--lhs);
+	letter-spacing: var(--lss);
+    color: #969696;
+    pointer-events: none;
+}
+
+
+.column {
+    background-color: none;
+    padding: 0px;
+    box-sizing: border-box;
+    vertical-align: baseline;
+  }
+
+
+  .hero {
+    height: calc(100vh - 14rem);         /* full viewport height */
+    display: flex;
+    flex-direction: column;
+    
+  }
+
+  .hero-bottom {
+    margin-top: auto;
+  }
+
+
+  .py-landing {
+    padding-top: 13rem;
+    padding-bottom: 1rem
+}
+
+.py-1 {
+    padding-top: 0rem;
+    padding-bottom: 1rem
+}
+
+.px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem
+}
+
+
+
+.col-span-12 {
+    grid-column: span 12 / span 12
+    }
+
+.col-span-2 {
+        grid-column: span 2 / span 2
+    }
+
+.col-span-3 {
+        grid-column: span 3 / span 3
+    }
+
+.col-span-6 {
+        grid-column: span 6 / span 6
+    }
+
+.col-span-9 {
+        grid-column: span 9 / span 9
+    }
+
+
+
+    @media(min-width:768px) {
+        .md\:fixed {
+            position: fixed
+        }
+    
+        .md\:left-0 {
+            left: 0
+        }
+    
+        .md\:col-span-1 {
+            grid-column: span 1 / span 1
+        }
+    
+        .md\:col-span-2 {
+            grid-column: span 2 / span 2
+        }
+    
+        .md\:col-span-6 {
+            grid-column: span 6 / span 6
+        }
+    
+        .md\:col-span-8 {
+            grid-column: span 8 / span 8
+        }
+    
+        .md\:col-span-10 {
+            grid-column: span 10 / span 10
+        }
+    }
+    
+    @media(min-width:1024px) {
+    .lg\:col-span-1 {
+        grid-column: span 1 / span 1
+    }
+
+    .lg\:col-span-2 {
+        grid-column: span 2 / span 2
+    }
+
+    .lg\:col-span-3 {
+        grid-column: span 3 / span 3
+    }
+
+    .lg\:col-span-4 {
+        grid-column: span 4 / span 4
+    }
+
+    .lg\:col-span-5 {
+        grid-column: span 5 / span 5
+    }
+
+    .lg\:col-span-6 {
+        grid-column: span 6 / span 6
+    }
+}

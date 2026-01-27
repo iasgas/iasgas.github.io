@@ -9,23 +9,15 @@
 
     <title>portfolio - Tobias</title>
     <meta id="schema_name" itemprop="name" content="portfolio - Tobias">
-    <meta name="description"
-        content="Explore innovative spatial design with Matière Noire, a Paris-based creative studio. Merging intuition with observational methods, we craft bespoke, cross-cultural design solutions.">
-    <meta id="schema_description" itemprop="description"
-        content="Explore innovative spatial design with Matière Noire, a Paris-based creative studio. Merging intuition with observational methods, we craft bespoke, cross-cultural design solutions.">
     <meta name="author" content="">
     <meta name="date" content="2025-09-15">
     <meta property="og:title" content="projects">
-    <meta property="og:description"
-        content="Explore innovative spatial design with Matière Noire, a Paris-based creative studio. Merging intuition with observational methods, we craft bespoke, cross-cultural design solutions.">
     <meta property="og:site_name" content="Tobias Andri Gasser">
     <meta property="og:url" content="https://tobiasgasser.ch">
     <meta property="og:type" content="">
     <meta property="og:locale" content="en_US">
     <meta name="twitter:card" content="">
     <meta name="twitter:title" content="projects">
-    <meta name="twitter:description"
-        content="Explore innovative spatial design with Matière Noire, a Paris-based creative studio. Merging intuition with observational methods, we craft bespoke, cross-cultural design solutions.">
     <meta name="twitter:site" content="">
     <meta name="twitter:creator" content="">
 
@@ -33,6 +25,7 @@
     <meta name="robots" content="" />
     <link href="css/reset.css" rel="stylesheet">
     <link href="css/master.css" rel="stylesheet">
+    <link href="mn-new.css" rel="stylesheet">
     <link href="../assets/css/filters.css" rel="stylesheet">
     <script src="js/lazysizes.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -56,7 +49,7 @@
       padding: 24px;
     }
     #pw-card {
-      width: min(520px, 96%);
+      width: min(520px);
       background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
       color: #000000;
       padding: 22px;
@@ -64,7 +57,7 @@
     }
     #pw-card h2 { margin: 0 0 8px; font-size:18px; }
     #pw-card p { margin: 0 0 14px; color: #000000; font-size:14px; }
-    #pw-input { width:100%; padding:10px; }
+    #pw-input { width:100%; padding:10px; background-color: #000000;}
     #pw-btn { width:100%; margin-top:10px; padding:10px; }
     #pw-msg { margin-top:10px; font-size:13px; color:#000000; display:none; }
     @media (max-width:420px){ #pw-card{padding:16px} }
@@ -72,14 +65,10 @@
   
   <div id="pw-overlay" aria-hidden="false">
     <div id="pw-card" role="dialog" aria-label="Password required">
-      <h2>Enter password</h2>
-      <p>Enter the shared password to view this page.</p>
+      <!--<h2>Enter password</h2>-->
       <input id="pw-input" type="password" placeholder="Password" autocomplete="off" />
       <button id="pw-btn">Unlock</button>
       <div id="pw-msg">Wrong password — try again.</div>
-      <div style="margin-top:10px;font-size:12px;color:#606060">
-        This is client-side protection only.
-      </div>
     </div>
   </div>
   
@@ -182,9 +171,6 @@
 <body class="show-index show-text show-about show-photo show-arch show-model">
 
     <header>
-        <a href="projects.html" class="logo long-width">
-            <img src="wordmark-univ.png">
-        </a>
         <div class="menu-wrapper">
             <div class="menu">
                 <!-- <div data-type="index" class="m-index button active">
@@ -192,10 +178,10 @@
                 </div>
                 <div data-type="text" class="m-text button active">
                     Text
-                </div>
+                </div> 
                 <div data-type="about" class="m-about button active">
                     About
-                </div> -->
+                </div>-->
                 <div data-type="photo" class="m-photo button active">
                     Image
                 </div>
@@ -205,39 +191,94 @@
                 <div data-type="model" class="m-model button active">
                     Model
                 </div>
+                <div data-type="list" class="m-list button active">
+                    Index
+                </div>
             </div>
         </div>
     </header>
     <div id="protected-content">
 
-        <div class="about-wrapper  ">
-            <div class="about-long-introduction">
-                <p>Tobias Andri Gasser is a swiss architecture graduate with a Bachelor of Science in Architecture 
-                    from ETH Zürich. Tobias is currently exploring various areas of design and experimenting with 
-                    visual communication.</p>
-            </div>
+        <div class="px-4 py-1 tg-grid list-wrapper">
+            <ul class="column col-span-12 md:col-span-8 lg:col-span-3">            
+                <a class="text-big">Tobias Andri Gasser</a>
+            </ul>
+            <ul class="column col-span-12 md:col-span-8 lg:col-span-3">            
+                <a class="text-big">Contact:</a><br>
+                <a class="text-big" href="">@tobias.andri</a>
+            </ul>
+            <ul class="column col-span-12 md:col-span-8 lg:col-span-6">            
+                <a class="text-big">Tobias Andri Gasser is a swiss architecture graduate with a Bachelor of Science in Architecture from ETH Zürich.
+                    Tobias is currently exploring various areas of design and experimenting with visual communication. </a>
+            </ul>
 
-            <div class="about-contact">
-                <p>@tobias.andri
-
-                </p>
-            </div>
-
-            <div class="about-short-introduction">
-                <p>Architecture<br />
-                    Design<br />
-                    Photography</p>
-            </div>
         </div>
 
+        <section class="px-4 relative z-10">
+                <div class="tg-grid">
+                    <ul class="column col-span-12 md:col-span-8 lg:col-span-3">
+                        <div class="work list-wrapper">
+                            <a class="blocked" href="">A-1.&nbsp;proyecte i memoria 'taller tematico, ETSAB'</a><br>
+                            <a class="text-small" href="00-gandria.html">A-2.&nbsp;to meet in gandria 'revealing encounters, studioser'</a><br>
+                            <a class="text-small" href="00-carrara.html">A-3.&nbsp;a new nature 'studio concrete garden, ETHZ'</a><br>
+                            <a class="text-small" href="">A-4.&nbsp;dolder sports 'studio Conen, ETHZ'</a><br>
+                            <a class="text-small" href="">A-5.&nbsp;schwarze räume, neue hard 'studio Boltshauser, ETHZ'</a><br>
+                            <a class="blocked" href="">A-6.&nbsp;klimafreundliche verdichtung 'studio Boltshauser, ETHZ'</a><br>
+        
+                        </div>
+                    </ul>
+                    <ul class="column col-span-12 md:col-span-8 lg:col-span-3">
+                        <div class="work list-wrapper">
+                            <a class="text-small" href="00-seebahnhöfe.html">L-1.&nbsp;seebahnhöfe 'unveiling habitats, ETHZ'</a><br>
+                            <a class="blocked" href="">L-2.&nbsp;neophytes 'studio concrete garden, ETHZ'</a><br>
+                            <a class="text-small" href="">L-3.&nbsp;dolder sports 'studio Conen, ETHZ'</a><br>
+                        </div>
+                    </ul>
+                    <ul class="column col-span-12 md:col-span-8 lg:col-span-3">
+                        <div class="work list-wrapper">
+                            <a class="text-small" href="00-custom-project.html">P-1.&nbsp;carrara marble quarry 'photographic essay 2025'</a><br>
+                            <a class="blocked" href="">P-2.&nbsp;asturias 'photographic essay 2024'</a><br>
+                            <a class="blocked" href="">P-3.&nbsp;dolder waldhaus 'photographic essay 2023'</a><br>
+                        </div>
+                    </ul>
+                    <ul class="column col-span-12 md:col-span-8 lg:col-span-3">
+                        <div class="work list-wrapper">
+                            <a class="blocked" href="">I-1.&nbsp;spot lamp 'WIP'</a><br>
+                            <a class="text-small" href="">I-2.&nbsp;neophytes 'studio concrete garden, ETHZ'</a><br>
+                            <br>
+                            <a class="blocked" href="">T-1.&nbsp;From Casa Tarragó to La Carboneria (1864-2025):<br><i>The Façade as an Ideological and Cultural Locus</i></a><br>
+                        </div>
+                    </ul>
+                </div>
+        </section>
+
         <div class="projects-wrapper">
-            <div class="photo-wrapper">
+            <!--<div class="arch-wrapper two-col">
                 <a href=""
-                    class="project-row">
+                    class="project-row two-col">
                     <div class="project-text">
                         <div class="title">
                             Plastics - WIP </div>
+                    </div> 
+                    <div class="project-image">
+                        <div class="media portrait image-container">
+                            <img loading="lazy" class="lazyload"
+                                src="../media/taller-tematico-12-25/SCH-1-web.jpg?auto=format,compress,true&q=90&fit=max&lossless=true&Cs=adobergb1998&blur=800&w=500"
+                                data-sizes="auto"
+                                data-srcset="../media/taller-tematico-12-25/SCH-1-web.jpg?auto=format,compress,true&q=90&fit=max&lossless=true&Cs=adobergb1998&blur=800&w=500"
+                                width="7878" height="5255">
+
+                        </div>
                     </div>
+                </a>
+            </div>-->
+            <div class="photo-wrapper">
+                <a href=""
+                    class="project-row">
+                    <!-- <div class="project-text">
+                        <div class="title">
+                            Plastics - WIP </div>
+                    </div> -->
                     <div class="project-image">
                         <div class="media portrait image-container">
                             <img loading="lazy" class="lazyload"
@@ -252,10 +293,10 @@
             </div>
             <div class="photo-wrapper two-col">
                 <a href="work/carrara.html" class="project-row two-col">
-                    <div class="project-text">
+                    <!-- <div class="project-text">
                         <div class="title">
                             Carrara marble quarry </div>
-                    </div>
+                    </div> -->
                     <div class="project-image">
                         <div class="media landscape image-container">
                             <img loading="lazy" class="lazyload"
@@ -270,10 +311,10 @@
             </div>
             <div class="photo-wrapper">
                 <a href="work/carrara.html" class="project-row">
-                    <div class="project-text">
+                    <!-- <div class="project-text">
                         <div class="title">
                             Carrara marble quarry </div>
-                    </div>
+                    </div> -->
                     <div class="project-image">
                         <div class="media landscape image-container">
                             <img loading="lazy" class="lazyload"
@@ -288,10 +329,10 @@
             </div>
             <div class="arch-wrapper">
                 <a href="work/gandria.html" class="project-row">
-                    <div class="project-text">
+                    <!-- <div class="project-text">
                         <div class="titleblack">
                             Revealing Encounters - Gandria </div>
-                    </div>
+                    </div> -->
                     <div class="project-image">
                         <div class="media portrait image-container">
                             <img loading="lazy" class="lazyload"
@@ -306,10 +347,10 @@
             </div>
             <div class="photo-wrapper">
                 <a href="work/gandria.html" class="project-row">
-                    <div class="project-text">
+                    <!-- <div class="project-text">
                         <div class="title">
                             Revealing Encounters - Gandria </div>
-                    </div>
+                    </div> -->
                     <div class="project-image">
                         <div class="media portrait image-container">
                             <img loading="lazy" class="lazyload"
@@ -324,10 +365,10 @@
             </div>
             <div class="photo-wrapper">
                 <a href="work/gandria.html" class="project-row">
-                    <div class="project-text">
+                    <!--<div class="project-text">
                         <div class="title">
                             Revealing Encounters - Gandria </div>
-                    </div>
+                    </div>-->
                     <div class="project-image">
                         <div class="media portrait image-container">
                             <img loading="lazy" class="lazyload"
@@ -342,10 +383,10 @@
             </div>
             <div class="photo-wrapper two-col">
                 <a href="work/neophytes.html" class="project-row two-col">
-                    <div class="project-text">
+                    <!--<div class="project-text">
                         <div class="title">
                             FS 2024 - Studio Concrete Garden</div>
-                    </div>
+                    </div> -->
                     <div class="project-image">
                         <div class="media portrait image-container">
                             <img loading="lazy" class="lazyload"
@@ -360,10 +401,10 @@
             </div>
             <div class="arch-wrapper">
                 <a href="work/neophytes.html" class="project-row">
-                    <div class="project-text">
+                    <!-- <div class="project-text">
                         <div class="titleblack">
                             FS 2024 - Studio Concrete Garden </div>
-                    </div>
+                    </div> -->
                     <div class="project-image">
                         <div class="media">
                             <video playsinline autoplay loop muted>
@@ -395,10 +436,10 @@
             </div> -->
             <div class="photo-wrapper">
                 <a href="work/neophytes.html" class="project-row">
-                    <div class="project-text">
+                    <!-- <div class="project-text">
                         <div class="title">
                             FS 2024 - Studio Concrete Garden </div>
-                    </div>
+                    </div> -->
                     <div class="project-image">
                         <div class="media portrait image-container">
                             <img loading="lazy" class="lazyload"
@@ -429,24 +470,7 @@
                     </div>
                 </a>
             </div> -->
-            <div class="photo-wrapper two-col">
-                <a href="" class="project-row two-col">
-                    <div class="project-text">
-                        <div class="title">
-                            Chalberhau Landfill </div>
-                    </div>
-                    <div class="project-image">
-                        <div class="media landscape image-container">
-                            <img loading="lazy" class="lazyload"
-                                src="../media/chalberhau-4-24/chalberhau-tobias-andri-gasser-03.jpg?auto=format,compress,true&q=90&fit=max&lossless=true&Cs=adobergb1998&blur=800&w=500"
-                                data-sizes="auto"
-                                data-srcset="../media/chalberhau-4-24/chalberhau-tobias-andri-gasser-03.jpg?auto=format,compress,true&q=90&fit=max&lossless=true&Cs=adobergb1998&w=100&quality=100 120w, ../media/chalberhau-4-24/chalberhau-tobias-andri-gasser-03.jpg?auto=format,compress,true&q=90&fit=max&lossless=true&Cs=adobergb1998&w=320&quality=100 320w, ../media/chalberhau-4-24/chalberhau-tobias-andri-gasser-03.jpg?auto=format,compress,true&q=90&fit=max&lossless=true&Cs=adobergb1998&w=614&quality=100 614w, ../media/chalberhau-4-24/chalberhau-tobias-andri-gasser-03.jpg?auto=format,compress,true&q=90&fit=max&lossless=true&Cs=adobergb1998&w=800&quality=100 820w, ../media/chalberhau-4-24/chalberhau-tobias-andri-gasser-03.jpg?auto=format,compress,true&q=90&fit=max&lossless=true&Cs=adobergb1998&w=960&quality=100 960w, ../media/chalberhau-4-24/chalberhau-tobias-andri-gasser-03.jpg?auto=format,compress,true&q=90&fit=max&lossless=true&Cs=adobergb1998&w=1152&quality=100 1152w, ../media/chalberhau-4-24/chalberhau-tobias-andri-gasser-03.jpg?auto=format,compress,true&q=90&fit=max&lossless=true&Cs=adobergb1998&w=1280&quality=100 1280w, ../media/chalberhau-4-24/chalberhau-tobias-andri-gasser-03.jpg?auto=format,compress,true&q=90&fit=max&lossless=true&Cs=adobergb1998&w=1800&quality=100 1800w, ../media/chalberhau-4-24/chalberhau-tobias-andri-gasser-03.jpg?auto=format,compress,true&q=90&fit=max&lossless=true&Cs=adobergb1998&w=2048&quality=100 2048w, ../media/chalberhau-4-24/chalberhau-tobias-andri-gasser-03.jpg?auto=format,compress,true&q=90&fit=max&lossless=true&Cs=adobergb1998&w=2304&quality=100 2304w"
-                                width="4800" height="3000">
 
-                        </div>
-                    </div>
-                </a>
-            </div>
             <!-- <div class="photo-wrapper">
                 <a href="" class="project-row ">
                     <div class="project-text">
@@ -467,10 +491,10 @@
             </div> -->
             <div class="arch-wrapper">
                 <a href="" class="project-row ">
-                    <div class="project-text">
+                    <!-- <div class="project-text">
                         <div class="titleblack">
                             Seebahnhöfe </div>
-                    </div>
+                    </div> -->
                     <div class="project-image">
                         <div class="media portrait image-container">
                             <img loading="lazy" class="lazyload"
@@ -483,30 +507,12 @@
                     </div>
                 </a>
             </div>
-            <div class="photo-wrapper two-col">
-                <a href="" class="project-row two-col">
-                    <div class="project-text">
-                        <div class="title">
-                            Dolder ice rink </div>
-                    </div>
-                    <div class="project-image">
-                        <div class="media landscape image-container">
-                            <img loading="lazy" class="lazyload"
-                                src="../media/dolder-10-23/dolder-tobias-andri-gasser_02.jpg?auto=format,compress,true&q=90&fit=max&lossless=true&Cs=adobergb1998&blur=800&w=500"
-                                data-sizes="auto"
-                                data-srcset="../media/dolder-10-23/dolder-tobias-andri-gasser_02.jpg?auto=format,compress,true&q=90&fit=max&lossless=true&Cs=adobergb1998&w=100&quality=100 120w, ../media/dolder-10-23/dolder-tobias-andri-gasser_02.jpg?auto=format,compress,true&q=90&fit=max&lossless=true&Cs=adobergb1998&w=320&quality=100 320w, ../media/dolder-10-23/dolder-tobias-andri-gasser_02.jpg?auto=format,compress,true&q=90&fit=max&lossless=true&Cs=adobergb1998&w=614&quality=100 614w, ../media/dolder-10-23/dolder-tobias-andri-gasser_02.jpg?auto=format,compress,true&q=90&fit=max&lossless=true&Cs=adobergb1998&w=800&quality=100 820w, ../media/dolder-10-23/dolder-tobias-andri-gasser_02.jpg?auto=format,compress,true&q=90&fit=max&lossless=true&Cs=adobergb1998&w=960&quality=100 960w, ../media/dolder-10-23/dolder-tobias-andri-gasser_02.jpg?auto=format,compress,true&q=90&fit=max&lossless=true&Cs=adobergb1998&w=1152&quality=100 1152w, ../media/dolder-10-23/dolder-tobias-andri-gasser_02.jpg?auto=format,compress,true&q=90&fit=max&lossless=true&Cs=adobergb1998&w=1280&quality=100 1280w, ../media/dolder-10-23/dolder-tobias-andri-gasser_02.jpg?auto=format,compress,true&q=90&fit=max&lossless=true&Cs=adobergb1998&w=1800&quality=100 1800w, ../media/dolder-10-23/dolder-tobias-andri-gasser_02.jpg?auto=format,compress,true&q=90&fit=max&lossless=true&Cs=adobergb1998&w=2048&quality=100 2048w, ../media/dolder-10-23/dolder-tobias-andri-gasser_02.jpg?auto=format,compress,true&q=90&fit=max&lossless=true&Cs=adobergb1998&w=2304&quality=100 2304w"
-                                width="6584" height="4391">
-
-                        </div>
-                    </div>
-                </a>
-            </div>
             <div class="model-wrapper">
                 <a href="" class="project-row ">
-                    <div class="project-text">
+                    <!-- <div class="project-text">
                         <div class="title">
                             HS 2023 - Studio Conen </div>
-                    </div>
+                    </div> -->
                     <div class="project-image">
                         <div class="media portrait image-container">
                             <img loading="lazy" class="lazyload"
@@ -521,10 +527,10 @@
             </div>
             <div class="arch-wrapper two-col">
                 <a href="" class="project-row two-col">
-                    <div class="project-text">
+                    <!-- <div class="project-text">
                         <div class="titleblack">
                             HS 2023 - Studio Conen </div>
-                    </div>
+                    </div> -->
                     <div class="project-image">
                         <div class="media portrait image-container">
                             <img loading="lazy" class="lazyload"
@@ -539,10 +545,10 @@
             </div>
             <div class="arch-wrapper">
                 <a href="" class="project-row">
-                    <div class="project-text">
+                    <!-- <div class="project-text">
                         <div class="titleblack">
                             HS 2023 - Studio Conen </div>
-                    </div>
+                    </div> -->
                     <div class="project-image">
                         <div class="media portrait image-container">
                             <img loading="lazy" class="lazyload"
@@ -575,10 +581,10 @@
             </div> -->
             <div class="model-wrapper two-col">
                 <a href="" class="project-row two-col">
-                    <div class="project-text">
+                    <!-- <div class="project-text">
                         <div class="title">
                             HS 2023 - Studio Conen </div>
-                    </div>
+                    </div> -->
                     <div class="project-image">
                         <div class="media portrait image-container">
                             <img loading="lazy" class="lazyload"
@@ -591,31 +597,12 @@
                     </div>
                 </a>
             </div>
-            <div class="photo-wrapper two-col">
-                <a href=""
-                class="project-row two-col">
-                <div class="project-text">
-                    <div class="titleblack">
-                        Dolder Waldhaus </div>
-                </div>
-                <div class="project-image">
-                    <div class="media portrait image-container">
-                        <img loading="lazy" class="lazyload"
-                            src="../media/waldhaus-9-23/waldhaus-tobias-andri-gasser-8.jpg?auto=format,compress,true&q=90&fit=max&lossless=true&Cs=adobergb1998&blur=800&w=500"
-                            data-sizes="auto"
-                            data-srcset="../media/waldhaus-9-23/waldhaus-tobias-andri-gasser-8.jpg?auto=format,compress,true&q=90&fit=max&lossless=true&Cs=adobergb1998&w=100&quality=100 120w, ../media/waldhaus-9-23/waldhaus-tobias-andri-gasser-8.jpg?auto=format,compress,true&q=90&fit=max&lossless=true&Cs=adobergb1998&w=320&quality=100 320w, ../media/waldhaus-9-23/waldhaus-tobias-andri-gasser-8.jpg?auto=format,compress,true&q=90&fit=max&lossless=true&Cs=adobergb1998&w=614&quality=100 614w, ../media/waldhaus-9-23/waldhaus-tobias-andri-gasser-8.jpg?auto=format,compress,true&q=90&fit=max&lossless=true&Cs=adobergb1998&w=800&quality=100 820w, ../media/waldhaus-9-23/waldhaus-tobias-andri-gasser-8.jpg?auto=format,compress,true&q=90&fit=max&lossless=true&Cs=adobergb1998&w=960&quality=100 960w, ../media/waldhaus-9-23/waldhaus-tobias-andri-gasser-8.jpg?auto=format,compress,true&q=90&fit=max&lossless=true&Cs=adobergb1998&w=1152&quality=100 1152w, ../media/waldhaus-9-23/waldhaus-tobias-andri-gasser-8.jpg?auto=format,compress,true&q=90&fit=max&lossless=true&Cs=adobergb1998&w=1280&quality=100 1280w, ../media/waldhaus-9-23/waldhaus-tobias-andri-gasser-8.jpg?auto=format,compress,true&q=90&fit=max&lossless=true&Cs=adobergb1998&w=1800&quality=100 1800w, ../media/waldhaus-9-23/waldhaus-tobias-andri-gasser-8.jpg?auto=format,compress,true&q=90&fit=max&lossless=true&Cs=adobergb1998&w=2048&quality=100 2048w, ../media/waldhaus-9-23/waldhaus-tobias-andri-gasser-8.jpg?auto=format,compress,true&q=90&fit=max&lossless=true&Cs=adobergb1998&w=2304&quality=100 2304w"
-                            width="3000" height="1060">
-
-                    </div>
-                </div>
-                </a>
-            </div>
-            <!-- <div class="photo-wrapper">
+            <div class="photo-wrapper">
                 <a href="" class="project-row">
-                    <div class="project-text">
+                    <!-- <div class="project-text">
                         <div class="title">
                             FS 2023 - Studio Boltshauser </div>
-                    </div>
+                    </div> -->
                     <div class="project-image">
                         <div class="media portrait image-container">
                             <img loading="lazy" class="lazyload"
@@ -627,13 +614,13 @@
                         </div>
                     </div>
                 </a>
-            </div> -->
-            <div class="arch-wrapper two-col">
+            </div> 
+            <!-- <div class="arch-wrapper two-col">
                 <a href="" class="project-row">
                     <div class="project-text">
                         <div class="titleblack">
                             FS 2023 - Studio Boltshauser </div>
-                    </div>
+                    </div> 
                     <div class="project-image two-col">
                         <div class="media portrait image-container">
                             <img loading="lazy" class="lazyload"
@@ -645,13 +632,13 @@
                         </div>
                     </div>
                 </a>
-            </div>
+            </div> -->
             <div class="arch-wrapper">
                 <a href="" class="project-row">
-                    <div class="project-text">
+                    <!-- <div class="project-text">
                         <div class="titleblack">
                             FS 2023 - Studio Boltshauser </div>
-                    </div>
+                    </div> -->
                     <div class="project-image">
                         <div class="media portrait image-container">
                             <img loading="lazy" class="lazyload"
@@ -663,7 +650,7 @@
                         </div>
                     </div>
                 </a>
-            </div>
+            </div> 
             <!-- <div class="photo-wrapper">
                 <a href="" class="project-row">
                     <div class="project-text">
@@ -703,13 +690,13 @@
             <!-- <a href="" class="project-row two-col">
                 <div class="project-text">
                     <div class="title">
-                        POSITIVE EDUCATION FESTIVAL 2024 </div>
+                        Video template </div>
                 </div>
                 <div class="project-image">
                     <div class="media">
                         <video playsinline autoplay loop muted>
                             <source
-                                src="../media/img_7851.mp4?loc=external&log_user=0&signature=f1a6ab5f74e0d93b8c814a73df8f9241dad1e77e1e5e797c0367f3454b346c82&user_id=100968438"
+                                src="(sourcehere)?loc=external&log_user=0&signature=f1a6ab5f74e0d93b8c814a73df8f9241dad1e77e1e5e797c0367f3454b346c82&user_id=100968438"
                                 type="video/mp4">
                         </video>
                     </div>
